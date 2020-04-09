@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'idea'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.alibaba.arouter'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        multiDexEnabled true
+
+//        //兼容Android6.0系统所需
+        useLibrary 'org.apache.http.legacy'
+
+        renderscriptTargetApi 25
+        renderscriptSupportModeEnabled false    // Enable RS support
+        // ButterKnife
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        //预编译
+        preDexLibraries true
+        //支持大工程
+        jumboMode = true
+        //线程数
+        threadCount = 16
+        //dex内存，公式：dex内存 + 1G < Gradle内存
+        javaMaxHeapSize "4g"
+        additionalParameters = [
+                '--multi-dex',//多分包
+                '--set-max-idx-number=60000'//每个包内方法数上限
+        ]
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            ndk {
+                abiFilters "armeabi", "armeabi-v7a", "arm64-v8a" // 保留这三种架构的CPU
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile './AndroidManifest.xml'
+        }
+    }
+}
+
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+apply plugin: 'com.zen.lib.analysis'
+
+libReport {
+    output = [
+            "txt", "html" // default
+    ]
+    ignore = [
+            "com.android.support:support-v4"
+    ]
+}
