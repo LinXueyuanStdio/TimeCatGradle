@@ -34,7 +34,7 @@ ext {
     component_SelfData_version = "1.0.1"
     component_SelfEventBus_version = "1.0.0"
     component_SelfRouter_version = "1.0.5"
-    component_SelfTheme_version = "1.0.2"
+    component_SelfTheme_version = "1.0.4"
     component_SelfXunfei_version = "1.0.0"
     component_SelfService_version = "1.0.0"
 
