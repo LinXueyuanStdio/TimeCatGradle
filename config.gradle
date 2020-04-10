@@ -81,7 +81,7 @@ ext {
             "module-master"            : project(":module:module-master"),
             "module-mindmap"           : project(":module:module-mindmap"),
             "module-photo-selector"    : project(":module:module-photo-selector"),
-//            "module-plugin"            : project(":module:module-plugin"),
+            "module-plugin"            : project(":module:module-plugin"),
             "module-theme"             : project(":module:module-theme"),
             "module-welcome"           : "com.timecat.module:module-welcome:$module_welcome_version",
 
@@ -174,7 +174,7 @@ ext {
             "module-master"           : project(":module:module-master"),
             "module-mindmap"          : project(":module:module-mindmap"),
             "module-photo-selector"   : project(":module:module-photo-selector"),
-//            "module-plugin"            : project(":module:module-plugin"),
+            "module-plugin"           : project(":module:module-plugin"),
             "module-theme"            : project(":module:module-theme"),
             "module-welcome"          : project(":module:module-welcome"),
 
@@ -267,7 +267,7 @@ ext {
             "module-master"            : timecatLocal["module-master"],
             "module-mindmap"           : timecatLocal["module-mindmap"],
             "module-photo-selector"    : timecatLocal["module-photo-selector"],
-//            "module-plugin"            : timecatLocal["module-plugin"],
+            "module-plugin"            : timecatLocal["module-plugin"],
             "module-theme"             : timecatLocal["module-theme"],
             "module-welcome"           : timecatLocal["module-welcome"],
 
@@ -651,18 +651,18 @@ ext {
             "preference"               : "androidx.preference:preference:$androidX",
             "support"                  : "androidx.legacy:legacy-support-v4:$androidX",
 
-            "lifecycle-extensions"         : "androidx.lifecycle:lifecycle-extensions:$android_lifecycle_version",
-            "lifecycle-common"             : "androidx.lifecycle:lifecycle-common-java8:$android_lifecycle_version",
+            "lifecycle-extensions"     : "androidx.lifecycle:lifecycle-extensions:$android_lifecycle_version",
+            "lifecycle-common"         : "androidx.lifecycle:lifecycle-common-java8:$android_lifecycle_version",
 
-            "androidx.room:runtime"        : "androidx.room:room-runtime:$androidx_room_version",
-            "androidx.room:testing"        : "androidx.room:room-testing:$androidx_room_version",
-            "androidx.room:compiler"       : "androidx.room:room-compiler:$androidx_room_version",
-            "androidx.room:rxjava2"        : "androidx.room:room-rxjava2:$androidx_room_version",
-            "androidx.room:common"         : "androidx.room:room-common:$androidx_room_version",
+            "androidx.room:runtime"    : "androidx.room:room-runtime:$androidx_room_version",
+            "androidx.room:testing"    : "androidx.room:room-testing:$androidx_room_version",
+            "androidx.room:compiler"   : "androidx.room:room-compiler:$androidx_room_version",
+            "androidx.room:rxjava2"    : "androidx.room:room-rxjava2:$androidx_room_version",
+            "androidx.room:common"     : "androidx.room:room-common:$androidx_room_version",
 
-            "room:runtime"                 : "android.arch.persistence.room:runtime:$roomVersion",
-            "room:rxjava2"                 : "android.arch.persistence.room:rxjava2:$roomVersion",
-            "room:compiler"                : "android.arch.persistence.room:compiler:$roomVersion",
+            "room:runtime"             : "android.arch.persistence.room:runtime:$roomVersion",
+            "room:rxjava2"             : "android.arch.persistence.room:rxjava2:$roomVersion",
+            "room:compiler"            : "android.arch.persistence.room:compiler:$roomVersion",
     ]
 
     extrasLibraries = [

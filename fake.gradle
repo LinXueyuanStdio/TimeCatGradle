@@ -31,6 +31,13 @@ android {
                 arguments = [moduleName: project.getName()]
             }
         }
+
+        manifestPlaceholders = [
+                //AR76G1XB3HKJ 属于应用"测试"独有的 Android AppKey, 用于配置SDK
+                MTA_APPKEY : "AR76G1XB3HKJ",
+                //标注应用推广渠道用以区分新用户来源，可填写如应用宝，豌豆荚等
+                MTA_CHANNEL: "酷安"
+        ]
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
