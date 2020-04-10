@@ -1,4 +1,4 @@
-apply from: rootProject.file("config_base.gradle")
+apply from: project.rootProject.file("TimeCatGradle/config_base.gradle")
 
 apply plugin: 'com.alibaba.arouter'
 apply plugin: 'kotlin-android'
