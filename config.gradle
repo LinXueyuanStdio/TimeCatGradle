@@ -11,7 +11,7 @@ ext {
     // mempool 根目录下
     build_gradle_version = '3.5.3'
     kotlin_version = '1.3.50'
-    shadow_version = "1.0.5"
+    shadow_version = "2.0.12"
 
     //region TimeCat
     component_commonarms_version = "1.0.1"
