@@ -67,6 +67,7 @@ ext {
     widget_chatinput_version = "1.0.1"
 
     plugin_aggreement_picturebed_version = "1.0.1"
+    plugin_aggreement_window_version = "1.0.1"
 
 
     timecatMarven = [
@@ -92,7 +93,7 @@ ext {
             "module-im"                  : project(":module-online:module-im"),
 //            "module-leaderboard"       : project(":module-online:module-leaderboard"),
             "module-login"               : "com.timecat.module:module-login:$module_login_version",
-            "module-moment"              : project(":module-online:module-moment"),
+//            "module-moment"              : project(":module-online:module-moment"),
             "module-search"              : "com.timecat.module:module-search:$module_search_version",
             "module-user"                : "com.timecat.module:module-user:$module_user_version",
 
@@ -162,6 +163,7 @@ ext {
             "component-SelfXunfei"       : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
 
             "plugin-agreement-picturebed": "com.timecat.plugin:agreement-picturebed:$plugin_aggreement_picturebed_version",
+            "plugin-agreement-window"    : "com.timecat.plugin:agreement-window:$plugin_aggreement_window_version",
     ]
 
     timecatLocal = [
@@ -187,7 +189,7 @@ ext {
             "module-im"               : project(":module-online:module-im"),
 //            "module-leaderboard"       : project(":module-online:module-leaderboard"),
             "module-login"            : project(":module-online:module-login"),
-            "module-moment"           : project(":module-online:module-moment"),
+//            "module-moment"           : project(":module-online:module-moment"),
             "module-search"           : project(":module-online:module-search"),
             "module-user"             : project(":module-online:module-user"),
 
@@ -280,7 +282,7 @@ ext {
             "module-im"                  : timecatLocal["module-im"],
 //            "module-leaderboard"       : timecatLocal["module-leaderboard"],
             "module-login"               : timecatLocal["module-login"],
-            "module-moment"              : timecatLocal["module-moment"],
+//            "module-moment"              : timecatLocal["module-moment"],
             "module-search"              : timecatLocal["module-search"],
             "module-user"                : timecatLocal["module-user"],
 
@@ -350,6 +352,7 @@ ext {
             "component-SelfXunfei"       : timecatMarven["component-SelfXunfei"],
 
             "plugin-agreement-picturebed": timecatMarven["plugin-agreement-picturebed"],
+            "plugin-agreement-window"    : timecatMarven["plugin-agreement-window"],
     ]
 
     //endregion
