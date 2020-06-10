@@ -27,7 +27,6 @@ android {
         // ButterKnife
         javaCompileOptions {
             annotationProcessorOptions {
-                includeCompileClasspath = true
                 arguments = [moduleName: project.getName()]
             }
         }

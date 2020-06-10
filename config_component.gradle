@@ -1,9 +1,9 @@
 apply from: project.rootProject.file("TimeCatGradle/config_base.gradle")
 
-apply plugin: 'com.alibaba.arouter'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.alibaba.arouter'
 apply plugin: 'com.jakewharton.butterknife'
 
 android {
@@ -13,7 +13,6 @@ android {
       javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [moduleName: project.getName()]
-                includeCompileClasspath true
             }
         }
     }

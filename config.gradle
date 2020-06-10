@@ -1,11 +1,11 @@
 ext {
     android = [
             compileSdkVersion: 28,
-            buildToolsVersion: "28.0.3",
+            buildToolsVersion: "29.0.2",
             minSdkVersion    : 21,
             targetSdkVersion : 28,
-            versionCode      : 30,
-            versionName      : "0.6.0"
+            versionCode      : 37,
+            versionName      : "0.6.7"
     ]
 
     // mempool 根目录下
@@ -37,6 +37,7 @@ ext {
     component_SelfTheme_version = "1.0.4"
     component_SelfXunfei_version = "1.0.0"
     component_SelfService_version = "1.0.1"
+    component_SelfImage_version = "1.0.0"
 
     component_PackAlert_version = "1.0.0"
     component_PackRefreshList_version = "1.0.1"
@@ -101,13 +102,17 @@ ext {
             "module-artifact"            : "com.timecat.module:module-artifact:$module_artifact_version",
             "module-book-reader"         : "com.timecat.module:module-book-reader:$module_book_reader_version",
             "module-git"                 : project(":module-stand:module-git"),
-            "module-github"              : project(":module-stand:module-github"),
+//            "module-github"              : project(":module-stand:module-github"),
 //            "module-keyboard"          : "com.timecat.module:module-keyboard:$module_keyboard_version",
             "module-neoterm"             : project(":module-stand:module-neoterm"),
             "module-scarlet"             : project(":module-stand:module-scarlet"),
             "module-timetable"           : project(":module-stand:module-timetable"),
             "module-note-org"            : project(":module-stand:module-note-org"),
             "module-file-explorer"       : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
+
+            //middle
+            "middle-setting"             : project(":middle:middle-setting"),
+            "middle-image"               : project(":middle:middle-image"),
 
             //data
             "component-CommonData"       : "com.timecat.component:CommonData:$component_CommonData_version",
@@ -157,6 +162,7 @@ ext {
             "component-SelfBaidu"        : "com.timecat.component:SelfBaidu:$component_SelfBaidu_version",
             "component-SelfEventBus"     : "com.timecat.component:SelfEventBus:$component_SelfEventBus_version",
             "component-SelfMarkdown"     : project(":extend:SelfMarkdown"),
+            "component-SelfImage"        : project(":extend:SelfImage"),
             "component-SelfRouter"       : "com.timecat.component:SelfRouter:$component_SelfRouter_version",
             "component-SelfService"      : "com.timecat.component:SelfService:$component_SelfService_version",
             "component-SelfTheme"        : "com.timecat.component:SelfTheme:$component_SelfTheme_version",
@@ -197,13 +203,17 @@ ext {
             "module-artifact"         : project(":module-stand:module-artifact"),
             "module-book-reader"      : project(":module-stand:module-book-reader"),
             "module-git"              : project(":module-stand:module-git"),
-            "module-github"           : project(":module-stand:module-github"),
+//            "module-github"           : project(":module-stand:module-github"),
 //            "module-keyboard"          : project(":module-stand:module-keyboard"),
             "module-neoterm"          : project(":module-stand:module-neoterm"),
             "module-scarlet"          : project(":module-stand:module-scarlet"),
             "module-timetable"        : project(":module-stand:module-timetable"),
             "module-note-org"         : project(":module-stand:module-note-org"),
             "module-file-explorer"    : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
+
+            //middle
+            "middle-setting"          : project(":middle:middle-setting"),
+            "middle-image"            : project(":middle:middle-image"),
 
             //data
             "component-CommonData"    : project(":data:CommonData"),
@@ -255,6 +265,7 @@ ext {
             "component-SelfMarkdown"  : project(":extend:SelfMarkdown"),
 //            "component-SelfRouter"     : "com.timecat.component:SelfRouter:$component_SelfRouter_version",
             "component-SelfService"   : project(":extend:SelfService"),
+            "component-SelfImage"     : project(":extend:SelfImage"),
 //            "component-SelfTheme"      : project(":extend:SelfTheme"),
 //            "component-SelfXunfei"     : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
     ]
@@ -290,13 +301,17 @@ ext {
             "module-artifact"            : timecatLocal["module-artifact"],
             "module-book-reader"         : timecatLocal["module-book-reader"],
             "module-git"                 : timecatLocal["module-git"],
-            "module-github"              : timecatLocal["module-github"],
+//            "module-github"              : timecatLocal["module-github"],
 //            "module-keyboard"          : timecatLocal["module-keyboard"],
             "module-neoterm"             : timecatLocal["module-neoterm"],
             "module-scarlet"             : timecatLocal["module-scarlet"],
             "module-timetable"           : timecatLocal["module-timetable"],
             "module-note-org"            : timecatLocal["module-note-org"],
             "module-file-explorer"       : timecatMarven["module-file-explorer"],
+
+            //middle
+            "middle-setting"             : timecatLocal["middle-setting"],
+            "middle-image"               : timecatLocal["middle-image"],
 
             //data
             "component-CommonData"       : timecatLocal["component-CommonData"],
@@ -346,6 +361,7 @@ ext {
             "component-SelfBaidu"        : timecatMarven["component-SelfBaidu"],
             "component-SelfEventBus"     : timecatMarven["component-SelfEventBus"],
             "component-SelfMarkdown"     : timecatLocal["component-SelfMarkdown"],
+            "component-SelfImage"        : timecatLocal["component-SelfImage"],
             "component-SelfRouter"       : timecatMarven["component-SelfRouter"],
             "component-SelfService"      : timecatLocal["component-SelfService"],
             "component-SelfTheme"        : timecatMarven["component-SelfTheme"],
