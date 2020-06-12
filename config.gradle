@@ -84,7 +84,7 @@ ext {
             "module-main"                : project(":module:module-main"),
             "module-master"              : project(":module:module-master"),
             "module-mindmap"             : project(":module:module-mindmap"),
-            "module-photo-selector"      : project(":module:module-photo-selector"),
+//            "module-photo-selector"      : project(":module:module-photo-selector"),
             "module-plugin"              : project(":module:module-plugin"),
             "module-theme"               : project(":module:module-theme"),
             "module-welcome"             : "com.timecat.module:module-welcome:$module_welcome_version",
@@ -95,7 +95,7 @@ ext {
 //            "module-leaderboard"       : project(":module-online:module-leaderboard"),
             "module-login"               : "com.timecat.module:module-login:$module_login_version",
 //            "module-moment"              : project(":module-online:module-moment"),
-            "module-search"              : "com.timecat.module:module-search:$module_search_version",
+//            "module-search"              : "com.timecat.module:module-search:$module_search_version",
             "module-user"                : "com.timecat.module:module-user:$module_user_version",
 
             //module-stand
@@ -185,7 +185,7 @@ ext {
             "module-main"             : project(":module:module-main"),
             "module-master"           : project(":module:module-master"),
             "module-mindmap"          : project(":module:module-mindmap"),
-            "module-photo-selector"   : project(":module:module-photo-selector"),
+//            "module-photo-selector"   : project(":module:module-photo-selector"),
             "module-plugin"           : project(":module:module-plugin"),
             "module-theme"            : project(":module:module-theme"),
             "module-welcome"          : project(":module:module-welcome"),
@@ -196,7 +196,7 @@ ext {
 //            "module-leaderboard"       : project(":module-online:module-leaderboard"),
             "module-login"            : project(":module-online:module-login"),
 //            "module-moment"           : project(":module-online:module-moment"),
-            "module-search"           : project(":module-online:module-search"),
+//            "module-search"           : project(":module-online:module-search"),
             "module-user"             : project(":module-online:module-user"),
 
             //module-stand
@@ -283,7 +283,7 @@ ext {
             "module-main"                : timecatLocal["module-main"],
             "module-master"              : timecatLocal["module-master"],
             "module-mindmap"             : timecatLocal["module-mindmap"],
-            "module-photo-selector"      : timecatLocal["module-photo-selector"],
+//            "module-photo-selector"      : timecatLocal["module-photo-selector"],
             "module-plugin"              : timecatLocal["module-plugin"],
             "module-theme"               : timecatLocal["module-theme"],
             "module-welcome"             : timecatLocal["module-welcome"],
@@ -294,7 +294,7 @@ ext {
 //            "module-leaderboard"       : timecatLocal["module-leaderboard"],
             "module-login"               : timecatLocal["module-login"],
 //            "module-moment"              : timecatLocal["module-moment"],
-            "module-search"              : timecatLocal["module-search"],
+//            "module-search"              : timecatLocal["module-search"],
             "module-user"                : timecatLocal["module-user"],
 
             //module-stand
@@ -428,9 +428,9 @@ ext {
     android_support_multidex_version = '2.0.1'
     android_support_version = '1.1.0'
     android_annotation_version = '1.0.2'
-    android_constraint_layout_version = '2.0.0-beta1'
-    android_room_version = '2.1.0-beta01'
-    android_lifecycle_version = '2.1.0-beta01'
+    android_constraint_layout_version = '2.0.0-beta4'
+    android_room_version = '2.1.0'
+    android_lifecycle_version = '2.1.0'
     android_test_espresso_version = '3.1.1'
     android_test_version = '1.1.1'
     android_test_uiautomator_version = '2.2.0'
