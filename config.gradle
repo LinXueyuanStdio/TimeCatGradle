@@ -107,6 +107,7 @@ ext {
             "module-neoterm"             : project(":module-stand:module-neoterm"),
             "module-scarlet"             : project(":module-stand:module-scarlet"),
             "module-timetable"           : project(":module-stand:module-timetable"),
+            "module-explorer"            : project(":module-stand:module-explorer"),
             "module-note-org"            : project(":module-stand:module-note-org"),
             "module-file-explorer"       : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
 
@@ -208,6 +209,7 @@ ext {
             "module-neoterm"          : project(":module-stand:module-neoterm"),
             "module-scarlet"          : project(":module-stand:module-scarlet"),
             "module-timetable"        : project(":module-stand:module-timetable"),
+            "module-explorer"         : project(":module-stand:module-explorer"),
             "module-note-org"         : project(":module-stand:module-note-org"),
             "module-file-explorer"    : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
 
@@ -306,6 +308,7 @@ ext {
             "module-neoterm"             : timecatLocal["module-neoterm"],
             "module-scarlet"             : timecatLocal["module-scarlet"],
             "module-timetable"           : timecatLocal["module-timetable"],
+            "module-explorer"            : timecatLocal["module-explorer"],
             "module-note-org"            : timecatLocal["module-note-org"],
             "module-file-explorer"       : timecatMarven["module-file-explorer"],
 
@@ -534,7 +537,6 @@ ext {
             "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:$butterknifeSdkVersion",
             "pickerview"                   : "com.contrarywind:Android-PickerView:4.1.2",
             "photoview"                    : "com.github.chrisbanes.photoview:library:1.2.3",
-            "numberprogressbar"            : "com.daimajia.numberprogressbar:library:1.2@aar",
             "nineoldandroids"              : "com.nineoldandroids:library:2.4.0",
             "paginate"                     : "com.github.markomilos:paginate:0.5.1",
             "vlayout"                      : "com.alibaba.android:vlayout:1.1.0@aar",
