@@ -4,8 +4,8 @@ ext {
             buildToolsVersion: "29.0.2",
             minSdkVersion    : 21,
             targetSdkVersion : 28,
-            versionCode      : 37,
-            versionName      : "0.6.7"
+            versionCode      : 38,
+            versionName      : "0.6.8"
     ]
 
     // mempool 根目录下
@@ -81,7 +81,7 @@ ext {
 //            "module-editor"            : project(":module:module-editor"),
 //            "module-editor-small"      : project(":module:module-editor-small"),
 //            "module-editor-idea"       : project(":module:module-editor-idea"),
-            "module-main"                : project(":module:module-main"),
+//            "module-main"                : project(":module:module-main"),
             "module-master"              : project(":module:module-master"),
             "module-mindmap"             : project(":module:module-mindmap"),
 //            "module-photo-selector"      : project(":module:module-photo-selector"),
@@ -132,7 +132,7 @@ ext {
             "component-CommonStatic"     : "com.timecat.component:CommonStatic:$component_CommonStatic_version",
             "component-BlockUI"          : project(":component:BlockUI"),
             "component-CommonUI"         : "com.timecat.component:CommonUI:$component_CommonUI_version",
-            "component-LightUI"          : project(":component:LightUI"),
+//            "component-LightUI"          : project(":component:LightUI"),
 
             //res
             "component-CommonResource"   : "com.timecat.component:CommonResource:$component_CommonResource_version",
@@ -183,7 +183,7 @@ ext {
 //            "module-editor"           : project(":module:module-editor"),
 //            "module-editor-small"      : project(":module:module-editor-small"),
 //            "module-editor-idea"      : project(":module:module-editor-idea"),
-            "module-main"             : project(":module:module-main"),
+//            "module-main"             : project(":module:module-main"),
             "module-master"           : project(":module:module-master"),
             "module-mindmap"          : project(":module:module-mindmap"),
 //            "module-photo-selector"   : project(":module:module-photo-selector"),
@@ -234,7 +234,7 @@ ext {
             "component-CommonStatic"  : project(":component:CommonStatic"),
             "component-BlockUI"       : project(":component:BlockUI"),
             "component-CommonUI"      : project(":component:CommonUI"),
-            "component-LightUI"       : project(":component:LightUI"),
+//            "component-LightUI"       : project(":component:LightUI"),
 
             //res
             "component-CommonResource": project(":res:CommonResource"),
@@ -282,7 +282,7 @@ ext {
 //            "module-editor"            : timecatLocal["module-editor"],
 //            "module-editor-small"      : timecatLocal["module-editor-small"],
 //            "module-editor-idea"       : timecatLocal["module-editor-idea"],
-            "module-main"                : timecatLocal["module-main"],
+//            "module-main"                : timecatLocal["module-main"],
             "module-master"              : timecatLocal["module-master"],
             "module-mindmap"             : timecatLocal["module-mindmap"],
 //            "module-photo-selector"      : timecatLocal["module-photo-selector"],
@@ -333,7 +333,7 @@ ext {
             "component-CommonStatic"     : timecatLocal["component-CommonStatic"],
             "component-BlockUI"          : timecatLocal["component-BlockUI"],
             "component-CommonUI"         : timecatLocal["component-CommonUI"],
-            "component-LightUI"          : timecatLocal["component-LightUI"],
+//            "component-LightUI"          : timecatLocal["component-LightUI"],
 
             //res
             "component-CommonResource"   : timecatLocal["component-CommonResource"],
@@ -598,8 +598,8 @@ ext {
             "realtimeblurview"             : "com.github.mmin18:realtimeblurview:1.0.6",
             "circleimageview"              : "de.hdodenhof:circleimageview:2.2.0",
             "loadinglayout"                : "com.github.czy1121:loadinglayout:1.0.1",
-            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.0-beta6",
-            "banner"                       : "com.youth.banner:banner:1.4.9",
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
+            "banner"                       : "com.youth.banner:banner:2.0.11",
 
             //插件化
             "shadow-dynamic-host"          : "com.tencent.shadow.dynamic:host:$shadow_version",
