@@ -1,0 +1,26 @@
+apply from: "../../TimeCatGradle/config_base.gradle"
+
+dependencies {
+}
+
+////////// 打包发布配置开始 ////////
+apply plugin: 'maven'
+ext {
+    // 从Github上clone下来的项目的本地地址
+    GITHUB_REPO_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.widget'
+    PUBLISH_ARTIFACT_ID = 'widget-timely'
+    PUBLISH_VERSION = "1.0.0"
+}
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
+////////// 打包发布配置结束 ////////
