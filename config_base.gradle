@@ -1,9 +1,5 @@
 apply plugin: 'com.android.library'
 
-Properties properties = new Properties()
-// local.properties file in the root director
-properties.load(rootProject.file('local.properties').newDataInputStream())
-
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
