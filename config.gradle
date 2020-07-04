@@ -154,6 +154,7 @@ ext {
             "widget-photoview"           : "com.timecat.widget:widget-photoview:1.0.0",
             "widget-swirl"               : "com.timecat.widget:widget-swirl:1.0.0",
             "widget-timely"              : "com.timecat.widget:widget-timely:1.0.0",
+            "widget-timetable"           : "com.timecat.widget:widget-timetable:1.0.0",
 
             //extend
             "component-PackAlert"        : "com.timecat.component:PackAlert:$component_PackAlert_version",
@@ -256,6 +257,7 @@ ext {
             "widget-photoview"        : "com.timecat.widget:widget-photoview:1.0.0",
             "widget-swirl"            : project("widget:widget-swirl"),
             "widget-timely"           : project("widget:widget-timely"),
+            "widget-timetable"        : project("widget:widget-timetable"),
 
             //extend
 //            "component-PackAlert"      : "com.timecat.component:PackAlert:$component_PackAlert_version",
@@ -355,6 +357,7 @@ ext {
             "widget-photoview"           : timecatMarven["widget-photoview"],
             "widget-swirl"               : timecatLocal["widget-swirl"],
             "widget-timely"              : timecatLocal["widget-timely"],
+            "widget-timetable"           : timecatLocal["widget-timetable"],
 
             //extend
             "component-PackAlert"        : timecatMarven["component-PackAlert"],
