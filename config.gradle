@@ -1,58 +1,20 @@
 ext {
     android = [
-            compileSdkVersion: 29,
-            buildToolsVersion: "29.0.2",
-            minSdkVersion    : 21,
-            targetSdkVersion : 28,
-            versionCode      : 39,
-            versionName      : "0.6.9"
+            compileSdkVersion      : 29,
+            buildToolsVersion      : "29.0.2",
+            minSdkVersion          : 21,
+            targetSdkVersion       : 28,
+            versionCode            : 39,
+            versionName            : "0.6.9",
+            globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
-
     // mempool 根目录下
     build_gradle_version = '3.5.3'
-    kotlin_version = '1.3.50'
-    shadow_version = "2.0.12"
 
     //region TimeCat
     component_commonarms_version = "1.0.1"
-    component_CommonBase_version = "1.1.2"
-    component_CommonData_version = "1.1.2"
-    component_CommonResource_version = "1.1.5"
-    component_CommonSDK_version = "1.1.1"
-    component_CommonStatic_version = "1.1.9"
-    component_CommonUI_version = "1.0.2"
-    component_lightui_version = "1.0.0"
-    component_BaseMvp_version = "1.0.0"
-    component_CommonBmob_version = "1.0.4"
-    component_CommonGreenDao_version = "1.0.0"
-    component_CommonSetting_version = "1.0.1"
-    styles_version = "1.0.0"
-
-    component_SelfArms_version = "1.0.0"
-    component_SelfBaidu_version = "1.0.0"
-    module_bugly_version = "1.0.1"
-    component_SelfData_version = "1.0.1"
-    component_SelfEventBus_version = "1.0.0"
-    component_SelfRouter_version = "1.0.5"
-    component_SelfTheme_version = "1.0.4"
-    component_SelfXunfei_version = "1.0.0"
-    component_SelfService_version = "1.0.1"
-    component_SelfImage_version = "1.0.0"
-
-    component_PackAlert_version = "1.0.0"
-    component_PackRefreshList_version = "1.0.1"
-    component_PackIM_version = "1.0.0"
-
-    module_about_version = "1.0.8"
-    module_data_version = "1.0.2"
-    module_artifact_version = "1.0.0"
-    module_book_reader_version = "1.1.1"
-    module_file_explorer_version = "1.0.9"
     module_keyboard_version = "1.0.10"
-    module_login_version = "1.0.11"
     module_search_version = "1.0.7"
-    module_user_version = "1.0.10"
-    module_welcome_version = '1.0.10'
 
     module_git_version = '1.0.0'
     module_github_version = '1.0.0'
@@ -60,6 +22,44 @@ ext {
     module_moment_version = '1.0.0'
     module_timetable_version = '1.0.0'
 
+
+    //1. module
+    module_about_version = "1.0.8"
+    module_bugly_version = "1.0.1"
+    module_data_version = "1.0.2"
+    module_welcome_version = '1.0.10'
+
+    //2. module-online
+    module_login_version = "1.0.11"
+    module_user_version = "1.0.10"
+
+    //3. module-stand
+    module_artifact_version = "1.0.0"
+    module_book_reader_version = "1.1.1"
+    module_file_explorer_version = "1.0.9"
+
+    //4. middle
+
+    //5. data
+    component_CommonData_version = "1.1.2"
+    component_CommonBmob_version = "1.0.4"
+    component_CommonGreenDao_version = "1.0.0"
+    component_CommonSetting_version = "1.0.1"
+    component_SelfData_version = "1.0.1"
+
+    //6. component
+    styles_version = "1.0.0"
+    component_CommonBase_version = "1.1.2"
+    component_CommonSDK_version = "1.1.1"
+    component_CommonStatic_version = "1.1.9"
+    component_CommonUI_version = "1.0.2"
+    component_lightui_version = "1.0.0"
+    component_BaseMvp_version = "1.0.0"
+
+    //7. res
+    component_CommonResource_version = "1.1.5"
+
+    //8. widget
     widget_burstlink_version = "1.0.1"
     widget_edittext_version = "1.0.1"
     widget_calendar_version = "1.0.0"
@@ -67,12 +67,25 @@ ext {
     widget_messagelist_version = "1.0.1"
     widget_chatinput_version = "1.0.1"
 
+    //9. extend
+    component_SelfArms_version = "1.0.0"
+    component_SelfBaidu_version = "1.0.0"
+    component_SelfEventBus_version = "1.0.0"
+    component_SelfRouter_version = "1.0.5"
+    component_SelfTheme_version = "1.0.4"
+    component_SelfXunfei_version = "1.0.0"
+    component_SelfService_version = "1.0.1"
+    component_SelfImage_version = "1.0.0"
+    component_PackAlert_version = "1.0.0"
+    component_PackRefreshList_version = "1.0.1"
+    component_PackIM_version = "1.0.0"
+
+    //10. plugin
     plugin_aggreement_picturebed_version = "1.0.1"
     plugin_aggreement_window_version = "1.0.1"
 
-
     timecatMarven = [
-            //module
+            //1. module
             "module-about"               : "com.timecat.module:module-about:$module_about_version",
             "module-bugly"               : "com.timecat.component:module-bugly:$module_bugly_version",
             "module-controller"          : project(":module:module-controller"),
@@ -89,7 +102,7 @@ ext {
             "module-theme"               : project(":module:module-theme"),
             "module-welcome"             : "com.timecat.module:module-welcome:$module_welcome_version",
 
-            //module-online
+            //2. module-online
 //            "module-app-detail"        : project(":module-online:module-app-detail"),
             "module-im"                  : project(":module-online:module-im"),
 //            "module-leaderboard"       : project(":module-online:module-leaderboard"),
@@ -98,7 +111,7 @@ ext {
 //            "module-search"              : "com.timecat.module:module-search:$module_search_version",
             "module-user"                : "com.timecat.module:module-user:$module_user_version",
 
-            //module-stand
+            //3. module-stand
             "module-artifact"            : "com.timecat.module:module-artifact:$module_artifact_version",
             "module-book-reader"         : "com.timecat.module:module-book-reader:$module_book_reader_version",
             "module-git"                 : project(":module-stand:module-git"),
@@ -110,12 +123,13 @@ ext {
             "module-explorer"            : project(":module-stand:module-explorer"),
             "module-note-org"            : project(":module-stand:module-note-org"),
             "module-file-explorer"       : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
+            "module-file"                : "com.timecat.module:module-file:1.0.0",
 
-            //middle
+            //4. middle
             "middle-setting"             : project(":middle:middle-setting"),
             "middle-image"               : project(":middle:middle-image"),
 
-            //data
+            //5. data
             "component-CommonData"       : "com.timecat.component:CommonData:$component_CommonData_version",
             "component-CommonRoom"       : project(":data:CommonRoom"),
             "component-CommonGreenDao"   : project(":data:CommonGreenDao"),
@@ -124,7 +138,7 @@ ext {
             "component-CommonSetting"    : "com.timecat.component:CommonSetting:$component_CommonSetting_version",
             "component-SelfData"         : "com.timecat.component:SelfData:$component_SelfData_version",
 
-            //component
+            //6. component
 //            "styles"                   : "com.timecat.component:styles:$styles_version",
             "component-BaseMvp"          : "com.timecat.component:basemvp:$component_BaseMvp_version",
             "component-CommonBase"       : "com.timecat.component:CommonBase:$component_CommonBase_version",
@@ -134,11 +148,11 @@ ext {
             "component-CommonUI"         : "com.timecat.component:CommonUI:$component_CommonUI_version",
 //            "component-LightUI"          : project(":component:LightUI"),
 
-            //res
+            //7. res
             "component-CommonResource"   : "com.timecat.component:CommonResource:$component_CommonResource_version",
             "component-ResBlock"         : project(":res:ResBlock"),
 
-            //widget
+            //8. widget
             "widget-burstlink"           : "com.timecat.widget:widget-burstlink:$widget_burstlink_version",
             "widget-edittext"            : "com.timecat.widget:widget-edittext:$widget_edittext_version@aar",
             "widget-calendar"            : "com.timecat.widget:widget-calendar:$widget_calendar_version",
@@ -156,7 +170,7 @@ ext {
             "widget-timely"              : "com.timecat.widget:widget-timely:1.0.0",
             "widget-timetable"           : "com.timecat.widget:widget-timetable:1.0.0",
 
-            //extend
+            //9. extend
             "component-PackAlert"        : "com.timecat.component:PackAlert:$component_PackAlert_version",
             "component-PackIM"           : project(":extend:PackIM"),
             "component-PackRefreshList"  : "com.timecat.component:PackRefreshList:$component_PackRefreshList_version",
@@ -170,12 +184,13 @@ ext {
             "component-SelfTheme"        : "com.timecat.component:SelfTheme:$component_SelfTheme_version",
             "component-SelfXunfei"       : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
 
+            //10. plugin
             "plugin-agreement-picturebed": "com.timecat.plugin:agreement-picturebed:$plugin_aggreement_picturebed_version",
             "plugin-agreement-window"    : "com.timecat.plugin:agreement-window:$plugin_aggreement_window_version",
     ]
 
     timecatLocal = [
-            //module
+            //1. module
             "module-about"            : project(":module:module-about"),
             "module-bugly"            : project(":module:module-bugly"),
             "module-controller"       : project(":module:module-controller"),
@@ -192,7 +207,7 @@ ext {
             "module-theme"            : project(":module:module-theme"),
             "module-welcome"          : project(":module:module-welcome"),
 
-            //module-online
+            //2. module-online
 //            "module-app-detail"        : project(":module-online:module-app-detail"),
             "module-im"               : project(":module-online:module-im"),
 //            "module-leaderboard"       : project(":module-online:module-leaderboard"),
@@ -201,7 +216,7 @@ ext {
 //            "module-search"           : project(":module-online:module-search"),
             "module-user"             : project(":module-online:module-user"),
 
-            //module-stand
+            //3. module-stand
             "module-artifact"         : project(":module-stand:module-artifact"),
             "module-book-reader"      : project(":module-stand:module-book-reader"),
             "module-git"              : project(":module-stand:module-git"),
@@ -213,12 +228,13 @@ ext {
             "module-explorer"         : project(":module-stand:module-explorer"),
             "module-note-org"         : project(":module-stand:module-note-org"),
             "module-file-explorer"    : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
+            "module-file"             : project(":module-stand:module-file"),
 
-            //middle
+            //4. middle
             "middle-setting"          : project(":middle:middle-setting"),
             "middle-image"            : project(":middle:middle-image"),
 
-            //data
+            //5. data
             "component-CommonData"    : project(":data:CommonData"),
             "component-CommonRoom"    : project(":data:CommonRoom"),
             "component-CommonGreenDao": project(":data:CommonGreenDao"),
@@ -227,7 +243,7 @@ ext {
             "component-CommonSetting" : project(":data:CommonSetting"),
             "component-SelfData"      : project(":data:SelfData"),
 
-            //component
+            //6. component
 //            "styles"                   : "com.timecat.component:styles:$styles_version",
 //            "component-BaseMvp"        : "com.timecat.component:basemvp:$component_BaseMvp_version",
             "component-CommonBase"    : project(":component:CommonBase"),
@@ -237,11 +253,11 @@ ext {
             "component-CommonUI"      : project(":component:CommonUI"),
 //            "component-LightUI"       : project(":component:LightUI"),
 
-            //res
+            //7. res
             "component-CommonResource": project(":res:CommonResource"),
             "component-ResBlock"      : project(":res:ResBlock"),
 
-            //widget
+            //8. widget
             "widget-burstlink"        : "com.timecat.widget:widget-burstlink:$widget_burstlink_version",
             "widget-edittext"         : "com.timecat.widget:widget-edittext:$widget_edittext_version@aar",
             "widget-calendar"         : "com.timecat.widget:widget-calendar:$widget_calendar_version",
@@ -259,7 +275,7 @@ ext {
 //            "widget-timely"           : project("widget:widget-timely"),
 //            "widget-timetable"        : project("widget:widget-timetable"),
 
-            //extend
+            //9. extend
 //            "component-PackAlert"      : "com.timecat.component:PackAlert:$component_PackAlert_version",
 //            "component-PackIM"         : project(":extend:PackIM"),
 //            "component-PackRefreshList": "com.timecat.component:PackRefreshList:$component_PackRefreshList_version",
@@ -275,7 +291,7 @@ ext {
     ]
 
     timecat = [
-            //module
+            //1. module
             "module-about"               : timecatLocal["module-about"],
             "module-bugly"               : timecatLocal["module-bugly"],
             "module-controller"          : timecatLocal["module-controller"],
@@ -292,7 +308,7 @@ ext {
             "module-theme"               : timecatLocal["module-theme"],
             "module-welcome"             : timecatLocal["module-welcome"],
 
-            //module-online
+            //2. module-online
 //            "module-app-detail"        : timecatLocal["module-app-detail"],
             "module-im"                  : timecatLocal["module-im"],
 //            "module-leaderboard"       : timecatLocal["module-leaderboard"],
@@ -301,7 +317,7 @@ ext {
 //            "module-search"              : timecatLocal["module-search"],
             "module-user"                : timecatLocal["module-user"],
 
-            //module-stand
+            //3. module-stand
             "module-artifact"            : timecatLocal["module-artifact"],
             "module-book-reader"         : timecatLocal["module-book-reader"],
             "module-git"                 : timecatLocal["module-git"],
@@ -313,12 +329,13 @@ ext {
             "module-explorer"            : timecatLocal["module-explorer"],
             "module-note-org"            : timecatLocal["module-note-org"],
             "module-file-explorer"       : timecatMarven["module-file-explorer"],
+            "module-file"                : timecatLocal["module-file"],
 
-            //middle
+            //4. middle
             "middle-setting"             : timecatLocal["middle-setting"],
             "middle-image"               : timecatLocal["middle-image"],
 
-            //data
+            //5. data
             "component-CommonData"       : timecatLocal["component-CommonData"],
             "component-CommonRoom"       : timecatLocal["component-CommonRoom"],
             "component-CommonGreenDao"   : timecatLocal["component-CommonGreenDao"],
@@ -327,7 +344,7 @@ ext {
             "component-CommonSetting"    : timecatLocal["component-CommonSetting"],
             "component-SelfData"         : timecatLocal["component-SelfData"],
 
-            //component
+            //6. component
 //            "styles"                   : timecatMarven["styles"],
             "component-BaseMvp"          : timecatMarven["component-BaseMvp"],
             "component-CommonBase"       : timecatLocal["component-CommonBase"],
@@ -337,11 +354,11 @@ ext {
             "component-CommonUI"         : timecatLocal["component-CommonUI"],
 //            "component-LightUI"          : timecatLocal["component-LightUI"],
 
-            //res
+            //7. res
             "component-CommonResource"   : timecatLocal["component-CommonResource"],
             "component-ResBlock"         : timecatLocal["component-ResBlock"],
 
-            //widget
+            //8. widget
             "widget-burstlink"           : timecatMarven["widget-burstlink"],
             "widget-edittext"            : timecatMarven["widget-edittext"],
             "widget-calendar"            : timecatMarven["widget-calendar"],
@@ -359,7 +376,7 @@ ext {
             "widget-timely"              : timecatMarven["widget-timely"],
             "widget-timetable"           : timecatMarven["widget-timetable"],
 
-            //extend
+            //9. extend
             "component-PackAlert"        : timecatMarven["component-PackAlert"],
             "component-PackIM"           : timecatLocal["component-PackIM"],
             "component-PackRefreshList"  : timecatMarven["component-PackRefreshList"],
@@ -373,39 +390,24 @@ ext {
             "component-SelfTheme"        : timecatMarven["component-SelfTheme"],
             "component-SelfXunfei"       : timecatMarven["component-SelfXunfei"],
 
+            //10. plugin
             "plugin-agreement-picturebed": timecatMarven["plugin-agreement-picturebed"],
             "plugin-agreement-window"    : timecatMarven["plugin-agreement-window"],
     ]
-
-    //endregion
-
-    //region support
-    androidX = '1.1.0'
-    navigation = '1.0.0'
-    constraintLayout = '2.0.0-beta1'
     //endregion
 
     //region 第三方
     retrofit = '2.6.0'
     gms = "11.8.0"
-    butterKnifeVersion = '8.5.1'
     state_version = '1.2.0'
-    lombokVersion = '1.16.18'
     thirtyinchVersion = '0.9.6'
-    junitVersion = '4.12'
     mockitoVersion = '1.10.19'
     assertjVersion = '2.5.0'
-    espresseVersion = '2.2.2'
     requery = '1.3.2'
 
     commonmark = '0.10.0'
 
-    markwonVersion = "2.0.0"
-
-    permissionsVersion = '3.2.0'
-
     //数据库
-//        epoxyVersion = '2.16.4'
     lifecycle_version = '1.1.1'
 
     // 其他模块可用
@@ -428,93 +430,70 @@ ext {
     apollo = '1.0.1-SNAPSHOT'
     pandora = 'v1.2.2'
     deepLinkDispatch = '3.1.1'
-
-
-    jetbrains_annotations_version = '16.0.3'
-    android_support_multidex_version = '2.0.1'
-    android_support_version = '1.1.0'
-    android_annotation_version = '1.0.2'
-    android_constraint_layout_version = '2.0.0-beta4'
-    android_room_version = '2.1.0'
-    android_lifecycle_version = '2.1.0'
-    android_test_espresso_version = '3.1.1'
     android_test_version = '1.1.1'
     android_test_uiautomator_version = '2.2.0'
-    dagger_version = '2.22.1'
     dropbox_core_sdk_version = '3.0.11'
     junit_version = '4.12'
     loremipsum_version = '1.0'
     juniversalchardet_version = '1.0.3'
     org_java_version = '1.3-SNAPSHOT'
     evernote_android_job_version = '1.2.6'
-    joda_time_version = '2.10.1'
-    jgit_version = '4.4.1.201607150455-r'
-    gson_version = '2.8.5'
-
-
-    constraintVersion = "1.1.3"
-
-    butterknifeVersion = "10.1.0"
-
-    okhttpVersion = "3.11.0"
-    retrofitVersion = "2.6.0"
-    rxJavaVersion = "1.3.8"
-    rxAndroidVersion = "1.2.1"
-    rxJava2Version = "2.2.1"
-    rxAndroid2Version = "2.1.0"
-
-    arouterVersion = "1.4.0"
-    arouterCompilerVersion = "1.2.1"
-
-    gsonVersion = "2.8.5"
-    eventBusVersion = "3.1.1"
-    timberVersion = "4.7.1"
-    agentwebVersion = "4.0.2"
-
-    retrofitSdkVersion = "2.6.0"
-    dagger2SdkVersion = "2.22.1"
-    glideSdkVersion = "4.8.0"
-    butterknifeSdkVersion = "10.1.0"
-    rxlifecycleSdkVersion = "1.0"
-    rxlifecycle2SdkVersion = "2.2.1"
-    espressoSdkVersion = "3.0.1"
-    canarySdkVersion = "1.5.4"
-    canaryVersion = "1.6.1"
-
-    androidx_room_version = "2.1.0-beta01"
-    supportVersion = "27.1.1"
-    roomVersion = '1.1.1'
     retrofit = '2.4.0'
     gms = "11.8.0"
-    butterKnifeVersion = '10.1.0'
-    state_version = '1.2.0'
     lombokVersion = '1.16.18'
-    thirtyinchVersion = '0.9.6'
     junitVersion = '4.12'
-
-    mockitoVersion = '1.10.19'
-    assertjVersion = '2.5.0'
-    espresseVersion = '2.2.2'
     requery = '1.3.2'
-
     commonmark = '0.10.0'
-
-    permissionsVersion = '3.2.0'
     //endregion
 
-    path = [
-            globalProguardFilesPath: "./proguard-global-rules.pro"
-    ]
+    //region 第三方
+    //1. kotlin
+    kotlin_version = '1.3.72'
+    jetbrains_annotations_version = '16.0.3'
+    kotlinx_coroutines_version = '1.3.7'
 
+    //2. network
+    retrofitSdkVersion = "2.6.0"
+
+    //3. image
+    glideSdkVersion = "4.8.0"
+
+    //4. web
+    agentwebVersion = "4.0.2"
+
+    //5. view
+    butterknifeSdkVersion = "10.1.0"
+
+    //6. rx1
+    rxlifecycleSdkVersion = "1.0"
+
+    //7. rx2
+    rxlifecycle2SdkVersion = "2.2.1"
+
+    //8. tools
+    dagger2SdkVersion = "2.22.1"
+    shadow_version = "2.0.12"
+
+    //9. test
+    espressoSdkVersion = "3.0.1"
+    canarySdkVersion = "1.5.4"
+
+//    implementation rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
+//    implementation rootProject.ext.dependencies["kotlinx-coroutines-android"]
+//    implementation rootProject.ext.dependencies["kotlinx-coroutines-core"]
     dependencies = [
-            //kotlin
-            "kotlin-stdlib"                : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
-            "kotlin-gradle-plugin"         : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",
+            //1. kotlin
+            "kotlin-stdlib-jdk7"           : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",//implementation rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
+            "kotlin-stdlib"                : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",//implementation rootProject.ext.dependencies["kotlin-stdlib"]
+            "kotlin-gradle-plugin"         : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",//implementation rootProject.ext.dependencies["kotlin-gradle-plugin"]
+            "org.jetbrains:annotations"    : "org.jetbrains:annotations:$jetbrains_annotations_version",//implementation rootProject.ext.dependencies["org.jetbrains:annotations"]
+            "kotlinx-coroutines-android"   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_version",//implementation rootProject.ext.dependencies["kotlinx-coroutines-android"]
+            "kotlinx-coroutines-core"      : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version",//implementation rootProject.ext.dependencies["kotlinx-coroutines-core"]
 
             //support
             "support-v4"                   : "androidx.legacy:legacy-support-v4:1.0.0",
 
-            //network
+            //2. network
             "retrofit"                     : "com.squareup.retrofit2:retrofit:$retrofitSdkVersion",
             "retrofit-converter-gson"      : "com.squareup.retrofit2:converter-gson:$retrofitSdkVersion",
             "retrofit-adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:$retrofitSdkVersion",
@@ -523,18 +502,18 @@ ext {
             "okhttp-urlconnection"         : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
             "okhttp3:logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:3.10.0",
 
+            //3. image
             "glide"                        : "com.github.bumptech.glide:glide:$glideSdkVersion",
             "glide-compiler"               : "com.github.bumptech.glide:compiler:$glideSdkVersion",
             "glide-loader-okhttp3"         : "com.github.bumptech.glide:okhttp3-integration:$glideSdkVersion",
             "picasso"                      : "com.squareup.picasso:picasso:2.5.2",
 
-            "fastjson"                     : 'com.alibaba:fastjson:1.2.9',
-
+            //4. web
             "agentweb"                     : "com.just.agentweb:agentweb:$agentwebVersion",
             "agentweb-download"            : "com.just.agentweb:download:$agentwebVersion",
             "agentweb-filechooser"         : "com.just.agentweb:filechooser:$agentwebVersion",
 
-            //view
+            //5. view
             "autolayout"                   : "com.zhy:autolayout:1.4.5",
             "butterknife"                  : "com.jakewharton:butterknife:$butterknifeSdkVersion",
             "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:$butterknifeSdkVersion",
@@ -544,70 +523,11 @@ ext {
             "paginate"                     : "com.github.markomilos:paginate:0.5.1",
             "vlayout"                      : "com.alibaba.android:vlayout:1.1.0@aar",
             "lottie"                       : "com.airbnb.android:lottie:2.5.4",
-
-            //rx1
-            "rxandroid"                    : "io.reactivex:rxandroid:1.2.1",
-            "rxjava"                       : "io.reactivex:rxjava:1.3.2",
-            "rxlifecycle"                  : "com.trello:rxlifecycle:$rxlifecycleSdkVersion",
-            "rxlifecycle-components"       : "com.trello:rxlifecycle-components:$rxlifecycleSdkVersion",
-            "rxcache"                      : "com.github.VictorAlbertos.RxCache:runtime:1.7.0-1.x",
-            "rxcache-jolyglot-gson"        : "com.github.VictorAlbertos.Jolyglot:gson:0.0.3",
-            "rxbinding-recyclerview-v7"    : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.1",
-            "rxpermissions"                : "com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar",
-            "rxerrorhandler"               : "me.jessyan:rxerrorhandler:1.0.1",
-
-            //rx2
-            "rxandroid2"                   : "io.reactivex.rxjava2:rxandroid:2.1.1",
-            "rxjava2"                      : "io.reactivex.rxjava2:rxjava:2.2.4",
-            "rxlifecycle2"                 : "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycle2SdkVersion",
-            "rxlifecycle2-android"         : "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycle2SdkVersion",
-            "rxlifecycle2-components"      : "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycle2SdkVersion",
-            "rxcache2"                     : "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x",
-            "rxpermissions2"               : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar",
-            "rxerrorhandler2"              : "me.jessyan:rxerrorhandler:2.1.1",
-
-            //tools
-            "dagger2"                      : "com.google.dagger:dagger:$dagger2SdkVersion",
-            "dagger2-android"              : "com.google.dagger:dagger-android:$dagger2SdkVersion",
-            "dagger2-android-support"      : "com.google.dagger:dagger-android-support:$dagger2SdkVersion",
-            "dagger2-compiler"             : "com.google.dagger:dagger-compiler:$dagger2SdkVersion",
-            "dagger2-android-processor"    : "com.google.dagger:dagger-android-processor:$dagger2SdkVersion",
-            "androideventbus"              : "org.simple:androideventbus:1.0.5.1",
-            "otto"                         : "com.squareup:otto:1.3.8",
-            "gson"                         : "com.google.code.gson:gson:2.8.5",
-            "javax.annotation"             : "javax.annotation:jsr250-api:1.0",
-            "arouter"                      : "com.alibaba:arouter-api:1.3.1",
-            "arouter-compiler"             : "com.alibaba:arouter-compiler:1.1.4",
-            "progressmanager"              : "me.jessyan:progressmanager:1.5.0",
-            "retrofit-url-manager"         : "me.jessyan:retrofit-url-manager:1.4.0",
-            "lifecyclemodel"               : "me.jessyan:lifecyclemodel:1.0.1",
-
-            //test
-            "junit"                        : "junit:junit:4.12",
-            "androidJUnitRunner"           : "androidx.test.runner.AndroidJUnitRunner",
-            "runner"                       : 'androidx.test.ext:junit:1.1.0',
-            "espresso-core"                : 'androidx.test.espresso:espresso-core:3.1.0',
-            "espresso-contrib"             : 'androidx.test.espresso:espresso-contrib:3.1.0',
-            "espresso-intents"             : "com.android.support.test.espresso:espresso-intents:$espressoSdkVersion",
-            "mockito-core"                 : "org.mockito:mockito-core:1.+",
-            "timber"                       : "com.jakewharton.timber:timber:4.7.0",
-            "logger"                       : "com.orhanobut:logger:2.2.0",
-            "canary-debug"                 : "com.squareup.leakcanary:leakcanary-android:$canarySdkVersion",
-            "canary-release"               : "com.squareup.leakcanary:leakcanary-android-no-op:$canarySdkVersion",
-            "umeng-analytics"              : "com.umeng.analytics:analytics:6.0.1",
-
-            "eventBus"                     : "org.greenrobot:eventbus:3.1.1",
-
             "realtimeblurview"             : "com.github.mmin18:realtimeblurview:1.0.6",
             "circleimageview"              : "de.hdodenhof:circleimageview:2.2.0",
             "loadinglayout"                : "com.github.czy1121:loadinglayout:1.0.1",
             "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
             "banner"                       : "com.youth.banner:banner:2.0.11",
-
-            //插件化
-            "shadow-dynamic-host"          : "com.tencent.shadow.dynamic:host:$shadow_version",
-
-            //扁平化依赖
             "StatusLayoutManager"          : 'com.github.Bakumon:StatusLayoutManager:1.0.4',
             "roundedimageview"             : 'com.makeramen:roundedimageview:2.3.0',
             "expansionpanel"               : 'com.github.florent37:expansionpanel:1.0.7',
@@ -621,55 +541,100 @@ ext {
             "DateTimeRangePicker"          : "com.github.skedgo:DateTimeRangePicker:v1.3",
             "BasePopup"                    : "com.github.razerdp:BasePopup:2.2.1",
             "FancyShowCaseView"            : 'me.toptas.fancyshowcase:fancyshowcaseview:1.1.5',
-
-            "joda-time"                    : 'joda-time:joda-time:2.10.1',
             "PhotoView"                    : 'com.github.chrisbanes:PhotoView:2.0.0',
+
+            //6. rx1
+            "rxandroid"                    : "io.reactivex:rxandroid:1.2.1",
+            "rxjava"                       : "io.reactivex:rxjava:1.3.2",
+            "rxlifecycle"                  : "com.trello:rxlifecycle:$rxlifecycleSdkVersion",
+            "rxlifecycle-components"       : "com.trello:rxlifecycle-components:$rxlifecycleSdkVersion",
+            "rxcache"                      : "com.github.VictorAlbertos.RxCache:runtime:1.7.0-1.x",
+            "rxcache-jolyglot-gson"        : "com.github.VictorAlbertos.Jolyglot:gson:0.0.3",
+            "rxbinding-recyclerview-v7"    : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.1",
+            "rxpermissions"                : "com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar",
+            "rxerrorhandler"               : "me.jessyan:rxerrorhandler:1.0.1",
+
+            //7. rx2
+            "rxandroid2"                   : "io.reactivex.rxjava2:rxandroid:2.1.1",
+            "rxjava2"                      : "io.reactivex.rxjava2:rxjava:2.2.4",
+            "rxlifecycle2"                 : "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycle2SdkVersion",
+            "rxlifecycle2-android"         : "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycle2SdkVersion",
+            "rxlifecycle2-components"      : "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycle2SdkVersion",
+            "rxcache2"                     : "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x",
+            "rxpermissions2"               : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar",
+            "rxerrorhandler2"              : "me.jessyan:rxerrorhandler:2.1.1",
+
+            //8. tools
+            "dagger2"                      : "com.google.dagger:dagger:$dagger2SdkVersion",
+            "dagger2-android"              : "com.google.dagger:dagger-android:$dagger2SdkVersion",
+            "dagger2-android-support"      : "com.google.dagger:dagger-android-support:$dagger2SdkVersion",
+            "dagger2-compiler"             : "com.google.dagger:dagger-compiler:$dagger2SdkVersion",
+            "dagger2-android-processor"    : "com.google.dagger:dagger-android-processor:$dagger2SdkVersion",
+            "androideventbus"              : "org.simple:androideventbus:1.0.5.1",
+            "otto"                         : "com.squareup:otto:1.3.8",
+            "gson"                         : "com.google.code.gson:gson:2.8.5",
+            "fastjson"                     : 'com.alibaba:fastjson:1.2.9',
+            "javax.annotation"             : "javax.annotation:jsr250-api:1.0",
+            "arouter"                      : "com.alibaba:arouter-api:1.3.1",
+            "arouter-compiler"             : "com.alibaba:arouter-compiler:1.1.4",
+            "progressmanager"              : "me.jessyan:progressmanager:1.5.0",
+            "retrofit-url-manager"         : "me.jessyan:retrofit-url-manager:1.4.0",
+            "lifecyclemodel"               : "me.jessyan:lifecyclemodel:1.0.1",
+            "timber"                       : "com.jakewharton.timber:timber:4.7.0",
+            "logger"                       : "com.orhanobut:logger:2.2.0",
+            "eventBus"                     : "org.greenrobot:eventbus:3.1.1",
+            "joda-time"                    : 'joda-time:joda-time:2.10.1',
             "jgit"                         : 'org.eclipse.jgit:org.eclipse.jgit:5.7.0.202003110725-r',
+            "shadow-dynamic-host"          : "com.tencent.shadow.dynamic:host:$shadow_version",
 
-            "org.jetbrains:annotations"    : "org.jetbrains:annotations:$jetbrains_annotations_version",
+            //9. test
+            "junit"                        : "junit:junit:4.12",
+            "androidJUnitRunner"           : "androidx.test.runner.AndroidJUnitRunner",
+            "runner"                       : 'androidx.test.ext:junit:1.1.0',
+            "espresso-core"                : 'androidx.test.espresso:espresso-core:3.1.0',
+            "espresso-contrib"             : 'androidx.test.espresso:espresso-contrib:3.1.0',
+            "espresso-intents"             : "com.android.support.test.espresso:espresso-intents:$espressoSdkVersion",
+            "mockito-core"                 : "org.mockito:mockito-core:1.+",
+            "canary-debug"                 : "com.squareup.leakcanary:leakcanary-android:$canarySdkVersion",
+            "canary-release"               : "com.squareup.leakcanary:leakcanary-android-no-op:$canarySdkVersion",
+            "umeng-analytics"              : "com.umeng.analytics:analytics:6.0.1",
     ]
+    //endregion
 
-
-    kotlinLibraries = [
-            "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
-    ]
-
-
-    supportLibraries = [
-            "com.google.android.material:material:1.1.0",
-            "androidx.appcompat:appcompat:$androidX",
-            "androidx.coordinatorlayout:coordinatorlayout:$androidX",
-            "androidx.drawerlayout:drawerlayout:$androidX",
-            "androidx.recyclerview:recyclerview-selection:$androidX",
-            "androidx.cardview:cardview:$androidX",
-            "androidx.recyclerview:recyclerview:$androidX",
-            "androidx.annotation:annotation:$androidX",
-            "androidx.core:core:$androidX",
-            "androidx.fragment:fragment:$androidX",
-            "androidx.swiperefreshlayout:swiperefreshlayout:$androidX",
-            "androidx.browser:browser:$androidX",
-            "androidx.webkit:webkit:$androidX",
-            "androidx.browser:browser:$androidX",
-            "androidx.constraintlayout:constraintlayout:$constraintLayout",
-            "androidx.constraintlayout:constraintlayout-solver:$constraintLayout",
-            "android.arch.navigation:navigation-ui:$navigation",
-            "android.arch.navigation:navigation-runtime:$navigation",
-            "android.arch.navigation:navigation-runtime-ktx:$navigation",
-            "android.arch.navigation:navigation-fragment:$navigation",
-            "android.arch.navigation:navigation-fragment-ktx:$navigation",
-    ]
+    //region support
+    androidX = '1.1.0'
+    androidx_core_version = '1.5.0-alpha01'
+    androidx_fragment_version = '1.2.5'
+    constraintLayout = '2.0.0-beta1'
     material_version = '1.2.0-alpha04'
+    androidx_room_version = "2.2.5"
+    androidx_lifecycle_version = '2.2.0'
+    androidx_preference_version = '1.1.1'
+
+//    implementation rootProject.ext.androidx_lib["appcompat"]
+//    implementation rootProject.ext.androidx_lib["design"]
     androidx_lib = [
-            "design"                   : "com.google.android.material:material:$material_version",
-            //support
-            "appcompat"                : "androidx.appcompat:appcompat:$androidX",
-            "transition"               : "androidx.transition:transition:$androidX",
-            "support-annotations"      : "androidx.annotation:annotation:$androidX",
-            "support-compat"           : "androidx.core:core:$androidX",
-            "support-fragment"         : "androidx.fragment:fragment:$androidX",
+            "design"                   : "com.google.android.material:material:$material_version",//implementation rootProject.ext.androidx_lib["design"]
+
+            "appcompat"                : "androidx.appcompat:appcompat:$androidX",//implementation rootProject.ext.androidx_lib["appcompat"]
+            "annotations"              : "androidx.annotation:annotation:$androidX",//implementation rootProject.ext.androidx_lib["annotation"]
+
+            "core"                     : "androidx.core:core:$androidx_core_version",//implementation rootProject.ext.androidx_lib["core"]
+            "core-ktx"                 : "androidx.core:core-ktx:$androidx_core_version",//implementation rootProject.ext.androidx_lib["core-ktx"]
+
+            "fragment"                 : "androidx.fragment:fragment:$androidx_fragment_version",//implementation rootProject.ext.androidx_lib["fragment"]
+            "fragment-ktx"             : "androidx.fragment:fragment-ktx:$androidx_fragment_version",//implementation rootProject.ext.androidx_lib["fragment-ktx"]
+
             "support-vector-drawable"  : "androidx.vectordrawable:vectordrawable:$androidX",
+            "transition"               : "androidx.transition:transition:$androidX",
+
+            "coordinatorlayout"        : "androidx.coordinatorlayout:coordinatorlayout:$androidX",
             "constraint-layout"        : "androidx.constraintlayout:constraintlayout:$constraintLayout",
-            "recyclerview"             : "androidx.recyclerview:recyclerview:$androidX",
+            "constraintlayout-solver"  : "androidx.constraintlayout:constraintlayout-solver:$constraintLayout",
+
+            "recyclerview"             : "androidx.recyclerview:recyclerview:$androidX",//implementation rootProject.ext.androidx_lib["recyclerview"]
+            "recyclerview-selection"   : "androidx.recyclerview:recyclerview-selection:$androidX",//implementation rootProject.ext.androidx_lib["recyclerview-selection"]
+            "swiperefreshlayout"       : "androidx.swiperefreshlayout:swiperefreshlayout:$androidX",//implementation rootProject.ext.androidx_lib["swiperefreshlayout"]
 
             "support-dynamic-animation": "androidx.dynamicanimation:dynamicanimation:1.0.0",
             "cardview"                 : "androidx.cardview:cardview:1.0.0",
@@ -677,23 +642,29 @@ ext {
             "palette"                  : "androidx.palette:palette:1.0.0",
             "multidex"                 : 'androidx.multidex:multidex:2.0.0',
 
-//            "preference"               : "androidx.legacy:legacy-preference-v14:$androidX",
-            "preference"               : "androidx.preference:preference:$androidX",
+            "preference"               : "androidx.preference:preference:$androidx_preference_version",//implementation rootProject.ext.androidx_lib["preference"]
+            "preference-ktx"           : "androidx.preference:preference-ktx:$androidx_preference_version",//implementation rootProject.ext.androidx_lib["preference-ktx"]
+
+            "drawerlayout"             : "androidx.drawerlayout:drawerlayout:$androidX",
+            "browser"                  : "androidx.browser:browser:$androidX",
+            "webkit"                   : "androidx.webkit:webkit:$androidX",
+
+            "lifecycle-extensions"     : "androidx.lifecycle:lifecycle-extensions:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-extensions"]
+            "lifecycle-common-java8"   : "androidx.lifecycle:lifecycle-common-java8:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-common-java8"]
+            "lifecycle-livedata-ktx"   : "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-livedata-ktx"]
+            "lifecycle-process"        : "androidx.lifecycle:lifecycle-process:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-process"]
+            "lifecycle-runtime-ktx"    : "androidx.lifecycle:lifecycle-runtime-ktx:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-runtime-ktx"]
+            "lifecycle-viewmodel-ktx"  : "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-viewmodel-ktx"]
+
+            "androidx.room:runtime"    : "androidx.room:room-runtime:$androidx_room_version",//api rootProject.ext.androidx_lib["androidx.room:runtime"]
+            "androidx.room:testing"    : "androidx.room:room-testing:$androidx_room_version",//api rootProject.ext.androidx_lib["androidx.room:testing"]
+            "androidx.room:compiler"   : "androidx.room:room-compiler:$androidx_room_version",//kapt rootProject.ext.androidx_lib["androidx.room:compiler"]
+            "androidx.room:rxjava2"    : "androidx.room:room-rxjava2:$androidx_room_version",//api rootProject.ext.androidx_lib["androidx.room:rxjava2"]
+            "androidx.room:common"     : "androidx.room:room-common:$androidx_room_version",//api rootProject.ext.androidx_lib["androidx.room:common"]
+
             "support"                  : "androidx.legacy:legacy-support-v4:$androidX",
-
-            "lifecycle-extensions"     : "androidx.lifecycle:lifecycle-extensions:$android_lifecycle_version",
-            "lifecycle-common"         : "androidx.lifecycle:lifecycle-common-java8:$android_lifecycle_version",
-
-            "androidx.room:runtime"    : "androidx.room:room-runtime:$androidx_room_version",
-            "androidx.room:testing"    : "androidx.room:room-testing:$androidx_room_version",
-            "androidx.room:compiler"   : "androidx.room:room-compiler:$androidx_room_version",
-            "androidx.room:rxjava2"    : "androidx.room:room-rxjava2:$androidx_room_version",
-            "androidx.room:common"     : "androidx.room:room-common:$androidx_room_version",
-
-            "room:runtime"             : "android.arch.persistence.room:runtime:$roomVersion",
-            "room:rxjava2"             : "android.arch.persistence.room:rxjava2:$roomVersion",
-            "room:compiler"            : "android.arch.persistence.room:compiler:$roomVersion",
     ]
+    //endregion
 
     extrasLibraries = [
             'com.github.daniel-stoneuk:material-about-library:2.1.0',
@@ -746,8 +717,6 @@ ext {
             "androidx.room:room-common:$room",
             "androidx.room:room-rxjava2:$room",
             "androidx.room:room-compiler:$room",
-            'androidx.core:core-ktx:1.2.0-alpha01',
-            'androidx.fragment:fragment-ktx:1.1.0-alpha08',
             'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha01',
             'androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0-alpha01',
             "android.arch.work:work-runtime:$workManager",
