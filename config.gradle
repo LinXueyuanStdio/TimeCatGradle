@@ -4,8 +4,8 @@ ext {
             buildToolsVersion      : "29.0.2",
             minSdkVersion          : 21,
             targetSdkVersion       : 28,
-            versionCode            : 39,
-            versionName            : "0.6.9",
+            versionCode            : 40,
+            versionName            : "0.7.0",
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
     // mempool 根目录下
@@ -76,7 +76,7 @@ ext {
     component_SelfXunfei_version = "1.0.0"
     component_SelfService_version = "1.0.1"
     component_SelfImage_version = "1.0.0"
-    component_PackAlert_version = "1.0.0"
+    component_PackAlert_version = "1.0.1"
     component_PackRefreshList_version = "1.0.1"
     component_PackIM_version = "1.0.0"
 
@@ -276,7 +276,7 @@ ext {
 //            "widget-timetable"        : project("widget:widget-timetable"),
 
             //9. extend
-//            "component-PackAlert"      : "com.timecat.component:PackAlert:$component_PackAlert_version",
+            "component-PackAlert"      : project(":extend:PackAlert"),
 //            "component-PackIM"         : project(":extend:PackIM"),
 //            "component-PackRefreshList": "com.timecat.component:PackRefreshList:$component_PackRefreshList_version",
 //            "component-SelfArms"       : "com.timecat.component:SelfArms:$component_SelfArms_version",
@@ -377,7 +377,7 @@ ext {
             "widget-timetable"           : timecatMarven["widget-timetable"],
 
             //9. extend
-            "component-PackAlert"        : timecatMarven["component-PackAlert"],
+            "component-PackAlert"        : timecatLocal["component-PackAlert"],
             "component-PackIM"           : timecatLocal["component-PackIM"],
             "component-PackRefreshList"  : timecatMarven["component-PackRefreshList"],
             "component-SelfArms"         : timecatMarven["component-SelfArms"],
