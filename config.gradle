@@ -278,7 +278,7 @@ ext {
             //9. extend
             "component-PackAlert"      : project(":extend:PackAlert"),
 //            "component-PackIM"         : project(":extend:PackIM"),
-//            "component-PackRefreshList": "com.timecat.component:PackRefreshList:$component_PackRefreshList_version",
+            "component-PackRefreshList": project(":extend:PackRefreshList"),
 //            "component-SelfArms"       : "com.timecat.component:SelfArms:$component_SelfArms_version",
 //            "component-SelfBaidu"      : "com.timecat.component:SelfBaidu:$component_SelfBaidu_version",
 //            "component-SelfEventBus"   : "com.timecat.component:SelfEventBus:$component_SelfEventBus_version",
@@ -379,7 +379,7 @@ ext {
             //9. extend
             "component-PackAlert"        : timecatLocal["component-PackAlert"],
             "component-PackIM"           : timecatLocal["component-PackIM"],
-            "component-PackRefreshList"  : timecatMarven["component-PackRefreshList"],
+            "component-PackRefreshList"  : timecatLocal["component-PackRefreshList"],
             "component-SelfArms"         : timecatMarven["component-SelfArms"],
             "component-SelfBaidu"        : timecatMarven["component-SelfBaidu"],
             "component-SelfEventBus"     : timecatMarven["component-SelfEventBus"],
