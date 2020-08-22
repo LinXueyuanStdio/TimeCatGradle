@@ -4,8 +4,8 @@ ext {
             buildToolsVersion      : "29.0.2",
             minSdkVersion          : 21,
             targetSdkVersion       : 28,
-            versionCode            : 42,
-            versionName            : "0.7.2",
+            versionCode            : 43,
+            versionName            : "0.7.3",
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
     // mempool 根目录下
