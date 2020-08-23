@@ -291,7 +291,7 @@ ext {
 //            "component-SelfRouter"     : "com.timecat.component:SelfRouter:$component_SelfRouter_version",
             "component-SelfService"    : project(":extend:SelfService"),
             "component-SelfImage"      : project(":extend:SelfImage"),
-            "component-SelfAliyun"     : project(":extend:SelfAliyun"),
+//            "component-SelfAliyun"     : project(":extend:SelfAliyun"),
 //            "component-SelfTheme"      : project(":extend:SelfTheme"),
 //            "component-SelfXunfei"     : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
     ]
@@ -396,7 +396,7 @@ ext {
             "component-SelfService"      : timecatLocal["component-SelfService"],
             "component-SelfTheme"        : timecatMarven["component-SelfTheme"],
             "component-SelfXunfei"       : timecatMarven["component-SelfXunfei"],
-            "component-SelfAliyun"       : timecatLocal["component-SelfAliyun"],
+//            "component-SelfAliyun"       : timecatLocal["component-SelfAliyun"],
 
             //10. plugin
             "plugin-agreement-picturebed": timecatMarven["plugin-agreement-picturebed"],
