@@ -78,6 +78,7 @@ ext {
     component_SelfImage_version = "1.0.0"
     component_SelfMarkdown_version = "1.0.0"
     component_SelfAliyun_version = "1.0.0"
+    component_SelfDSL_version = "1.0.0"
     component_PackAlert_version = "1.0.1"
     component_PackRefreshList_version = "1.0.1"
     component_PackIM_version = "1.0.0"
@@ -187,6 +188,7 @@ ext {
             "component-SelfTheme"        : "com.timecat.component:SelfTheme:$component_SelfTheme_version",
             "component-SelfXunfei"       : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
             "component-SelfAliyun"       : "com.timecat.component:SelfXunfei:$component_SelfAliyun_version",
+            "component-SelfDSL"          : "com.timecat.component:SelfXunfei:$component_SelfDSL_version",
 
             //10. plugin
             "plugin-agreement-picturebed": "com.timecat.plugin:agreement-picturebed:$plugin_aggreement_picturebed_version",
@@ -291,6 +293,7 @@ ext {
 //            "component-SelfRouter"     : "com.timecat.component:SelfRouter:$component_SelfRouter_version",
             "component-SelfService"    : project(":extend:SelfService"),
             "component-SelfImage"      : project(":extend:SelfImage"),
+            "component-SelfDSL"        : project(":extend:SelfDSL"),
 //            "component-SelfAliyun"     : project(":extend:SelfAliyun"),
 //            "component-SelfTheme"      : project(":extend:SelfTheme"),
 //            "component-SelfXunfei"     : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
@@ -396,6 +399,7 @@ ext {
             "component-SelfService"      : timecatLocal["component-SelfService"],
             "component-SelfTheme"        : timecatMarven["component-SelfTheme"],
             "component-SelfXunfei"       : timecatMarven["component-SelfXunfei"],
+            "component-SelfDSL"          : timecatLocal["component-SelfDSL"],
 //            "component-SelfAliyun"       : timecatLocal["component-SelfAliyun"],
 
             //10. plugin
