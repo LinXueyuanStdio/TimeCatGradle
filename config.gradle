@@ -617,8 +617,8 @@ ext {
     androidX = '1.1.0'
     androidx_core_version = '1.5.0-alpha01'
     androidx_fragment_version = '1.2.5'
-    constraintLayout = '2.0.0-beta1'
-    material_version = '1.2.0-alpha04'
+    constraintLayout = '2.0.1'
+    material_version = '1.2.1'
     androidx_room_version = "2.2.5"
     androidx_lifecycle_version = '2.2.0'
     androidx_preference_version = '1.1.1'
