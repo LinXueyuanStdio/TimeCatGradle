@@ -460,7 +460,7 @@ ext {
 
     //region 第三方
     //1. kotlin
-    kotlin_version = '1.3.72'
+    kotlin_version = '1.4.10'
     jetbrains_annotations_version = '16.0.3'
     kotlinx_coroutines_version = '1.3.7'
 
