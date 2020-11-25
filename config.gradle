@@ -592,7 +592,7 @@ ext {
             "progressmanager"              : "me.jessyan:progressmanager:1.5.0",
             "retrofit-url-manager"         : "me.jessyan:retrofit-url-manager:1.4.0",
             "lifecyclemodel"               : "me.jessyan:lifecyclemodel:1.0.1",
-            "timber"                       : "com.jakewharton.timber:timber:4.7.0",
+            "timber"                       : "com.jakewharton.timber:timber:4.7.1",
             "logger"                       : "com.orhanobut:logger:2.2.0",
             "eventBus"                     : "org.greenrobot:eventbus:3.1.1",
             "joda-time"                    : 'joda-time:joda-time:2.10.1',
@@ -622,6 +622,7 @@ ext {
     androidx_room_version = "2.2.5"
     androidx_lifecycle_version = '2.2.0'
     androidx_preference_version = '1.1.1'
+    androidx_databinding_version = '4.1.1'
 
 //    implementation rootProject.ext.androidx_lib["appcompat"]
 //    implementation rootProject.ext.androidx_lib["design"]
@@ -675,6 +676,9 @@ ext {
             "androidx.room:common"     : "androidx.room:room-common:$androidx_room_version",//api rootProject.ext.androidx_lib["androidx.room:common"]
 
             "support"                  : "androidx.legacy:legacy-support-v4:$androidX",
+
+            "databinding-runtime"      : "androidx.databinding:databinding-runtime:$androidx_databinding_version", //api rootProject.ext.androidx_lib["databinding-runtime"]
+            "databinding-compiler"     : "androidx.databinding:databinding-compiler:$androidx_databinding_version", //kaptAndroidTest rootProject.ext.androidx_lib["databinding-compiler"]
     ]
     //endregion
 
