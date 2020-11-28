@@ -1,5 +1,4 @@
 //////// 打包发布配置开始 ////////
-
 //下面的jarPackage和afterEvaluate负责让这个aar再生成一个输出jar包的任务
 def jarPackage(buildType) {
     return tasks.create("jar${buildType.capitalize()}Package", Copy) {

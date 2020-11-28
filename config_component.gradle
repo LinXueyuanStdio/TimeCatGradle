@@ -10,9 +10,12 @@ android {
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-      javaCompileOptions {
+        javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [moduleName: project.getName()]
+                arguments = [
+                        "moduleName": project.getName(),
+                        "HOST"      : project.getName().replace("-", ""),
+                ]
             }
         }
     }
@@ -22,6 +25,7 @@ dependencies {
     kapt rootProject.ext.dependencies["butterknife-compiler"]
     kapt rootProject.ext.dependencies["dagger2-compiler"]
     kapt rootProject.ext.dependencies["arouter-compiler"]
+    kapt rootProject.ext.dependencies["router-compiler"]
 
     api rootProject.ext.dependencies["kotlin-stdlib"]
 }

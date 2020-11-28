@@ -9,7 +9,7 @@ ext {
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
     // mempool 根目录下
-    build_gradle_version = '3.5.3'
+    build_gradle_version = '4.0.0'
 
     //region TimeCat
     component_commonarms_version = "1.0.1"
@@ -63,7 +63,6 @@ ext {
     widget_burstlink_version = "1.0.1"
     widget_edittext_version = "1.0.1"
     widget_calendar_version = "1.0.0"
-    widget_colorpicker_version = "1.0.1"
     widget_messagelist_version = "1.0.1"
     widget_chatinput_version = "1.0.1"
 
@@ -100,18 +99,13 @@ ext {
 //            "module-main"                : project(":module:module-main"),
             "module-master"              : project(":module:module-master"),
             "module-mindmap"             : project(":module:module-mindmap"),
-//            "module-photo-selector"      : project(":module:module-photo-selector"),
             "module-plugin"              : project(":module:module-plugin"),
             "module-theme"               : project(":module:module-theme"),
             "module-welcome"             : "com.timecat.module:module-welcome:$module_welcome_version",
 
             //2. module-online
-//            "module-app-detail"        : project(":module-online:module-app-detail"),
             "module-im"                  : project(":module-online:module-im"),
-//            "module-leaderboard"       : project(":module-online:module-leaderboard"),
             "module-login"               : "com.timecat.module:module-login:$module_login_version",
-//            "module-moment"              : project(":module-online:module-moment"),
-//            "module-search"              : "com.timecat.module:module-search:$module_search_version",
             "module-user"                : "com.timecat.module:module-user:$module_user_version",
 
             //3. module-stand
@@ -144,23 +138,16 @@ ext {
 
             //6. component
 //            "styles"                   : "com.timecat.component:styles:$styles_version",
-            "component-BaseMvp"          : "com.timecat.component:basemvp:$component_BaseMvp_version",
             "component-CommonBase"       : "com.timecat.component:CommonBase:$component_CommonBase_version",
             "component-CommonSDK"        : "com.timecat.component:CommonSDK:$component_CommonSDK_version",
             "component-CommonStatic"     : "com.timecat.component:CommonStatic:$component_CommonStatic_version",
-//            "component-BlockUI"          : project(":component:BlockUI"),
             "component-CommonUI"         : "com.timecat.component:CommonUI:$component_CommonUI_version",
-//            "component-LightUI"          : project(":component:LightUI"),
 
             //7. res
             "component-CommonResource"   : "com.timecat.component:CommonResource:$component_CommonResource_version",
             "component-ResBlock"         : project(":res:ResBlock"),
 
             //8. widget
-            "widget-burstlink"           : "com.timecat.widget:widget-burstlink:$widget_burstlink_version",
-            "widget-edittext"            : "com.timecat.widget:widget-edittext:$widget_edittext_version@aar",
-            "widget-calendar"            : "com.timecat.widget:widget-calendar:$widget_calendar_version",
-            "widget-colorpicker"         : "com.timecat.widget:widget-colorpicker:$widget_colorpicker_version",
 //            "widget-messagelist"       : "com.timecat.widget:widget-messagelist:$widget_messagelist_version",
 //            "widget-chatinput"         : "com.timecat.widget:widget-chatinput:$widget_chatinput_version",
             "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:1.0.0",
@@ -208,18 +195,13 @@ ext {
 //            "module-main"             : project(":module:module-main"),
             "module-master"            : project(":module:module-master"),
             "module-mindmap"           : project(":module:module-mindmap"),
-//            "module-photo-selector"   : project(":module:module-photo-selector"),
             "module-plugin"            : project(":module:module-plugin"),
             "module-theme"             : project(":module:module-theme"),
             "module-welcome"           : project(":module:module-welcome"),
 
             //2. module-online
-//            "module-app-detail"        : project(":module-online:module-app-detail"),
             "module-im"                : project(":module-online:module-im"),
-//            "module-leaderboard"       : project(":module-online:module-leaderboard"),
             "module-login"             : project(":module-online:module-login"),
-//            "module-moment"           : project(":module-online:module-moment"),
-//            "module-search"           : project(":module-online:module-search"),
             "module-user"              : project(":module-online:module-user"),
 
             //3. module-stand
@@ -252,25 +234,18 @@ ext {
 
             //6. component
 //            "styles"                   : "com.timecat.component:styles:$styles_version",
-//            "component-BaseMvp"        : "com.timecat.component:basemvp:$component_BaseMvp_version",
             "component-CommonBase"     : project(":component:CommonBase"),
             "component-CommonSDK"      : project(":component:CommonSDK"),
             "component-CommonStatic"   : project(":component:CommonStatic"),
-//            "component-BlockUI"        : project(":component:BlockUI"),
             "component-CommonUI"       : project(":component:CommonUI"),
-//            "component-LightUI"       : project(":component:LightUI"),
 
             //7. res
             "component-CommonResource" : project(":res:CommonResource"),
             "component-ResBlock"       : project(":res:ResBlock"),
 
             //8. widget
-            "widget-burstlink"         : "com.timecat.widget:widget-burstlink:$widget_burstlink_version",
-            "widget-edittext"          : "com.timecat.widget:widget-edittext:$widget_edittext_version@aar",
-            "widget-calendar"          : "com.timecat.widget:widget-calendar:$widget_calendar_version",
-            "widget-colorpicker"       : "com.timecat.widget:widget-colorpicker:$widget_colorpicker_version",
-//            "widget-messagelist"      : "com.timecat.widget:widget-messagelist:$widget_messagelist_version",
-//            "widget-chatinput"        : "com.timecat.widget:widget-chatinput:$widget_chatinput_version",
+//            "widget-messagelist"      : project("widget:widget-messagelist"),
+//            "widget-chatinput"        : project("widget:widget-chatinput"),
             "widget-chrome-tabs"       : project("widget:widget-chrome-tabs"),
             "widget-md-editor"         : project("widget:widget-md-editor"),
 //            "widget-NeoTermBridge"    : project("widget:widget-NeoTermBridge"),
@@ -286,17 +261,17 @@ ext {
             "component-PackAlert"      : project(":extend:PackAlert"),
 //            "component-PackIM"         : project(":extend:PackIM"),
             "component-PackRefreshList": project(":extend:PackRefreshList"),
-//            "component-SelfArms"       : "com.timecat.component:SelfArms:$component_SelfArms_version",
-//            "component-SelfBaidu"      : "com.timecat.component:SelfBaidu:$component_SelfBaidu_version",
-//            "component-SelfEventBus"   : "com.timecat.component:SelfEventBus:$component_SelfEventBus_version",
+//            "component-SelfArms"       : project(":extend:SelfArms"),
+//            "component-SelfBaidu"      : project(":extend:SelfBaidu"),
+//            "component-SelfEventBus"   : project(":extend:SelfEventBus"),
             "component-SelfMarkdown"   : project(":extend:SelfMarkdown"),
-//            "component-SelfRouter"     : "com.timecat.component:SelfRouter:$component_SelfRouter_version",
+            "component-SelfRouter"     : project(":extend:SelfRouter"),
             "component-SelfService"    : project(":extend:SelfService"),
             "component-SelfImage"      : project(":extend:SelfImage"),
             "component-SelfDSL"        : project(":extend:SelfDSL"),
 //            "component-SelfAliyun"     : project(":extend:SelfAliyun"),
 //            "component-SelfTheme"      : project(":extend:SelfTheme"),
-//            "component-SelfXunfei"     : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
+//            "component-SelfXunfei"     : project(":extend:SelfXunfei"),
     ]
 
     timecat = [
@@ -312,18 +287,13 @@ ext {
 //            "module-main"                : timecatLocal["module-main"],
             "module-master"              : timecatLocal["module-master"],
             "module-mindmap"             : timecatLocal["module-mindmap"],
-//            "module-photo-selector"      : timecatLocal["module-photo-selector"],
             "module-plugin"              : timecatLocal["module-plugin"],
             "module-theme"               : timecatLocal["module-theme"],
             "module-welcome"             : timecatLocal["module-welcome"],
 
             //2. module-online
-//            "module-app-detail"        : timecatLocal["module-app-detail"],
             "module-im"                  : timecatLocal["module-im"],
-//            "module-leaderboard"       : timecatLocal["module-leaderboard"],
             "module-login"               : timecatLocal["module-login"],
-//            "module-moment"              : timecatLocal["module-moment"],
-//            "module-search"              : timecatLocal["module-search"],
             "module-user"                : timecatLocal["module-user"],
 
             //3. module-stand
@@ -356,23 +326,16 @@ ext {
 
             //6. component
 //            "styles"                   : timecatMarven["styles"],
-            "component-BaseMvp"          : timecatMarven["component-BaseMvp"],
             "component-CommonBase"       : timecatLocal["component-CommonBase"],
             "component-CommonSDK"        : timecatLocal["component-CommonSDK"],
             "component-CommonStatic"     : timecatLocal["component-CommonStatic"],
-//            "component-BlockUI"          : timecatLocal["component-BlockUI"],
             "component-CommonUI"         : timecatLocal["component-CommonUI"],
-//            "component-LightUI"          : timecatLocal["component-LightUI"],
 
             //7. res
             "component-CommonResource"   : timecatLocal["component-CommonResource"],
             "component-ResBlock"         : timecatLocal["component-ResBlock"],
 
             //8. widget
-            "widget-burstlink"           : timecatMarven["widget-burstlink"],
-            "widget-edittext"            : timecatMarven["widget-edittext"],
-            "widget-calendar"            : timecatMarven["widget-calendar"],
-            "widget-colorpicker"         : timecatMarven["widget-colorpicker"],
 //            "widget-messagelist"       : timecatMarven["widget-messagelist"],
 //            "widget-chatinput"         : timecatMarven["widget-chatinput"],
             "widget-chrome-tabs"         : timecatLocal["widget-chrome-tabs"],
@@ -395,7 +358,7 @@ ext {
             "component-SelfEventBus"     : timecatMarven["component-SelfEventBus"],
             "component-SelfMarkdown"     : timecatLocal["component-SelfMarkdown"],
             "component-SelfImage"        : timecatLocal["component-SelfImage"],
-            "component-SelfRouter"       : timecatMarven["component-SelfRouter"],
+            "component-SelfRouter"       : timecatLocal["component-SelfRouter"],
             "component-SelfService"      : timecatLocal["component-SelfService"],
             "component-SelfTheme"        : timecatMarven["component-SelfTheme"],
             "component-SelfXunfei"       : timecatMarven["component-SelfXunfei"],
@@ -460,7 +423,7 @@ ext {
 
     //region 第三方
     //1. kotlin
-    kotlin_version = '1.4.10'
+    kotlin_version = '1.4.20'
     jetbrains_annotations_version = '16.0.3'
     kotlinx_coroutines_version = '1.3.7'
 
@@ -489,6 +452,9 @@ ext {
     //9. test
     espressoSdkVersion = "3.0.1"
     canarySdkVersion = "1.5.4"
+
+    //10. router
+    component_router_version = "1.8.3.5"
 
 //    implementation rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
 //    implementation rootProject.ext.dependencies["kotlinx-coroutines-android"]
@@ -587,6 +553,8 @@ ext {
             "gson"                         : "com.google.code.gson:gson:2.8.5",
             "fastjson"                     : 'com.alibaba:fastjson:1.2.9',
             "javax.annotation"             : "javax.annotation:jsr250-api:1.0",
+            "router"                       : "com.github.xiaojinzi123.Component:component-impl:$component_router_version-androidx",
+            "router-compiler"              : "com.github.xiaojinzi123.Component:component-compiler:$component_router_version-androidx",
             "arouter"                      : "com.alibaba:arouter-api:1.3.1",
             "arouter-compiler"             : "com.alibaba:arouter-compiler:1.1.4",
             "progressmanager"              : "me.jessyan:progressmanager:1.5.0",
