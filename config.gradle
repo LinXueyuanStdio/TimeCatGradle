@@ -10,6 +10,9 @@ ext {
     ]
     // mempool 根目录下
     build_gradle_version = '4.0.0'
+    // 注解生成器生成的文件 json 信息都在这里面
+    component_router_doc_folder = "./RouterDocument"
+    component_router_doc_enable = false
 
     //region TimeCat
     component_commonarms_version = "1.0.1"
@@ -104,7 +107,7 @@ ext {
             "module-welcome"             : "com.timecat.module:module-welcome:$module_welcome_version",
 
             //2. module-online
-            "module-im"                  : project(":module-online:module-im"),
+//            "module-im"                  : project(":module-online:module-im"),
             "module-login"               : "com.timecat.module:module-login:$module_login_version",
             "module-user"                : "com.timecat.module:module-user:$module_user_version",
 
@@ -117,7 +120,7 @@ ext {
             "module-neoterm"             : project(":module-stand:module-neoterm"),
             "module-scarlet"             : project(":module-stand:module-scarlet"),
             "module-timetable"           : project(":module-stand:module-timetable"),
-            "module-explorer"            : project(":module-stand:module-explorer"),
+//            "module-explorer"            : project(":module-stand:module-explorer"),
             "module-note-org"            : project(":module-stand:module-note-org"),
             "module-file-explorer"       : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
             "module-file"                : "com.timecat.module:module-file:1.0.0",
@@ -163,7 +166,7 @@ ext {
 
             //9. extend
             "component-PackAlert"        : "com.timecat.component:PackAlert:$component_PackAlert_version",
-            "component-PackIM"           : project(":extend:PackIM"),
+//            "component-PackIM"           : project(":extend:PackIM"),
             "component-PackRefreshList"  : "com.timecat.component:PackRefreshList:$component_PackRefreshList_version",
             "component-SelfArms"         : "com.timecat.component:SelfArms:$component_SelfArms_version",
             "component-SelfBaidu"        : "com.timecat.component:SelfBaidu:$component_SelfBaidu_version",
@@ -200,7 +203,7 @@ ext {
             "module-welcome"           : project(":module:module-welcome"),
 
             //2. module-online
-            "module-im"                : project(":module-online:module-im"),
+//            "module-im"                : project(":module-online:module-im"),
             "module-login"             : project(":module-online:module-login"),
             "module-user"              : project(":module-online:module-user"),
 
@@ -213,7 +216,7 @@ ext {
             "module-neoterm"           : project(":module-stand:module-neoterm"),
             "module-scarlet"           : project(":module-stand:module-scarlet"),
             "module-timetable"         : project(":module-stand:module-timetable"),
-            "module-explorer"          : project(":module-stand:module-explorer"),
+//            "module-explorer"          : project(":module-stand:module-explorer"),
             "module-note-org"          : project(":module-stand:module-note-org"),
             "module-file-explorer"     : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
             "module-file"              : project(":module-stand:module-file"),
@@ -292,7 +295,7 @@ ext {
             "module-welcome"             : timecatLocal["module-welcome"],
 
             //2. module-online
-            "module-im"                  : timecatLocal["module-im"],
+//            "module-im"                  : timecatLocal["module-im"],
             "module-login"               : timecatLocal["module-login"],
             "module-user"                : timecatLocal["module-user"],
 
@@ -305,7 +308,7 @@ ext {
             "module-neoterm"             : timecatLocal["module-neoterm"],
             "module-scarlet"             : timecatLocal["module-scarlet"],
             "module-timetable"           : timecatLocal["module-timetable"],
-            "module-explorer"            : timecatLocal["module-explorer"],
+//            "module-explorer"            : timecatLocal["module-explorer"],
             "module-note-org"            : timecatLocal["module-note-org"],
             "module-file-explorer"       : timecatMarven["module-file-explorer"],
             "module-file"                : timecatLocal["module-file"],
@@ -351,7 +354,7 @@ ext {
 
             //9. extend
             "component-PackAlert"        : timecatLocal["component-PackAlert"],
-            "component-PackIM"           : timecatLocal["component-PackIM"],
+//            "component-PackIM"           : timecatLocal["component-PackIM"],
             "component-PackRefreshList"  : timecatLocal["component-PackRefreshList"],
             "component-SelfArms"         : timecatMarven["component-SelfArms"],
             "component-SelfBaidu"        : timecatMarven["component-SelfBaidu"],
@@ -382,10 +385,8 @@ ext {
 
     commonmark = '0.10.0'
 
-    //数据库
     lifecycle_version = '1.1.1'
 
-    // 其他模块可用
     rxJava2 = '2.1.9'
     rxKotlin = '2.2.0'
     rxAndroid = '2.0.1'
@@ -419,9 +420,7 @@ ext {
     junitVersion = '4.12'
     requery = '1.3.2'
     commonmark = '0.10.0'
-    //endregion
 
-    //region 第三方
     //1. kotlin
     kotlin_version = '1.4.20'
     jetbrains_annotations_version = '16.0.3'

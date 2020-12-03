@@ -3,7 +3,7 @@ apply from: project.rootProject.file("TimeCatGradle/config_base.gradle")
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'com.alibaba.arouter'
+//apply plugin: 'com.alibaba.arouter'
 apply plugin: 'com.jakewharton.butterknife'
 
 android {
@@ -13,8 +13,10 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [
-                        "moduleName": project.getName(),
-                        "HOST"      : project.getName().replace("-", ""),
+                        "moduleName"     : project.getName(),
+                        "HOST"           : project.getName().replace("-", ""),
+                        "RouterDocFolder": project.property("component_router_doc_folder"),
+                        "RouterDocEnable": String.valueOf(project.property("component_router_doc_enable"))
                 ]
             }
         }
@@ -24,7 +26,7 @@ android {
 dependencies {
     kapt rootProject.ext.dependencies["butterknife-compiler"]
     kapt rootProject.ext.dependencies["dagger2-compiler"]
-    kapt rootProject.ext.dependencies["arouter-compiler"]
+//    kapt rootProject.ext.dependencies["arouter-compiler"]
     kapt rootProject.ext.dependencies["router-compiler"]
 
     api rootProject.ext.dependencies["kotlin-stdlib"]
