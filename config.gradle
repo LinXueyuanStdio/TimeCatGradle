@@ -10,10 +10,10 @@ ext {
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
     // mempool 根目录下
-    build_gradle_version = '4.0.0'
+    build_gradle_version = '4.0.1'
     // 注解生成器生成的文件 json 信息都在这里面
     component_router_doc_folder = "./RouterDocument"
-    component_router_doc_enable = false
+    component_router_doc_enable = true
 
     //region TimeCat
     component_commonarms_version = "1.0.1"
@@ -154,8 +154,8 @@ ext {
             //8. widget
 //            "widget-messagelist"       : "com.timecat.widget:widget-messagelist:$widget_messagelist_version",
 //            "widget-chatinput"         : "com.timecat.widget:widget-chatinput:$widget_chatinput_version",
-            "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:1.0.0",
-            "widget-md-editor"           : "com.timecat.widget:widget-md-editor:1.0.1",
+            "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:1.0.1",
+            "widget-md-editor"           : "com.timecat.widget:widget-md-editor:1.0.2",
             "widget-NeoTermBridge"       : "com.timecat.widget:widget-NeoTermBridge:1.0.0",
             "widget-smartalert"          : "com.timecat.widget:widget-smartalert:1.0.0",
             "widget-toolkit"             : "com.timecat.widget:widget-toolkit:1.0.0",
@@ -163,7 +163,7 @@ ext {
             "widget-photoview"           : "com.timecat.widget:widget-photoview:1.0.0",
             "widget-swirl"               : "com.timecat.widget:widget-swirl:1.0.0",
             "widget-timely"              : "com.timecat.widget:widget-timely:1.0.0",
-            "widget-timetable"           : "com.timecat.widget:widget-timetable:1.0.0",
+            "widget-timetable"           : "com.timecat.widget:widget-timetable:1.0.1",
 
             //9. extend
             "component-PackAlert"        : "com.timecat.component:PackAlert:$component_PackAlert_version",
@@ -250,8 +250,8 @@ ext {
             //8. widget
 //            "widget-messagelist"      : project("widget:widget-messagelist"),
 //            "widget-chatinput"        : project("widget:widget-chatinput"),
-            "widget-chrome-tabs"       : project("widget:widget-chrome-tabs"),
-            "widget-md-editor"         : project("widget:widget-md-editor"),
+//            "widget-chrome-tabs"       : project("widget:widget-chrome-tabs"),
+//            "widget-md-editor"         : project("widget:widget-md-editor"),
 //            "widget-NeoTermBridge"    : project("widget:widget-NeoTermBridge"),
 //            "widget-smartalert"       : project("widget:widget-smartalert"),
 //            "widget-toolkit"          : project("widget:widget-toolkit"),
@@ -342,8 +342,8 @@ ext {
             //8. widget
 //            "widget-messagelist"       : timecatMarven["widget-messagelist"],
 //            "widget-chatinput"         : timecatMarven["widget-chatinput"],
-            "widget-chrome-tabs"         : timecatLocal["widget-chrome-tabs"],
-            "widget-md-editor"           : timecatLocal["widget-md-editor"],
+            "widget-chrome-tabs"         : timecatMarven["widget-chrome-tabs"],
+            "widget-md-editor"           : timecatMarven["widget-md-editor"],
             "widget-NeoTermBridge"       : timecatMarven["widget-NeoTermBridge"],
             "widget-smartalert"          : timecatMarven["widget-smartalert"],
             "widget-toolkit"             : timecatMarven["widget-toolkit"],
