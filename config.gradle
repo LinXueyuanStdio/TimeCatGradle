@@ -4,8 +4,8 @@ ext {
             buildToolsVersion      : "29.0.2",
             minSdkVersion          : 21,
             targetSdkVersion       : 28,
-            versionCode            : 53,
-            versionName            : "0.8.3",
+            versionCode            : 54,
+            versionName            : "0.8.4",
             debug                  : "true",
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
@@ -759,3 +759,5 @@ ext {
             "com.github.whataa:pandora-no-op:$pandora"
     ]
 }
+
+project.version = ext.android["versionCode"]
