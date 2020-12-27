@@ -2,8 +2,14 @@ apply plugin: "com.github.breadmoirai.github-release"
 
 //classpath "com.github.breadmoirai:github-release:2.2.12"
 
+def tokenProps = new Properties()
+File tokenConfig = rootProject.file("token.properties")
+if (tokenConfig.exists()) {
+    tokenProps.load(new FileInputStream(tokenConfig))
+}
+
 githubRelease {
-    token "db9f2daebe8c8bb2bc899ecef2386cbfdbed981b" // This is your personal access token with Repo permissions
+    token tokenProps.githubRelease // This is your personal access token with Repo permissions
     // You get this from your user settings > developer settings > Personal Access Tokens
     owner "LinXueyuanStdio" // default is the last part of your group. Eg group: "com.github.breadmoirai" => owner: "breadmoirai"
     repo "mempool" // by default this is set to your project name
@@ -17,11 +23,17 @@ githubRelease {
 //    releaseAssets.from("app/release/${apkName}")
 //    FilenameFilter filter = { dir, filename -> filename.contains(project.version) }
 //    releaseAssets = jar.destinationDir.listFiles filter
-    releaseAssets = file("${project.rootDir}/app/release").listFiles()
+//    releaseAssets = file("${project.rootDir}/app/release").listFiles()
+    releaseAssets = file("${project.rootDir}/app/build/outputs/apk/release").listFiles()
 //    releaseAssets jar.destinationDir.listFiles // this points to which files you want to upload as assets with your release
 
     overwrite true // by default false; if set to true, will delete an existing release with the same tag and name
 //    dryRun false // by default false; you can use this to see what actions would be taken without making a release
 //    apiEndpoint "https://api.github.com" // should only change for github enterprise users
 //    client // This is the okhttp client used for http requests
+}
+
+task autoGithubRelease(dependsOn: [":app:assembleRelease"]) {
+    group "publishing"
+    finalizedBy tasks.getByName("githubRelease")
 }

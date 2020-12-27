@@ -150,7 +150,6 @@ ext {
 
             //7. res
             "component-CommonResource"   : "com.timecat.component:CommonResource:$component_CommonResource_version",
-            "component-ResBlock"         : project(":res:ResBlock"),
 
             //8. widget
 //            "widget-messagelist"       : "com.timecat.widget:widget-messagelist:$widget_messagelist_version",
@@ -247,7 +246,6 @@ ext {
 
             //7. res
             "component-CommonResource" : project(":res:CommonResource"),
-            "component-ResBlock"       : project(":res:ResBlock"),
 
             //8. widget
 //            "widget-messagelist"      : project("widget:widget-messagelist"),
@@ -340,7 +338,6 @@ ext {
 
             //7. res
             "component-CommonResource"   : timecatLocal["component-CommonResource"],
-            "component-ResBlock"         : timecatLocal["component-ResBlock"],
 
             //8. widget
 //            "widget-messagelist"       : timecatMarven["widget-messagelist"],

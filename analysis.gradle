@@ -1,10 +1,6 @@
 apply plugin: 'com.zen.lib.analysis'
 
 libReport {
-    output = [
-            "txt", "html" // default
-    ]
-    ignore = [
-            "com.android.support:support-v4"
-    ]
+    output = ["txt", "html"]
+    ignore = ["com.android.support:support-v4"]
 }
