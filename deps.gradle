@@ -138,18 +138,18 @@ ext {
             "component-CommonGreenDao"   : "com.timecat.data:CommonGreenDao:1.0.0",
             "component-DataManager"      : "com.timecat.data:DataManager:1.0.0",
             "component-CommonBmob"       : "com.timecat.component:CommonBmob:$component_CommonBmob_version",
-            "component-CommonSetting"    : "com.timecat.component:CommonSetting:$component_CommonSetting_version",
-            "component-SelfData"         : "com.timecat.component:SelfData:$component_SelfData_version",
+            "component-CommonSetting"    : "com.timecat.component:setting:1.0.0",
+            "component-SelfData"         : "com.timecat.identity:data:1.0.0",
 
             //6. component
 //            "styles"                   : "com.timecat.component:styles:$styles_version",
             "component-CommonBase"       : "com.timecat.component:CommonBase:$component_CommonBase_version",
-            "component-CommonSDK"        : "com.timecat.component:CommonSDK:$component_CommonSDK_version",
+            "component-CommonSDK"        : "com.timecat.component:sdk:1.0.0",
             "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.0",
             "component-CommonUI"         : "com.timecat.component:CommonUI:$component_CommonUI_version",
 
             //7. res
-            "component-CommonResource"   : "com.timecat.identity:resources:1.0.0",
+            "component-CommonResource"   : "com.timecat.component:ui:1.0.0",
 
             //8. widget
 //            "widget-messagelist"       : "com.timecat.widget:widget-messagelist:$widget_messagelist_version",

@@ -138,18 +138,18 @@ ext {
             "component-CommonGreenDao"   : "com.timecat.data:CommonGreenDao:1.0.0",
             "component-DataManager"      : "com.timecat.data:DataManager:1.0.0",
             "component-CommonBmob"       : "com.timecat.component:CommonBmob:$component_CommonBmob_version",
-            "component-CommonSetting"    : "com.timecat.component:CommonSetting:$component_CommonSetting_version",
-            "component-SelfData"         : "com.timecat.component:SelfData:$component_SelfData_version",
+            "component-CommonSetting"    : "com.timecat.component:setting:1.0.0",
+            "component-SelfData"         : "com.timecat.identity:data:1.0.0",
 
             //6. component
 //            "styles"                   : "com.timecat.component:styles:$styles_version",
             "component-CommonBase"       : "com.timecat.component:CommonBase:$component_CommonBase_version",
-            "component-CommonSDK"        : "com.timecat.component:CommonSDK:$component_CommonSDK_version",
+            "component-CommonSDK"        : "com.timecat.component:sdk:1.0.0",
             "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.0",
             "component-CommonUI"         : "com.timecat.component:CommonUI:$component_CommonUI_version",
 
             //7. res
-            "component-CommonResource"   : "com.timecat.identity:resources:1.0.0",
+            "component-CommonResource"   : "com.timecat.component:ui:1.0.0",
 
             //8. widget
 //            "widget-messagelist"       : "com.timecat.widget:widget-messagelist:$widget_messagelist_version",
@@ -234,18 +234,18 @@ ext {
             "component-CommonGreenDao" : project(":data:CommonGreenDao"),
             "component-DataManager"    : project(":data:DataManager"),
             "component-CommonBmob"     : project(":data:CommonBmob"),
-            "component-CommonSetting"  : project(":data:CommonSetting"),
-            "component-SelfData"       : project(":data:SelfData"),
+//            "component-CommonSetting"  : project(":data:CommonSetting"),
+//            "component-SelfData"       : project(":data:SelfData"),
 
             //6. component
 //            "styles"                   : "com.timecat.component:styles:$styles_version",
             "component-CommonBase"     : project(":component:CommonBase"),
-            "component-CommonSDK"      : project(":component:CommonSDK"),
-            "component-CommonStatic"   : project(":component:CommonStatic"),
+//            "component-CommonSDK"      : project(":component:CommonSDK"),
+//            "component-CommonStatic"   : project(":component:CommonStatic"),
             "component-CommonUI"       : project(":component:CommonUI"),
 
             //7. res
-            "component-CommonResource" : project(":res:CommonResource"),
+//            "component-CommonResource" : project(":res:CommonResource"),
 
             //8. widget
 //            "widget-messagelist"      : project("widget:widget-messagelist"),
@@ -270,10 +270,10 @@ ext {
 //            "component-SelfEventBus"   : project(":extend:SelfEventBus"),
             "component-SelfMarkdown"   : project(":extend:SelfMarkdown"),
             "component-SelfRouter"     : project(":extend:SelfRouter"),
-            "component-SelfService"    : project(":extend:SelfService"),
+//            "component-SelfService"    : project(":extend:SelfService"),
             "component-SelfImage"      : project(":extend:SelfImage"),
-            "component-SelfDSL"        : project(":extend:SelfDSL"),
-            "component-SelfFont"       : project(":extend:SelfFont"),
+//            "component-SelfDSL"        : project(":extend:SelfDSL"),
+//            "component-SelfFont"       : project(":extend:SelfFont"),
 //            "component-SelfAliyun"     : project(":extend:SelfAliyun"),
 //            "component-SelfTheme"      : project(":extend:SelfTheme"),
 //            "component-SelfXunfei"     : project(":extend:SelfXunfei"),
@@ -326,18 +326,18 @@ ext {
             "component-CommonGreenDao"   : timecatLocal["component-CommonGreenDao"],
             "component-DataManager"      : timecatLocal["component-DataManager"],
             "component-CommonBmob"       : timecatLocal["component-CommonBmob"],
-            "component-CommonSetting"    : timecatLocal["component-CommonSetting"],
-            "component-SelfData"         : timecatLocal["component-SelfData"],
+            "component-CommonSetting"    : timecatMarven["component-CommonSetting"],
+            "component-SelfData"         : timecatMarven["component-SelfData"],
 
             //6. component
 //            "styles"                   : timecatMarven["styles"],
             "component-CommonBase"       : timecatLocal["component-CommonBase"],
-            "component-CommonSDK"        : timecatLocal["component-CommonSDK"],
+            "component-CommonSDK"        : timecatMarven["component-CommonSDK"],
             "component-CommonStatic"     : timecatMarven["component-CommonStatic"],
             "component-CommonUI"         : timecatLocal["component-CommonUI"],
 
             //7. res
-            "component-CommonResource"   : timecatLocal["component-CommonResource"],
+            "component-CommonResource"   : timecatMarven["component-CommonResource"],
 
             //8. widget
 //            "widget-messagelist"       : timecatMarven["widget-messagelist"],
