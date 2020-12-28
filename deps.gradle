@@ -149,7 +149,7 @@ ext {
             "component-CommonUI"         : "com.timecat.component:CommonUI:$component_CommonUI_version",
 
             //7. res
-            "component-CommonResource"   : "com.timecat.component:ui:1.0.0",
+            "component-CommonResource"   : "com.timecat.component:identity:1.0.0",
 
             //8. widget
 //            "widget-messagelist"       : "com.timecat.widget:widget-messagelist:$widget_messagelist_version",
@@ -166,17 +166,16 @@ ext {
             "widget-timetable"           : "com.timecat.widget:widget-timetable:1.0.1",
 
             //9. extend
-            "component-PackAlert"        : "com.timecat.component:PackAlert:$component_PackAlert_version",
+            "component-PackAlert"        : "com.timecat.element:alert:1.0.0",
 //            "component-PackIM"           : project(":extend:PackIM"),
-            "component-PackRefreshList"  : "com.timecat.component:PackRefreshList:$component_PackRefreshList_version",
+            "component-PackRefreshList"  : "com.timecat.element:listview:1.0.0",
             "component-SelfArms"         : "com.timecat.extend:arms:1.0.0",
             "component-SelfBaidu"        : "com.timecat.component:SelfBaidu:$component_SelfBaidu_version",
             "component-SelfEventBus"     : "com.timecat.component:SelfEventBus:$component_SelfEventBus_version",
-            "component-SelfMarkdown"     : "com.timecat.component:SelfMarkdown:$component_SelfMarkdown_version",
-            "component-SelfImage"        : "com.timecat.component:SelfImage:$component_SelfImage_version",
-            "component-SelfRouter"       : "com.timecat.component:SelfRouter:$component_SelfRouter_version",
-            "component-SelfService"      : "com.timecat.identity:service:1.0.0",
-            "component-SelfTheme"        : "com.timecat.component:SelfTheme:$component_SelfTheme_version",
+            "component-SelfMarkdown"     : "com.timecat.extend:markdown:1.0.0",
+            "component-SelfImage"        : "com.timecat.extend:image:1.0.0",
+            "component-SelfRouter"       : "com.timecat.component:router:1.0.0",
+            "component-SelfService"      : "com.timecat.identity:service:1.0.1",
             "component-SelfXunfei"       : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
             "component-SelfAliyun"       : "com.timecat.component:SelfAliyun:$component_SelfAliyun_version",
             "component-SelfDSL"          : "com.timecat.identity:anim:1.0.0",
@@ -289,9 +288,9 @@ ext {
             "retrofit-converter-gson"      : "com.squareup.retrofit2:converter-gson:$retrofitSdkVersion",
             "retrofit-adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:$retrofitSdkVersion",
             "retrofit-adapter-rxjava2"     : "com.squareup.retrofit2:adapter-rxjava2:$retrofitSdkVersion",
-            "okhttp3"                      : "com.squareup.okhttp3:okhttp:3.10.0",
+            "okhttp3"                      : "com.squareup.okhttp3:okhttp:4.5.0",
             "okhttp-urlconnection"         : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
-            "okhttp3:logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:3.10.0",
+            "okhttp3:logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:4.5.0",
 
             //3. image
             "glide"                        : "com.github.bumptech.glide:glide:$glideSdkVersion",
