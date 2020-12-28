@@ -228,11 +228,11 @@ ext {
             "middle-block"             : project(":middle:middle-block"),
 
             //5. data
-            "component-CommonData"     : project(":data:CommonData"),
-            "component-CommonRoom"     : project(":data:CommonRoom"),
-            "component-CommonGreenDao" : project(":data:CommonGreenDao"),
-            "component-DataManager"    : project(":data:DataManager"),
-            "component-CommonBmob"     : project(":data:CommonBmob"),
+//            "component-CommonData"     : project(":data:CommonData"),
+//            "component-CommonRoom"     : project(":data:CommonRoom"),
+//            "component-CommonGreenDao" : project(":data:CommonGreenDao"),
+//            "component-DataManager"    : project(":data:DataManager"),
+//            "component-CommonBmob"     : project(":data:CommonBmob"),
 //            "component-CommonSetting"  : project(":data:CommonSetting"),
 //            "component-SelfData"       : project(":data:SelfData"),
 
