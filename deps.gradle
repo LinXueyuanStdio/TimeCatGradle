@@ -128,7 +128,7 @@ ext {
             "module-file"                : "com.timecat.module:module-file:1.0.0",
 
             //4. middle
-            "middle-setting"             : "com.timecat.middle:setting:1.0.0",
+            "middle-setting"             : "com.timecat.middle:form:1.0.0",
             "middle-image"               : "com.timecat.middle:selector:1.0.0",
             "middle-block"               : "com.timecat.middle:block:1.0.0",
 
