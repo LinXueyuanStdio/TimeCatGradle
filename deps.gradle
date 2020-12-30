@@ -128,9 +128,9 @@ ext {
             "module-file"                : "com.timecat.module:module-file:1.0.0",
 
             //4. middle
-            "middle-setting"             : "com.timecat.middle:middle-setting:1.0.0",
-            "middle-image"               : "com.timecat.middle:middle-image:1.0.0",
-            "middle-block"               : "com.timecat.middle:middle-block:1.0.0",
+            "middle-setting"             : "com.timecat.middle:setting:1.0.0",
+            "middle-image"               : "com.timecat.middle:selector:1.0.0",
+            "middle-block"               : "com.timecat.middle:block:1.0.0",
 
             //5. data
             "component-CommonData"       : "com.timecat.data:system:1.0.0",
@@ -143,10 +143,10 @@ ext {
 
             //6. component
 //            "styles"                   : "com.timecat.component:styles:$styles_version",
-            "component-CommonBase"       : "com.timecat.component:CommonBase:$component_CommonBase_version",
+            "component-CommonBase"       : "com.timecat.page:base:1.0.0",
             "component-CommonSDK"        : "com.timecat.component:sdk:1.0.0",
             "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.0",
-            "component-CommonUI"         : "com.timecat.component:CommonUI:$component_CommonUI_version",
+            "component-CommonUI"         : "com.timecat.layout:ui:1.0.0",
 
             //7. res
             "component-CommonResource"   : "com.timecat.component:identity:1.0.2",
