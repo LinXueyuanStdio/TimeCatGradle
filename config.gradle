@@ -93,38 +93,30 @@ ext {
 
     timecatMarven = [
             //1. module
-            "module-about"               : "com.timecat.module:module-about:$module_about_version",
-            "module-bugly"               : "com.timecat.component:module-bugly:$module_bugly_version",
+            "module-about"               : "com.timecat.module:module-about:1.0.0",
+            "module-bugly"               : "com.timecat.component:module-bugly:1.0.0",
             "module-controller"          : "com.timecat.module:module:module-controller:1.0.0",
-            "module-data"                : "com.timecat.module:module-data:$module_data_version",
+            "module-data"                : "com.timecat.module:module-data:1.0.0",
             "module-developer"           : "com.timecat.module:module-developer:1.0.0",
-//            "module-editor"            : project(":module:module-editor"),
-//            "module-editor-small"      : project(":module:module-editor-small"),
-//            "module-editor-idea"       : project(":module:module-editor-idea"),
-//            "module-main"                : project(":module:module-main"),
             "module-master"              : "com.timecat.module:module-master:1.0.0",
             "module-mindmap"             : "com.timecat.module:module-mindmap:1.0.0",
             "module-plugin"              : "com.timecat.module:module-plugin:1.0.0",
             "module-theme"               : "com.timecat.module:module-theme:1.0.0",
-            "module-welcome"             : "com.timecat.module:module-welcome:$module_welcome_version",
+            "module-welcome"             : "com.timecat.module:module-welcome:1.0.0",
 
             //2. module-online
-//            "module-im"                  : project(":module-online:module-im"),
-            "module-login"               : "com.timecat.module:module-login:$module_login_version",
-            "module-user"                : "com.timecat.module:module-user:$module_user_version",
+            "module-login"               : "com.timecat.module:module-login:1.0.0",
+            "module-user"                : "com.timecat.module:module-user:1.0.0",
 
             //3. module-stand
-            "module-artifact"            : "com.timecat.module:module-artifact:$module_artifact_version",
-            "module-book-reader"         : "com.timecat.module:module-book-reader:$module_book_reader_version",
+            "module-artifact"            : "com.timecat.module:module-artifact:1.0.0",
+            "module-book-reader"         : "com.timecat.module:module-book-reader:1.0.0",
             "module-git"                 : "com.timecat.module:module-git:1.0.0",
-//            "module-github"              : project(":module-stand:module-github"),
-//            "module-keyboard"          : "com.timecat.module:module-keyboard:$module_keyboard_version",
             "module-neoterm"             : "com.timecat.module:module-neoterm:1.0.0",
             "module-scarlet"             : "com.timecat.module:module-scarlet:1.0.0",
             "module-timetable"           : "com.timecat.module:module-timetable:1.0.0",
-//            "module-explorer"            : project(":module-stand:module-explorer"),
             "module-note-org"            : "com.timecat.module:module-note-org:1.0.0",
-            "module-file-explorer"       : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
+            "module-file-explorer"       : "com.timecat.module:module-file-explorer:1.0.0",
             "module-file"                : "com.timecat.module:module-file:1.0.0",
 
             //4. middle
@@ -142,7 +134,6 @@ ext {
             "component-SelfData"         : "com.timecat.identity:data:1.0.0",
 
             //6. component
-//            "styles"                   : "com.timecat.component:styles:$styles_version",
             "component-CommonBase"       : "com.timecat.page:base:1.0.0",
             "component-CommonSDK"        : "com.timecat.component:sdk:1.0.0",
             "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.0",
@@ -152,8 +143,6 @@ ext {
             "component-CommonResource"   : "com.timecat.component:identity:1.0.2",
 
             //8. widget
-//            "widget-messagelist"       : "com.timecat.widget:widget-messagelist:$widget_messagelist_version",
-//            "widget-chatinput"         : "com.timecat.widget:widget-chatinput:$widget_chatinput_version",
             "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:1.0.1",
             "widget-md-editor"           : "com.timecat.widget:widget-md-editor:1.0.2",
             "widget-NeoTermBridge"       : "com.timecat.widget:widget-NeoTermBridge:1.0.0",
@@ -193,88 +182,24 @@ ext {
             "module-controller"        : project(":module:module-controller"),
             "module-data"              : "com.timecat.module:module-data:$module_data_version",
             "module-developer"         : project(":module:module-developer"),
-//            "module-editor"           : project(":module:module-editor"),
-//            "module-editor-small"      : project(":module:module-editor-small"),
-//            "module-editor-idea"      : project(":module:module-editor-idea"),
-//            "module-main"             : project(":module:module-main"),
             "module-master"            : project(":module:module-master"),
-//            "module-mindmap"           : project(":module:module-mindmap"),
             "module-plugin"            : project(":module:module-plugin"),
             "module-theme"             : project(":module:module-theme"),
             "module-welcome"           : project(":module:module-welcome"),
 
             //2. module-online
-//            "module-im"                : project(":module-online:module-im"),
             "module-login"             : project(":module-online:module-login"),
             "module-user"              : project(":module-online:module-user"),
 
             //3. module-stand
             "module-artifact"          : project(":module-stand:module-artifact"),
             "module-book-reader"       : project(":module-stand:module-book-reader"),
-            "module-git"               : project(":module-stand:module-git"),
-//            "module-github"           : project(":module-stand:module-github"),
-//            "module-keyboard"          : project(":module-stand:module-keyboard"),
-//            "module-neoterm"           : project(":module-stand:module-neoterm"),
+//            "module-git"               : project(":module-stand:module-git"),
             "module-scarlet"           : project(":module-stand:module-scarlet"),
             "module-timetable"         : project(":module-stand:module-timetable"),
-//            "module-explorer"          : project(":module-stand:module-explorer"),
             "module-note-org"          : project(":module-stand:module-note-org"),
             "module-file-explorer"     : "com.timecat.module:module-file-explorer:$module_file_explorer_version",
             "module-file"              : project(":module-stand:module-file"),
-
-            //4. middle
-//            "middle-setting"           : project(":middle:middle-setting"),
-//            "middle-image"             : project(":middle:middle-image"),
-//            "middle-block"             : project(":middle:middle-block"),
-
-            //5. data
-//            "component-CommonData"     : project(":data:CommonData"),
-//            "component-CommonRoom"     : project(":data:CommonRoom"),
-//            "component-CommonGreenDao" : project(":data:CommonGreenDao"),
-//            "component-DataManager"    : project(":data:DataManager"),
-//            "component-CommonBmob"     : project(":data:CommonBmob"),
-//            "component-CommonSetting"  : project(":data:CommonSetting"),
-//            "component-SelfData"       : project(":data:SelfData"),
-
-            //6. component
-//            "styles"                   : "com.timecat.component:styles:$styles_version",
-//            "component-CommonBase"     : project(":component:CommonBase"),
-//            "component-CommonSDK"      : project(":component:CommonSDK"),
-//            "component-CommonStatic"   : project(":component:CommonStatic"),
-//            "component-CommonUI"       : project(":component:CommonUI"),
-
-            //7. res
-//            "component-CommonResource" : project(":res:CommonResource"),
-
-            //8. widget
-//            "widget-messagelist"      : project("widget:widget-messagelist"),
-//            "widget-chatinput"        : project("widget:widget-chatinput"),
-//            "widget-chrome-tabs"       : project("widget:widget-chrome-tabs"),
-//            "widget-md-editor"         : project("widget:widget-md-editor"),
-//            "widget-NeoTermBridge"    : project("widget:widget-NeoTermBridge"),
-//            "widget-smartalert"       : project("widget:widget-smartalert"),
-//            "widget-toolkit"          : project("widget:widget-toolkit"),
-//            "widget-Xorg"             : project("widget:widget-Xorg"),
-//            "widget-photoview"        : project("widget:widget-photoview"),
-//            "widget-swirl"            : project("widget:widget-swirl"),
-//            "widget-timely"           : project("widget:widget-timely"),
-//            "widget-timetable"        : project("widget:widget-timetable"),
-
-            //9. extend
-//            "component-PackAlert"      : project(":extend:PackAlert"),
-//            "component-PackIM"         : project(":extend:PackIM"),
-//            "component-PackRefreshList": project(":extend:PackRefreshList"),
-//            "component-SelfArms"       : project(":extend:SelfArms"),
-//            "component-SelfBaidu"      : project(":extend:SelfBaidu"),
-//            "component-SelfEventBus"   : project(":extend:SelfEventBus"),
-//            "component-SelfMarkdown"   : project(":extend:SelfMarkdown"),
-//            "component-SelfRouter"     : project(":extend:SelfRouter"),
-//            "component-SelfService"    : project(":extend:SelfService"),
-//            "component-SelfImage"      : project(":extend:SelfImage"),
-//            "component-SelfDSL"        : project(":extend:SelfDSL"),
-//            "component-SelfFont"       : project(":extend:SelfFont"),
-//            "component-SelfAliyun"     : project(":extend:SelfAliyun"),
-//            "component-SelfXunfei"     : project(":extend:SelfXunfei"),
     ]
 
     timecat = [
@@ -296,13 +221,13 @@ ext {
 
             //2. module-online
 //            "module-im"                  : timecatLocal["module-im"],
-            "module-login"               : timecatLocal["module-login"],
-            "module-user"                : timecatLocal["module-user"],
+            "module-login"               : timecatMarven["module-login"],
+            "module-user"                : timecatMarven["module-user"],
 
             //3. module-stand
             "module-artifact"            : timecatLocal["module-artifact"],
             "module-book-reader"         : timecatLocal["module-book-reader"],
-            "module-git"                 : timecatLocal["module-git"],
+            "module-git"                 : timecatMarven["module-git"],
 //            "module-github"              : timecatLocal["module-github"],
 //            "module-keyboard"          : timecatLocal["module-keyboard"],
             "module-neoterm"             : timecatMarven["module-neoterm"],
@@ -322,7 +247,7 @@ ext {
             "component-CommonData"       : timecatMarven["component-CommonData"],
             "component-CommonRoom"       : timecatMarven["component-CommonRoom"],
             "component-CommonGreenDao"   : timecatMarven["component-CommonGreenDao"],
-            "component-DataManager"      : timecatLocal["component-DataManager"],
+            "component-DataManager"      : timecatMarven["component-DataManager"],
             "component-CommonBmob"       : timecatMarven["component-CommonBmob"],
             "component-CommonSetting"    : timecatMarven["component-CommonSetting"],
             "component-SelfData"         : timecatMarven["component-SelfData"],

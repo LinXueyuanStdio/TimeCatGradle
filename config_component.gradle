@@ -3,8 +3,6 @@ apply from: project.rootProject.file("TimeCatGradle/config_base.gradle")
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-//apply plugin: 'com.alibaba.arouter'
-//apply plugin: 'com.jakewharton.butterknife'
 
 android {
     useLibrary 'org.apache.http.legacy'
@@ -24,10 +22,10 @@ android {
 }
 
 dependencies {
-//    kapt rootProject.ext.dependencies["butterknife-compiler"]
-//    kapt rootProject.ext.dependencies["arouter-compiler"]
     kapt rootProject.ext.dependencies["dagger2-compiler"]
     kapt rootProject.ext.dependencies["router-compiler"]
 
     api rootProject.ext.dependencies["kotlin-stdlib"]
 }
+
+group="com.timecat.moddule"
