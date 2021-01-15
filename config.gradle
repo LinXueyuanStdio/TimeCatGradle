@@ -118,61 +118,6 @@ ext {
             "module-note-org"            : "com.timecat.module:module-note-org:1.0.0",
             "module-file-explorer"       : "com.timecat.module:module-file-explorer:1.0.0",
             "module-file"                : "com.timecat.module:module-file:1.0.0",
-
-            //4. middle
-            "middle-setting"             : "com.timecat.middle:form:1.0.0",
-            "middle-image"               : "com.timecat.middle:selector:1.0.0",
-            "middle-block"               : "com.timecat.middle:block:1.0.0",
-
-            //5. data
-            "component-CommonData"       : "com.timecat.data:system:1.0.0",
-            "component-CommonRoom"       : "com.timecat.data:room:1.0.0",
-            "component-CommonGreenDao"   : "com.timecat.data:greendao:1.0.0",
-            "component-DataManager"      : "com.timecat.data:DataManager:1.0.0",
-            "component-CommonBmob"       : "com.timecat.data:bmob:1.0.1",
-            "component-CommonSetting"    : "com.timecat.component:setting:1.0.0",
-            "component-SelfData"         : "com.timecat.identity:data:1.0.0",
-
-            //6. component
-            "component-CommonBase"       : "com.timecat.page:base:1.0.0",
-            "component-CommonSDK"        : "com.timecat.component:sdk:1.0.0",
-            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.0",
-            "component-CommonUI"         : "com.timecat.layout:ui:1.0.0",
-
-            //7. res
-            "component-CommonResource"   : "com.timecat.component:identity:1.0.2",
-
-            //8. widget
-            "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:1.0.1",
-            "widget-md-editor"           : "com.timecat.widget:widget-md-editor:1.0.2",
-            "widget-NeoTermBridge"       : "com.timecat.widget:widget-NeoTermBridge:1.0.0",
-            "widget-smartalert"          : "com.timecat.widget:widget-smartalert:1.0.0",
-            "widget-toolkit"             : "com.timecat.widget:widget-toolkit:1.0.0",
-            "widget-Xorg"                : "com.timecat.widget:widget-Xorg:1.0.0",
-            "widget-photoview"           : "com.timecat.widget:widget-photoview:1.0.0",
-            "widget-swirl"               : "com.timecat.widget:widget-swirl:1.0.0",
-            "widget-timely"              : "com.timecat.widget:widget-timely:1.0.0",
-            "widget-timetable"           : "com.timecat.widget:widget-timetable:1.0.1",
-
-            //9. extend
-            "component-PackAlert"        : "com.timecat.element:alert:1.0.0",
-//            "component-PackIM"           : project(":extend:PackIM"),
-            "component-PackRefreshList"  : "com.timecat.element:listview:1.0.0",
-            "component-SelfArms"         : "com.timecat.extend:arms:1.0.0",
-            "component-SelfBaidu"        : "com.timecat.component:SelfBaidu:$component_SelfBaidu_version",
-            "component-SelfEventBus"     : "com.timecat.component:SelfEventBus:$component_SelfEventBus_version",
-            "component-SelfMarkdown"     : "com.timecat.extend:markdown:1.0.0",
-            "component-SelfImage"        : "com.timecat.extend:image:1.0.0",
-            "component-SelfRouter"       : "com.timecat.component:router:1.0.0",
-            "component-SelfService"      : "com.timecat.identity:service:1.0.1",
-            "component-SelfXunfei"       : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
-            "component-SelfAliyun"       : "com.timecat.component:SelfAliyun:$component_SelfAliyun_version",
-            "component-SelfDSL"          : "com.timecat.identity:anim:1.0.0",
-            "component-SelfFont"         : "com.timecat.identity:font:1.0.0",
-
-            //10. plugin
-            "plugin-agreement-picturebed": "com.timecat.show:picturebed:1.0.0",
-            "plugin-agreement-window"    : "com.timecat.show:window:1.0.0",
     ]
 
     timecatLocal = [
@@ -234,59 +179,59 @@ ext {
             "module-file"                : timecatMarven["module-file"],
 
             //4. middle
-            "middle-setting"             : timecatMarven["middle-setting"],
-            "middle-image"               : timecatMarven["middle-image"],
-            "middle-block"               : timecatMarven["middle-block"],
+            "middle-setting"             : "com.timecat.middle:form:1.0.0",
+            "middle-image"               : "com.timecat.middle:selector:1.0.0",
+            "middle-block"               : "com.timecat.middle:block:1.0.0",
 
             //5. data
-            "component-CommonData"       : timecatMarven["component-CommonData"],
-            "component-CommonRoom"       : timecatMarven["component-CommonRoom"],
-            "component-CommonGreenDao"   : timecatMarven["component-CommonGreenDao"],
-            "component-DataManager"      : timecatMarven["component-DataManager"],
-            "component-CommonBmob"       : timecatMarven["component-CommonBmob"],
-            "component-CommonSetting"    : timecatMarven["component-CommonSetting"],
-            "component-SelfData"         : timecatMarven["component-SelfData"],
+            "component-CommonData"       : "com.timecat.data:system:1.0.0",
+            "component-CommonRoom"       : "com.timecat.data:room:1.0.0",
+            "component-CommonGreenDao"   : "com.timecat.data:greendao:1.0.0",
+            "component-DataManager"      : "com.timecat.data:DataManager:1.0.0",
+            "component-CommonBmob"       : "com.timecat.data:bmob:1.0.1",
+            "component-CommonSetting"    : "com.timecat.component:setting:1.0.0",
+            "component-SelfData"         : "com.timecat.identity:data:1.0.1",
 
             //6. component
-            "component-CommonBase"       : timecatMarven["component-CommonBase"],
-            "component-CommonSDK"        : timecatMarven["component-CommonSDK"],
-            "component-CommonStatic"     : timecatMarven["component-CommonStatic"],
-            "component-CommonUI"         : timecatMarven["component-CommonUI"],
+            "component-CommonBase"       : "com.timecat.page:base:1.0.0",
+            "component-CommonSDK"        : "com.timecat.component:sdk:1.0.1",
+            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.1",
+            "component-CommonUI"         : "com.timecat.layout:ui:1.0.0",
 
             //7. res
-            "component-CommonResource"   : timecatMarven["component-CommonResource"],
+            "component-CommonResource"   : "com.timecat.component:identity:1.0.2",
 
             //8. widget
-            "widget-chrome-tabs"         : timecatMarven["widget-chrome-tabs"],
-            "widget-md-editor"           : timecatMarven["widget-md-editor"],
-            "widget-NeoTermBridge"       : timecatMarven["widget-NeoTermBridge"],
-            "widget-smartalert"          : timecatMarven["widget-smartalert"],
-            "widget-toolkit"             : timecatMarven["widget-toolkit"],
-            "widget-Xorg"                : timecatMarven["widget-Xorg"],
-            "widget-photoview"           : timecatMarven["widget-photoview"],
-            "widget-swirl"               : timecatMarven["widget-swirl"],
-            "widget-timely"              : timecatMarven["widget-timely"],
-            "widget-timetable"           : timecatMarven["widget-timetable"],
+            "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:1.0.1",
+            "widget-md-editor"           : "com.timecat.widget:widget-md-editor:1.0.2",
+            "widget-NeoTermBridge"       : "com.timecat.widget:widget-NeoTermBridge:1.0.0",
+            "widget-smartalert"          : "com.timecat.widget:widget-smartalert:1.0.0",
+            "widget-toolkit"             : "com.timecat.widget:widget-toolkit:1.0.0",
+            "widget-Xorg"                : "com.timecat.widget:widget-Xorg:1.0.0",
+            "widget-photoview"           : "com.timecat.widget:widget-photoview:1.0.0",
+            "widget-swirl"               : "com.timecat.widget:widget-swirl:1.0.0",
+            "widget-timely"              : "com.timecat.widget:widget-timely:1.0.0",
+            "widget-timetable"           : "com.timecat.widget:widget-timetable:1.0.1",
 
             //9. extend
-            "component-PackAlert"        : timecatMarven["component-PackAlert"],
-//            "component-PackIM"           : timecatLocal["component-PackIM"],
-            "component-PackRefreshList"  : timecatMarven["component-PackRefreshList"],
-            "component-SelfArms"         : timecatMarven["component-SelfArms"],
-            "component-SelfBaidu"        : timecatMarven["component-SelfBaidu"],
-            "component-SelfEventBus"     : timecatMarven["component-SelfEventBus"],
-            "component-SelfMarkdown"     : timecatMarven["component-SelfMarkdown"],
-            "component-SelfImage"        : timecatMarven["component-SelfImage"],
-            "component-SelfRouter"       : timecatMarven["component-SelfRouter"],
-            "component-SelfService"      : timecatMarven["component-SelfService"],
-            "component-SelfXunfei"       : timecatMarven["component-SelfXunfei"],
-            "component-SelfDSL"          : timecatMarven["component-SelfDSL"],
-//            "component-SelfAliyun"       : timecatLocal["component-SelfAliyun"],
-            "component-SelfFont"         : timecatMarven["component-SelfFont"],
+            "component-PackAlert"        : "com.timecat.element:alert:1.0.0",
+//            "component-PackIM"           : project(":extend:PackIM"),
+            "component-PackRefreshList"  : "com.timecat.element:listview:1.0.0",
+            "component-SelfArms"         : "com.timecat.extend:arms:1.0.0",
+            "component-SelfBaidu"        : "com.timecat.component:SelfBaidu:$component_SelfBaidu_version",
+            "component-SelfEventBus"     : "com.timecat.component:SelfEventBus:$component_SelfEventBus_version",
+            "component-SelfMarkdown"     : "com.timecat.extend:markdown:1.0.0",
+            "component-SelfImage"        : "com.timecat.extend:image:1.0.0",
+            "component-SelfRouter"       : "com.timecat.component:router:1.0.0",
+            "component-SelfService"      : "com.timecat.identity:service:1.0.1",
+            "component-SelfXunfei"       : "com.timecat.component:SelfXunfei:$component_SelfXunfei_version",
+            "component-SelfAliyun"       : "com.timecat.component:SelfAliyun:$component_SelfAliyun_version",
+            "component-SelfDSL"          : "com.timecat.identity:anim:1.0.0",
+            "component-SelfFont"         : "com.timecat.identity:font:1.0.0",
 
             //10. plugin
-            "plugin-agreement-picturebed": timecatMarven["plugin-agreement-picturebed"],
-            "plugin-agreement-window"    : timecatMarven["plugin-agreement-window"],
+            "plugin-agreement-picturebed": "com.timecat.show:picturebed:1.0.0",
+            "plugin-agreement-window"    : "com.timecat.show:window:1.0.0",
     ]
     //endregion
 

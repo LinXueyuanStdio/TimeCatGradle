@@ -131,12 +131,12 @@ ext {
             "component-DataManager"      : "com.timecat.data:DataManager:1.0.0",
             "component-CommonBmob"       : "com.timecat.data:bmob:1.0.1",
             "component-CommonSetting"    : "com.timecat.component:setting:1.0.0",
-            "component-SelfData"         : "com.timecat.identity:data:1.0.0",
+            "component-SelfData"         : "com.timecat.identity:data:1.0.1",
 
             //6. component
             "component-CommonBase"       : "com.timecat.page:base:1.0.0",
-            "component-CommonSDK"        : "com.timecat.component:sdk:1.0.0",
-            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.0",
+            "component-CommonSDK"        : "com.timecat.component:sdk:1.0.1",
+            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.1",
             "component-CommonUI"         : "com.timecat.layout:ui:1.0.0",
 
             //7. res
