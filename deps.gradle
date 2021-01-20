@@ -136,8 +136,8 @@ ext {
             //6. component
             "component-CommonBase"       : "com.timecat.page:base:1.0.0",
             "component-CommonSDK"        : "com.timecat.component:sdk:1.0.1",
-            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.4",
-            "component-CommonUI"         : "com.timecat.layout:ui:1.0.1",
+            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.5",
+            "component-CommonUI"         : "com.timecat.layout:ui:1.0.2",
 
             //7. res
             "component-CommonResource"   : "com.timecat.component:identity:1.0.2",
