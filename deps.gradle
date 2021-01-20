@@ -122,22 +122,22 @@ ext {
             //4. middle
             "middle-setting"             : "com.timecat.middle:form:1.0.0",
             "middle-image"               : "com.timecat.middle:selector:1.0.0",
-            "middle-block"               : "com.timecat.middle:block:1.0.0",
+            "middle-block"               : "com.timecat.middle:block:1.0.1",
 
             //5. data
             "component-CommonData"       : "com.timecat.data:system:1.0.0",
-            "component-CommonRoom"       : "com.timecat.data:room:1.0.0",
+            "component-CommonRoom"       : "com.timecat.data:room:1.0.2",
             "component-CommonGreenDao"   : "com.timecat.data:greendao:1.0.0",
             "component-DataManager"      : "com.timecat.data:DataManager:1.0.0",
-            "component-CommonBmob"       : "com.timecat.data:bmob:1.0.1",
+            "component-CommonBmob"       : "com.timecat.data:bmob:1.0.3",
             "component-CommonSetting"    : "com.timecat.component:setting:1.0.0",
-            "component-SelfData"         : "com.timecat.identity:data:1.0.1",
+            "component-SelfData"         : "com.timecat.identity:data:1.0.4",
 
             //6. component
             "component-CommonBase"       : "com.timecat.page:base:1.0.0",
             "component-CommonSDK"        : "com.timecat.component:sdk:1.0.1",
-            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.2",
-            "component-CommonUI"         : "com.timecat.layout:ui:1.0.0",
+            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.4",
+            "component-CommonUI"         : "com.timecat.layout:ui:1.0.1",
 
             //7. res
             "component-CommonResource"   : "com.timecat.component:identity:1.0.2",
