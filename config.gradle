@@ -109,7 +109,7 @@ ext {
             "module-user"                : "com.timecat.module:module-user:1.0.3",
 
             //3. module-stand
-            "module-artifact"            : "com.timecat.module:module-artifact:1.0.0",
+            "module-artifact"            : "com.timecat.module:module-browser:1.0.0",
             "module-book-reader"         : "com.timecat.module:module-reader:1.0.0",
             "module-git"                 : "com.timecat.module:module-git:1.0.2",
             "module-neoterm"             : "com.timecat.module:module-neoterm:1.0.0",
@@ -188,8 +188,8 @@ ext {
             "component-CommonRoom"       : "com.timecat.data:room:1.0.4",
             "component-CommonGreenDao"   : "com.timecat.data:greendao:1.0.0",
             "component-DataManager"      : "com.timecat.data:DataManager:1.0.0",
-            "component-CommonBmob"       : "com.timecat.data:bmob:1.0.3",
-            "component-CommonSetting"    : "com.timecat.component:setting:1.0.0",
+            "component-CommonBmob"       : "com.timecat.data:bmob:1.0.7",
+            "component-CommonSetting"    : "com.timecat.component:setting:1.0.1",
             "component-SelfData"         : "com.timecat.identity:data:1.0.5",
 
             //6. component
