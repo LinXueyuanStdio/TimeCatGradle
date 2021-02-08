@@ -125,18 +125,18 @@ ext {
             "middle-block"               : "com.timecat.middle:block:1.0.4",
 
             //5. data
-            "component-CommonData"       : "com.timecat.data:system:1.0.0",
+            "component-CommonData"       : "com.timecat.data:system:1.0.1",
             "component-CommonRoom"       : "com.timecat.data:room:1.0.4",
             "component-CommonGreenDao"   : "com.timecat.data:greendao:1.0.0",
             "component-DataManager"      : "com.timecat.data:DataManager:1.0.0",
             "component-CommonBmob"       : "com.timecat.data:bmob:1.0.7",
             "component-CommonSetting"    : "com.timecat.component:setting:1.0.1",
-            "component-SelfData"         : "com.timecat.identity:data:1.0.5",
+            "component-SelfData"         : "com.timecat.identity:data:1.0.6",
 
             //6. component
-            "component-CommonBase"       : "com.timecat.page:base:1.0.0",
+            "component-CommonBase"       : "com.timecat.page:base:1.0.1",
             "component-CommonSDK"        : "com.timecat.component:sdk:1.0.2",
-            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.5",
+            "component-CommonStatic"     : "com.timecat.identity:readonly:1.0.7",
             "component-CommonUI"         : "com.timecat.layout:ui:1.0.3",
 
             //7. res
