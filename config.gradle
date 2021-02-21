@@ -45,8 +45,6 @@ ext {
     //4. middle
 
     //5. data
-    component_CommonData_version = "1.1.2"
-    component_CommonBmob_version = "1.0.4"
     component_CommonGreenDao_version = "1.0.0"
     component_CommonSetting_version = "1.0.1"
     component_SelfData_version = "1.0.1"
@@ -93,31 +91,31 @@ ext {
 
     timecatMarven = [
             //1. module
-            "module-about"               : "com.timecat.module:module-about:1.0.9",
-            "module-bugly"               : "com.timecat.module:module-bugly:1.0.2",
-            "module-controller"          : "com.timecat.module:module:module-controller:1.0.0",
-            "module-data"                : "com.timecat.module:module-data:1.0.0",
-            "module-developer"           : "com.timecat.module:module-developer:1.0.0",
-            "module-master"              : "com.timecat.module:module-master:1.0.0",
-            "module-mindmap"             : "com.timecat.module:module-mindmap:1.0.0",
-            "module-plugin"              : "com.timecat.module:module-plugin:1.0.0",
-            "module-theme"               : "com.timecat.module:module-theme:1.0.0",
-            "module-welcome"             : "com.timecat.module:module-welcome:1.0.10",
+            "module-about"               : "com.timecat.module:module-about:+",
+            "module-bugly"               : "com.timecat.module:module-bugly:+",
+            "module-controller"          : "com.timecat.module:module:module-controller:+",
+            "module-data"                : "com.timecat.module:module-data:+",
+            "module-developer"           : "com.timecat.module:module-developer:+",
+            "module-master"              : "com.timecat.module:module-master:+",
+            "module-mindmap"             : "com.timecat.module:module-mindmap:+",
+            "module-plugin"              : "com.timecat.module:module-plugin:+",
+            "module-theme"               : "com.timecat.module:module-theme:+",
+            "module-welcome"             : "com.timecat.module:module-welcome:+",
 
             //2. module-online
-            "module-login"               : "com.timecat.module:module-login:1.1.0",
-            "module-user"                : "com.timecat.module:module-user:1.0.3",
+            "module-login"               : "com.timecat.module:module-login:+",
+            "module-user"                : "com.timecat.module:module-user:+",
 
             //3. module-stand
-            "module-artifact"            : "com.timecat.module:module-browser:1.0.0",
-            "module-book-reader"         : "com.timecat.module:module-reader:1.0.0",
-            "module-git"                 : "com.timecat.module:module-git:1.0.2",
-            "module-neoterm"             : "com.timecat.module:module-neoterm:1.0.0",
-            "module-scarlet"             : "com.timecat.module:module-scarlet:1.0.0",
-            "module-timetable"           : "com.timecat.module:module-timetable:1.0.0",
-            "module-note-org"            : "com.timecat.module:module-note-org:1.0.0",
-            "module-file-explorer"       : "com.timecat.module:module-file-explorer:1.0.0",
-            "module-file"                : "com.timecat.module:module-file:1.0.4",
+            "module-artifact"            : "com.timecat.module:module-browser:+",
+            "module-book-reader"         : "com.timecat.module:module-reader:+",
+            "module-git"                 : "com.timecat.module:module-git:+",
+            "module-neoterm"             : "com.timecat.module:module-neoterm:+",
+            "module-scarlet"             : "com.timecat.module:module-scarlet:+",
+            "module-timetable"           : "com.timecat.module:module-timetable:+",
+            "module-note-org"            : "com.timecat.module:module-note-org:+",
+            "module-file-explorer"       : "com.timecat.module:module-file-explorer:+",
+            "module-file"                : "com.timecat.module:module-file:+",
     ]
 
     timecatLocal = [
