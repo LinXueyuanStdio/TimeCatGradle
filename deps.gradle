@@ -255,7 +255,7 @@ ext {
     canarySdkVersion = "1.5.4"
 
     //10. router
-    component_router_version = "1.8.3.5"
+    component_router_version = "1.8.8"
 
 //    implementation rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
 //    implementation rootProject.ext.dependencies["kotlinx-coroutines-android"]
@@ -311,7 +311,7 @@ ext {
             "roundedimageview"             : 'com.makeramen:roundedimageview:2.3.0',
             "expansionpanel"               : 'com.github.florent37:expansionpanel:1.0.7',
             "HoloColorPicker"              : 'com.larswerkman:HoloColorPicker:1.5',
-            "RoundCornerProgressBar"       : 'com.akexorcist:RoundCornerProgressBar:2.0.3',
+            "RoundCornerProgressBar"       : 'com.akexorcist:round-corner-progress-bar:2.1.1',
             "countdownview"                : 'com.github.iwgang:countdownview:2.1.6',
             "compoundlayout"               : 'com.github.jaouan:compoundlayout:1.0.1',
             "FlowLayout"                   : 'org.apmem.tools:layouts:1.10@aar',
