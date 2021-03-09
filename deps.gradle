@@ -16,81 +16,6 @@ ext {
     component_router_doc_enable = true
 
     //region TimeCat
-    component_commonarms_version = "1.0.1"
-    module_keyboard_version = "1.0.10"
-    module_search_version = "1.0.7"
-
-    module_git_version = '1.0.0'
-    module_github_version = '1.0.0'
-    module_leaderboard_version = '1.0.0'
-    module_moment_version = '1.0.0'
-    module_timetable_version = '1.0.0'
-
-
-    //1. module
-    module_about_version = "1.0.8"
-    module_bugly_version = "1.0.1"
-    module_data_version = "1.0.2"
-    module_welcome_version = '1.0.10'
-
-    //2. module-online
-    module_login_version = "1.0.11"
-    module_user_version = "1.0.10"
-
-    //3. module-stand
-    module_artifact_version = "1.0.0"
-    module_book_reader_version = "1.1.1"
-    module_file_explorer_version = "1.0.9"
-
-    //4. middle
-
-    //5. data
-    component_CommonData_version = "1.1.2"
-    component_CommonBmob_version = "1.0.4"
-    component_CommonGreenDao_version = "1.0.0"
-    component_CommonSetting_version = "1.0.1"
-    component_SelfData_version = "1.0.1"
-
-    //6. component
-    styles_version = "1.0.0"
-    component_CommonBase_version = "1.1.2"
-    component_CommonSDK_version = "1.1.1"
-    component_CommonStatic_version = "1.1.9"
-    component_CommonUI_version = "1.0.2"
-    component_lightui_version = "1.0.0"
-    component_BaseMvp_version = "1.0.0"
-
-    //7. res
-    component_CommonResource_version = "1.1.5"
-
-    //8. widget
-    widget_burstlink_version = "1.0.1"
-    widget_edittext_version = "1.0.1"
-    widget_calendar_version = "1.0.0"
-    widget_messagelist_version = "1.0.1"
-    widget_chatinput_version = "1.0.1"
-
-    //9. extend
-    component_SelfArms_version = "1.0.0"
-    component_SelfBaidu_version = "1.0.0"
-    component_SelfEventBus_version = "1.0.0"
-    component_SelfRouter_version = "1.0.5"
-    component_SelfTheme_version = "1.0.4"
-    component_SelfXunfei_version = "1.0.0"
-    component_SelfService_version = "1.0.1"
-    component_SelfImage_version = "1.0.0"
-    component_SelfMarkdown_version = "1.0.0"
-    component_SelfAliyun_version = "1.0.0"
-    component_SelfDSL_version = "1.0.0"
-    component_PackAlert_version = "1.0.1"
-    component_PackRefreshList_version = "1.0.1"
-    component_PackIM_version = "1.0.0"
-    component_SelfFont_version = "1.0.0"
-
-    //10. plugin
-    plugin_aggreement_picturebed_version = "1.0.1"
-    plugin_aggreement_window_version = "1.0.1"
-
     timecat = [
             //1. module
             "module-about"               : "com.timecat.module:module-about:+",
@@ -173,6 +98,21 @@ ext {
             //10. plugin
             "plugin-agreement-picturebed": "com.timecat.show:picturebed:+",
             "plugin-agreement-window"    : "com.timecat.show:window:+",
+
+            //11. MView
+            "MView-same"                 : "com.timecat.middle:MView-same:+",
+
+            "MView-theme"                : "com.timecat.component:MView-theme:+",
+            "MView-lottie"               : "com.timecat.component:MView-lottie:+",
+
+            "MView-base"                 : "com.timecat.component:MView-base:+",
+            "MView-core"                 : "com.timecat.component:MView-core:+",
+            "MView-intro"                : "com.timecat.component:MView-intro:+",
+            "MView-font"                 : "com.timecat.component:MView-font:+",
+            "MView-RadioButton"          : "com.timecat.component:MView-RadioButton:+",
+            "MView-ListView"             : "com.timecat.component:MView-ListView:+",
+            "MView-CheckBox"             : "com.timecat.component:MView-CheckBox:+",
+            "MLang"                      : "com.timecat.component:MLang:2.0.2",
     ]
     //endregion
 
