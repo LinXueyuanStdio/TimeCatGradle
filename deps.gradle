@@ -170,6 +170,7 @@ ext {
 
     //2. network
     retrofitSdkVersion = "2.6.0"
+    MO_SHI_VERSION = "1.11.0"
 
     //3. image
     glideSdkVersion = "4.8.0"
@@ -179,6 +180,7 @@ ext {
 
     //5. view
     butterknifeSdkVersion = "10.1.0"
+    IMMERSION_BAR_VERSION = "3.0.0"
 
     //6. rx1
     rxlifecycleSdkVersion = "1.0"
@@ -190,11 +192,14 @@ ext {
     dagger2SdkVersion = "2.22.1"
     shadow_version = "2.0.13"
 
-    //9. test
+    //9. player
+    EXOPLAYER_VERSION = "2.12.1"
+
+    //10. test
     espressoSdkVersion = "3.0.1"
     canarySdkVersion = "1.5.4"
 
-    //10. router
+    //11. router
     component_router_version = "1.8.8"
 
 //    implementation rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
@@ -217,6 +222,9 @@ ext {
             "retrofit-converter-gson"      : "com.squareup.retrofit2:converter-gson:$retrofitSdkVersion",
             "retrofit-adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:$retrofitSdkVersion",
             "retrofit-adapter-rxjava2"     : "com.squareup.retrofit2:adapter-rxjava2:$retrofitSdkVersion",
+            "converter-moshi"              : "com.squareup.retrofit2:converter-moshi:$retrofitSdkVersion",
+            "moshi"                        : "com.squareup.moshi:moshi:$MO_SHI_VERSION",
+            "moshi-kotlin"                 : "com.squareup.moshi:moshi-kotlin-codegen:$MO_SHI_VERSION",
             "okhttp3"                      : "com.squareup.okhttp3:okhttp:4.5.0",
             "okhttp-urlconnection"         : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
             "okhttp3:logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:4.5.0",
@@ -261,6 +269,7 @@ ext {
             "BasePopup"                    : "com.github.razerdp:BasePopup:2.2.1",
             "FancyShowCaseView"            : 'me.toptas.fancyshowcase:fancyshowcaseview:1.1.5',
             "PhotoView"                    : 'com.github.chrisbanes:PhotoView:2.0.0',
+            "immersionbar"                 : "com.gyf.immersionbar:immersionbar:$IMMERSION_BAR_VERSION",
 
             //6. rx1
             "rxandroid"                    : "io.reactivex:rxandroid:1.2.1",
@@ -307,8 +316,17 @@ ext {
             "joda-time"                    : 'joda-time:joda-time:2.10.1',
             "jgit"                         : 'org.eclipse.jgit:org.eclipse.jgit:5.7.0.202003110725-r',
             "shadow-dynamic-host"          : "com.tencent.shadow.dynamic:host:$shadow_version",
+            "mmkv"                         : "com.tencent:mmkv:1.2.9",
 
-            //9. test
+            //9. player
+            "exoplayer"                 : "com.google.android.exoplayer:exoplayer:$EXOPLAYER_VERSION",
+            "exoplayer-core"            : "com.google.android.exoplayer:exoplayer-core:$EXOPLAYER_VERSION",
+            "exoplayer-dash"            : "com.google.android.exoplayer:exoplayer-dash:$EXOPLAYER_VERSION",
+            "exoplayer-hls"             : "com.google.android.exoplayer:exoplayer-hls:$EXOPLAYER_VERSION",
+            "exoplayer-smoothstraming"  : "com.google.android.exoplayer:exoplayer-smoothstreaming:$EXOPLAYER_VERSION",
+            "exoplayer-rtmp"            : "com.google.android.exoplayer:extension-rtmp:$EXOPLAYER_VERSION",
+
+            //10. test
             "junit"                        : "junit:junit:4.12",
             "androidJUnitRunner"           : "androidx.test.runner.AndroidJUnitRunner",
             "runner"                       : 'androidx.test.ext:junit:1.1.0',
@@ -383,6 +401,9 @@ ext {
             "androidx.room:compiler"   : "androidx.room:room-compiler:$androidx_room_version",//kapt rootProject.ext.androidx_lib["androidx.room:compiler"]
             "androidx.room:rxjava2"    : "androidx.room:room-rxjava2:$androidx_room_version",//api rootProject.ext.androidx_lib["androidx.room:rxjava2"]
             "androidx.room:common"     : "androidx.room:room-common:$androidx_room_version",//api rootProject.ext.androidx_lib["androidx.room:common"]
+            "androidx.room:room-ktx"   : "androidx.room:room-ktx:$androidx_room_version",//api rootProject.ext.androidx_lib["androidx.room:room-ktx"]
+            "startup"                  : "androidx.startup:startup-runtime:1.0.0",
+            "paging"                   : "androidx.paging:paging-runtime-ktx:3.0.0-alpha09",
 
             "support"                  : "androidx.legacy:legacy-support-v4:$androidX",
 
