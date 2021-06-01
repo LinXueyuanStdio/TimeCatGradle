@@ -250,7 +250,7 @@ ext {
             "paginate"                     : "com.github.markomilos:paginate:0.5.1",
             "vlayout"                      : "com.alibaba.android:vlayout:1.1.0@aar",
             "lottie"                       : "com.airbnb.android:lottie:2.5.4",
-            "realtimeblurview"             : "com.github.mmin18:realtimeblurview:1.0.6",
+            "realtimeblurview"             : "com.github.mmin18:realtimeblurview:1.2.1",
             "circleimageview"              : "de.hdodenhof:circleimageview:2.2.0",
             "loadinglayout"                : "com.github.czy1121:loadinglayout:1.0.1",
             "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
