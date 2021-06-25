@@ -78,6 +78,8 @@ ext {
             "widget-swirl"               : "com.timecat.widget:widget-swirl:+",
             "widget-timely"              : "com.timecat.widget:widget-timely:+",
             "widget-timetable"           : "com.timecat.widget:widget-timetable:+",
+            "widget-board"               : "com.timecat.widget:board:+",
+            "widget-table"               : "com.timecat.widget:table:+",
 
             //9. extend
             "component-PackAlert"        : "com.timecat.element:alert:+",
@@ -266,7 +268,7 @@ ext {
             "viewtooltip"                  : 'com.github.florent37:viewtooltip:1.1.8',
             "taptargetview"                : 'com.getkeepsafe.taptargetview:taptargetview:1.12.0',
             "DateTimeRangePicker"          : "com.github.skedgo:DateTimeRangePicker:v1.3",
-            "BasePopup"                    : "com.github.razerdp:BasePopup:2.2.1",
+            "BasePopup"                    : "io.github.razerdp:BasePopup:3.1.4",
             "FancyShowCaseView"            : 'me.toptas.fancyshowcase:fancyshowcaseview:1.1.5',
             "PhotoView"                    : 'com.github.chrisbanes:PhotoView:2.0.0',
             "immersionbar"                 : "com.gyf.immersionbar:immersionbar:$IMMERSION_BAR_VERSION",

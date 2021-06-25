@@ -53,8 +53,8 @@ ext {
             "module-data"         : "com.timecat.module:module-data:+",
             "module-developer"    : project(":module:module-developer"),
             "module-master"       : project(":module:module-master"),
-            "module-plugin"       : project(":module:module-plugin"),
-            "module-theme"        : project(":module:module-theme"),
+//            "module-plugin"       : project(":module:module-plugin"),
+//            "module-theme"        : project(":module:module-theme"),
 //            "module-welcome"           : project(":module:module-welcome"),
 
             //2. module-online
@@ -81,8 +81,8 @@ ext {
             "module-developer"           : timecatLocal["module-developer"],
             "module-master"              : timecatLocal["module-master"],
             "module-mindmap"             : timecatMarven["module-mindmap"],
-            "module-plugin"              : timecatLocal["module-plugin"],
-            "module-theme"               : timecatLocal["module-theme"],
+            "module-plugin"              : timecatMarven["module-plugin"],
+            "module-theme"               : timecatMarven["module-theme"],
             "module-welcome"             : timecatMarven["module-welcome"],
 
             //2. module-online
@@ -137,6 +137,8 @@ ext {
             "widget-swirl"               : "com.timecat.widget:widget-swirl:+",
             "widget-timely"              : "com.timecat.widget:widget-timely:+",
             "widget-timetable"           : "com.timecat.widget:widget-timetable:+",
+            "widget-board"               : "com.timecat.widget:board:+",
+            "widget-table"               : "com.timecat.widget:table:+",
 
             //9. extend
             "component-PackAlert"        : "com.timecat.element:alert:+",
@@ -325,7 +327,7 @@ ext {
             "viewtooltip"                  : 'com.github.florent37:viewtooltip:1.1.8',
             "taptargetview"                : 'com.getkeepsafe.taptargetview:taptargetview:1.12.0',
             "DateTimeRangePicker"          : "com.github.skedgo:DateTimeRangePicker:v1.3",
-            "BasePopup"                    : "com.github.razerdp:BasePopup:2.2.1",
+            "BasePopup"                    : "io.github.razerdp:BasePopup:3.1.4",
             "FancyShowCaseView"            : 'me.toptas.fancyshowcase:fancyshowcaseview:1.1.5',
             "PhotoView"                    : 'com.github.chrisbanes:PhotoView:2.0.0',
 
@@ -377,12 +379,12 @@ ext {
             "mmkv"                         : "com.tencent:mmkv:1.2.9",
 
             //9. player
-            "exoplayer"                 : "com.google.android.exoplayer:exoplayer:$EXOPLAYER_VERSION",
-            "exoplayer-core"            : "com.google.android.exoplayer:exoplayer-core:$EXOPLAYER_VERSION",
-            "exoplayer-dash"            : "com.google.android.exoplayer:exoplayer-dash:$EXOPLAYER_VERSION",
-            "exoplayer-hls"             : "com.google.android.exoplayer:exoplayer-hls:$EXOPLAYER_VERSION",
-            "exoplayer-smoothstraming"  : "com.google.android.exoplayer:exoplayer-smoothstreaming:$EXOPLAYER_VERSION",
-            "exoplayer-rtmp"            : "com.google.android.exoplayer:extension-rtmp:$EXOPLAYER_VERSION",
+            "exoplayer"                    : "com.google.android.exoplayer:exoplayer:$EXOPLAYER_VERSION",
+            "exoplayer-core"               : "com.google.android.exoplayer:exoplayer-core:$EXOPLAYER_VERSION",
+            "exoplayer-dash"               : "com.google.android.exoplayer:exoplayer-dash:$EXOPLAYER_VERSION",
+            "exoplayer-hls"                : "com.google.android.exoplayer:exoplayer-hls:$EXOPLAYER_VERSION",
+            "exoplayer-smoothstraming"     : "com.google.android.exoplayer:exoplayer-smoothstreaming:$EXOPLAYER_VERSION",
+            "exoplayer-rtmp"               : "com.google.android.exoplayer:extension-rtmp:$EXOPLAYER_VERSION",
 
             //10. test
             "junit"                        : "junit:junit:4.12",
