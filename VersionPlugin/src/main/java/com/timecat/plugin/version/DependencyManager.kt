@@ -39,7 +39,7 @@ val rxlifecycle2SdkVersion = "2.2.1"
 
 //8. tools
 val dagger2SdkVersion = "2.22.1"
-val shadow_version = "2.0.13"
+val shadow_version = "2.0.15"
 
 //9. test
 val espressoSdkVersion = "3.0.1"

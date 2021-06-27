@@ -251,7 +251,7 @@ ext {
 
     //8. tools
     dagger2SdkVersion = "2.22.1"
-    shadow_version = "2.0.13"
+    shadow_version = "2.0.15"
 
     //9. player
     EXOPLAYER_VERSION = "2.12.1"
@@ -375,7 +375,7 @@ ext {
             "eventBus"                     : "org.greenrobot:eventbus:3.1.1",
             "joda-time"                    : 'joda-time:joda-time:2.10.1',
             "jgit"                         : 'org.eclipse.jgit:org.eclipse.jgit:5.7.0.202003110725-r',
-            "shadow-dynamic-host"          : "com.tencent.shadow.dynamic:host:$shadow_version",
+            "shadow-dynamic-host"          : "com.tencent.shadow.dynamic:host:+",
             "mmkv"                         : "com.tencent:mmkv:1.2.9",
 
             //9. player
