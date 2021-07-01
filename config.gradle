@@ -125,6 +125,7 @@ ext {
 
             //7. res
             "component-CommonResource"   : "com.timecat.component:identity:+",
+            "identity-Resource"          : "com.timecat.identity:resources:+",
 
             //8. widget
             "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:+",

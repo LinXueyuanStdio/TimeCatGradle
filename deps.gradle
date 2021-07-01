@@ -66,6 +66,7 @@ ext {
 
             //7. res
             "component-CommonResource"   : "com.timecat.component:identity:+",
+            "identity-Resource"          : "com.timecat.identity:resources:+",
 
             //8. widget
             "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:+",
@@ -321,12 +322,12 @@ ext {
             "mmkv"                         : "com.tencent:mmkv:1.2.9",
 
             //9. player
-            "exoplayer"                 : "com.google.android.exoplayer:exoplayer:$EXOPLAYER_VERSION",
-            "exoplayer-core"            : "com.google.android.exoplayer:exoplayer-core:$EXOPLAYER_VERSION",
-            "exoplayer-dash"            : "com.google.android.exoplayer:exoplayer-dash:$EXOPLAYER_VERSION",
-            "exoplayer-hls"             : "com.google.android.exoplayer:exoplayer-hls:$EXOPLAYER_VERSION",
-            "exoplayer-smoothstraming"  : "com.google.android.exoplayer:exoplayer-smoothstreaming:$EXOPLAYER_VERSION",
-            "exoplayer-rtmp"            : "com.google.android.exoplayer:extension-rtmp:$EXOPLAYER_VERSION",
+            "exoplayer"                    : "com.google.android.exoplayer:exoplayer:$EXOPLAYER_VERSION",
+            "exoplayer-core"               : "com.google.android.exoplayer:exoplayer-core:$EXOPLAYER_VERSION",
+            "exoplayer-dash"               : "com.google.android.exoplayer:exoplayer-dash:$EXOPLAYER_VERSION",
+            "exoplayer-hls"                : "com.google.android.exoplayer:exoplayer-hls:$EXOPLAYER_VERSION",
+            "exoplayer-smoothstraming"     : "com.google.android.exoplayer:exoplayer-smoothstreaming:$EXOPLAYER_VERSION",
+            "exoplayer-rtmp"               : "com.google.android.exoplayer:extension-rtmp:$EXOPLAYER_VERSION",
 
             //10. test
             "junit"                        : "junit:junit:4.12",
