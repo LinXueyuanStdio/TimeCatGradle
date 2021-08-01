@@ -28,4 +28,4 @@ dependencies {
     api rootProject.ext.dependencies["kotlin-stdlib"]
 }
 
-group="com.timecat.moddule"
+group="com.timecat.module"
