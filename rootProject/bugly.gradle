@@ -1,0 +1,9 @@
+//classpath 'com.tencent.bugly:symtabfileuploader:2.2.1'
+
+apply plugin: 'bugly'
+
+bugly {
+    debug = true
+    appId = '7567451d45' // 注册时分配的App ID
+    appKey = '04d3bd1e-b8f5-48d7-98b8-dec5dbc7af18' // 注册时分配的App Key
+}
