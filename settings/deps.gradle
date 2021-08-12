@@ -49,7 +49,7 @@ ext {
             //1. module
             "module-about"               : "com.timecat.module:module-about:+",
             "module-bugly"               : "com.timecat.module:module-bugly:+",
-            "module-controller"          : "com.timecat.module:module:module-controller:+",
+            "module-controller"          : "com.timecat.module:module-controller:+",
             "module-data"                : "com.timecat.module:module-data:+",
             "module-developer"           : "com.timecat.module:module-developer:+",
             "module-master"              : "com.timecat.module:module-master:+",
