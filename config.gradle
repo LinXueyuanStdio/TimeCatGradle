@@ -1,16 +1,16 @@
 ext {
     android = [
-            compileSdkVersion      : 29,
-            buildToolsVersion      : "29.0.2",
+            compileSdkVersion      : 30,
+            buildToolsVersion      : "30.0.2",
             minSdkVersion          : 21,
             targetSdkVersion       : 28,
-            versionCode            : 58,
-            versionName            : "0.8.8",
+            versionCode            : 59,
+            versionName            : "0.8.9",
             debug                  : "true",
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
     // mempool 根目录下
-    build_gradle_version = '4.0.1'
+    build_gradle_version = '7.0.1'
     // 注解生成器生成的文件 json 信息都在这里面
     component_router_doc_folder = "${rootDir}/RouterDocument".toString()
     component_router_doc_enable = true

@@ -8,10 +8,13 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     compileOptions {
-        targetCompatibility JavaVersion.VERSION_1_8
-        sourceCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
-
+    kotlinOptions {
+        jvmTarget = "11"
+        useIR = true
+    }
     defaultConfig {
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]

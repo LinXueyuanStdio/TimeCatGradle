@@ -4,7 +4,8 @@ if (moduleConfig.exists()) {
     moduleConfigProps.load(new FileInputStream(moduleConfig))
 }
 
-apply plugin: 'maven'
+//apply plugin: 'java-library'
+apply plugin: 'maven-publish'
 
 ext {
     DIST_PATH = gradle.ext.localMavenDir
@@ -13,44 +14,63 @@ ext {
     PUBLISH_VERSION = moduleConfigProps.PUBLISH_VERSION
 }
 
-// custom tasks for creating source/javadoc jars
-//task javadoc(type: Javadoc) {
-//    source = android.sourceSets.main.java.srcDirs
-//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-//    destinationDir = file("../javadoc/")
-//    failOnError false
-//}
+group = project.PUBLISH_GROUP_ID
+version = project.PUBLISH_VERSION
 
-//task javadocJar(type: Jar, dependsOn: javadoc) {
-//    classifier = 'javadoc'
-//    from javadoc.destinationDir
-//}
-
-//Creating sources with comments
-task androidSourcesJar(type: Jar) {
-    classifier = 'sources'
+task sourceJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
+    classifier "sources"
 }
 
-//Put the androidSources and javadoc to t he artifacts
-artifacts {
-    archives androidSourcesJar
-//    archives javadocJar
+task jarPackage(type: Copy, dependsOn: ["${project.path}:assembleRelease"]) {
+    def buildType = "release"
+    def aarFile = file(project.buildDir.path + "/outputs/aar/${project.name}-${buildType}.aar")
+    def outputDir = file(project.buildDir.path + "/outputs/jar")
+
+    from zipTree(aarFile)
+    into outputDir
+    include 'classes.jar'
+    rename 'classes.jar', "${project.name}-${buildType}.jar"
+    group = 'build'
+    description = '生成jar包'
 }
 
-uploadArchives {
-    repositories.mavenDeployer {
-        def deployPath = file(project.DIST_PATH)
-        repository(url: "file://${deployPath.absolutePath}")
-        pom.project {
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
             groupId project.PUBLISH_GROUP_ID
             artifactId project.PUBLISH_ARTIFACT_ID
             version project.PUBLISH_VERSION
+            artifact(sourceJar)
+            pom {
+                name = project.PUBLISH_ARTIFACT_ID
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'linxueyuan'
+                        name = 'Lin Xueyuan'
+                        email = 'linxy59@mail2.sysu.edu.cn'
+                    }
+                }
+            }
+        }
+        def buildTypeName = "release"
+        create("publish-jar-${buildTypeName.capitalize()}", MavenPublication) {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION + ".jar"
+            artifact(source: file(project.buildDir.path + "/outputs/jar/" + "${project.name}-${buildTypeName}.jar"), extension: 'jar') {
+                builtBy jarPackage
+            }
         }
     }
-}
-
-task autoUploadArchives(dependsOn: ["${project.path}:assembleRelease"]) {
-    group = "upload"
-    finalizedBy tasks.getByName("uploadArchives")
+    repositories {
+        def deployPath = file(project.DIST_PATH)
+        maven { url "file://${deployPath.absolutePath}" }
+    }
 }

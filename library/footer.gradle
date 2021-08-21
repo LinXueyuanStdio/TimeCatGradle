@@ -1,0 +1,1 @@
+apply from: "${gradle.ext.localGradleDir}/publish/publish_to_local_maven.gradle"
