@@ -37,7 +37,32 @@ task jarPackage(type: Copy, dependsOn: ["${project.path}:assembleRelease"]) {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        maven_jar(MavenPublication) {
+            def buildTypeName = "release"
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID + "-jar"
+            version project.PUBLISH_VERSION
+            artifact(source: file(project.buildDir.path + "/outputs/jar/" + "${project.name}-${buildTypeName}.jar"), extension: 'jar') {
+                builtBy jarPackage
+            }
+            pom {
+                name = project.PUBLISH_ARTIFACT_ID
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'linxueyuan'
+                        name = 'Lin Xueyuan'
+                        email = 'linxy59@mail2.sysu.edu.cn'
+                    }
+                }
+            }
+        }
+        maven_aar_with_source(MavenPublication) {
             groupId project.PUBLISH_GROUP_ID
             artifactId project.PUBLISH_ARTIFACT_ID
             version project.PUBLISH_VERSION
@@ -57,15 +82,6 @@ publishing {
                         email = 'linxy59@mail2.sysu.edu.cn'
                     }
                 }
-            }
-        }
-        def buildTypeName = "release"
-        create("publish-jar-${buildTypeName.capitalize()}", MavenPublication) {
-            groupId project.PUBLISH_GROUP_ID
-            artifactId project.PUBLISH_ARTIFACT_ID
-            version project.PUBLISH_VERSION + ".jar"
-            artifact(source: file(project.buildDir.path + "/outputs/jar/" + "${project.name}-${buildTypeName}.jar"), extension: 'jar') {
-                builtBy jarPackage
             }
         }
     }

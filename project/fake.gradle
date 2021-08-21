@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'idea'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.xiaojinzi.component.plugin'
 apply from: "${gradle.ext.localGradleDir}/project/signing.gradle"
@@ -42,10 +41,12 @@ android {
                 MTA_CHANNEL: "酷安"
         ]
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
         useIR = true
@@ -64,6 +65,7 @@ android {
                 '--set-max-idx-number=60000'//每个包内方法数上限
         ]
     }
+
     lintOptions {
         checkReleaseBuilds false
         disable 'InvalidPackage'
