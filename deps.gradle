@@ -262,7 +262,7 @@ ext {
             "roundedimageview"             : 'com.makeramen:roundedimageview:2.3.0',
             "expansionpanel"               : 'com.github.florent37:expansionpanel:1.0.7',
             "HoloColorPicker"              : 'com.larswerkman:HoloColorPicker:1.5',
-            "RoundCornerProgressBar"       : 'com.akexorcist:round-corner-progress-bar:2.1.1',
+            "RoundCornerProgressBar"       : 'com.akexorcist:round-corner-progress-bar:2.1.2',
             "countdownview"                : 'com.github.iwgang:countdownview:2.1.6',
             "compoundlayout"               : 'com.github.jaouan:compoundlayout:1.0.1',
             "FlowLayout"                   : 'org.apmem.tools:layouts:1.10@aar',

@@ -99,7 +99,7 @@ object Dep {
     val roundedimageview = "com.makeramen:roundedimageview:2.3.0"
     val expansionpanel = "com.github.florent37:expansionpanel:1.0.7"
     val HoloColorPicker = "com.larswerkman:HoloColorPicker:1.5"
-    val RoundCornerProgressBar = "com.akexorcist:round-corner-progress-bar:2.1.1"
+    val RoundCornerProgressBar = "com.akexorcist:round-corner-progress-bar:2.1.2"
     val countdownview = "com.github.iwgang:countdownview:2.1.6"
     val compoundlayout = "com.github.jaouan:compoundlayout:1.0.1"
     val FlowLayout = "org.apmem.tools:layouts:1.10@aar"
