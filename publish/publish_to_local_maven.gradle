@@ -35,58 +35,62 @@ task jarPackage(type: Copy, dependsOn: ["${project.path}:assembleRelease"]) {
     description = '生成jar包'
 }
 
-publishing {
-    publications {
-        maven_jar(MavenPublication) {
-            def buildTypeName = "release"
-            groupId project.PUBLISH_GROUP_ID
-            artifactId project.PUBLISH_ARTIFACT_ID + "-jar"
-            version project.PUBLISH_VERSION
-            artifact(source: file(project.buildDir.path + "/outputs/jar/" + "${project.name}-${buildTypeName}.jar"), extension: 'jar') {
-                builtBy jarPackage
-            }
-            pom {
-                name = project.PUBLISH_ARTIFACT_ID
-                licenses {
-                    license {
-                        name = 'The Apache License, Version 2.0'
-                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+afterEvaluate {
+    publishing {
+        publications {
+            maven_jar(MavenPublication) {
+                def buildTypeName = "release"
+                from components.release
+                groupId project.PUBLISH_GROUP_ID
+                artifactId project.PUBLISH_ARTIFACT_ID + "-jar"
+                version project.PUBLISH_VERSION
+                artifact(source: file(project.buildDir.path + "/outputs/jar/" + "${project.name}-${buildTypeName}.jar"), extension: 'jar') {
+                    builtBy jarPackage
+                }
+                pom {
+                    name = project.PUBLISH_ARTIFACT_ID
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'linxueyuan'
+                            name = 'Lin Xueyuan'
+                            email = 'linxy59@mail2.sysu.edu.cn'
+                        }
                     }
                 }
-                developers {
-                    developer {
-                        id = 'linxueyuan'
-                        name = 'Lin Xueyuan'
-                        email = 'linxy59@mail2.sysu.edu.cn'
+            }
+            maven_aar_with_source(MavenPublication) {
+                from components.release
+                groupId project.PUBLISH_GROUP_ID
+                artifactId project.PUBLISH_ARTIFACT_ID
+                version project.PUBLISH_VERSION
+                artifact(sourceJar)
+                pom {
+                    name = project.PUBLISH_ARTIFACT_ID
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'linxueyuan'
+                            name = 'Lin Xueyuan'
+                            email = 'linxy59@mail2.sysu.edu.cn'
+                        }
                     }
                 }
             }
         }
-        maven_aar_with_source(MavenPublication) {
-            groupId project.PUBLISH_GROUP_ID
-            artifactId project.PUBLISH_ARTIFACT_ID
-            version project.PUBLISH_VERSION
-            artifact(sourceJar)
-            pom {
-                name = project.PUBLISH_ARTIFACT_ID
-                licenses {
-                    license {
-                        name = 'The Apache License, Version 2.0'
-                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id = 'linxueyuan'
-                        name = 'Lin Xueyuan'
-                        email = 'linxy59@mail2.sysu.edu.cn'
-                    }
-                }
-            }
+        repositories {
+            def deployPath = file(project.DIST_PATH)
+            maven { url "file://${deployPath.absolutePath}" }
         }
-    }
-    repositories {
-        def deployPath = file(project.DIST_PATH)
-        maven { url "file://${deployPath.absolutePath}" }
     }
 }

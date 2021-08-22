@@ -262,7 +262,7 @@ ext {
     canarySdkVersion = "1.5.4"
 
     //11. router
-    component_router_version = "1.8.6"
+    component_router_version = "v1.9.2-androidx-java8"
 
 //    implementation rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
 //    implementation rootProject.ext.dependencies["kotlinx-coroutines-android"]

@@ -40,28 +40,17 @@ android {
                 MTA_CHANNEL: "酷安"
         ]
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
         useIR = true
     }
-    dexOptions {
-        //预编译
-        preDexLibraries true
-        //支持大工程
-        jumboMode = true
-        //线程数
-        threadCount = 16
-        //dex内存，公式：dex内存 + 1G < Gradle内存
-        javaMaxHeapSize "4g"
-        additionalParameters = [
-                '--multi-dex',//多分包
-                '--set-max-idx-number=60000'//每个包内方法数上限
-        ]
-    }
+
     lintOptions {
         checkReleaseBuilds false
         disable 'InvalidPackage'

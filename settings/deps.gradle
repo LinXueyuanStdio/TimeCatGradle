@@ -14,8 +14,8 @@ ext {
     component_router_doc_enable = true
     //region classpath
     build_gradle_version = '4.1.2'
-    kotlin_version = '1.4.31'
-    component_router_version = '1.8.8'
+    kotlin_version = '1.5.21'
+    component_router_version = "v1.9.2-androidx-java8"
     detekt_version = '1.14.0'
     classpath = [
             "kotlin"              : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",
@@ -24,7 +24,7 @@ ext {
             "easyconfig"          : "com.android.boost.easyconfig:easyconfig:2.4.3",
 
             "arouter"             : "com.alibaba:arouter-register:1.0.2",
-            "component_router"    : "com.github.xiaojinzi123.Component:component-plugin:$component_router_version-androidx",
+            "component_router"    : "com.github.xiaojinzi123.Component:component-plugin:$component_router_version",
             "bugly"               : "com.tencent.bugly:symtabfileuploader:2.2.1",
 
             "greendao"            : "org.greenrobot:greendao-gradle-plugin:3.3.0",
@@ -122,6 +122,7 @@ ext {
             "component-SelfImage"        : "com.timecat.extend:image:+",
             "component-SelfRouter"       : "com.timecat.component:router:+",
             "component-SelfService"      : "com.timecat.identity:service:+",
+            "component-SelfSkin"         : "com.timecat.identity:skin:+",
             "component-SelfXunfei"       : "com.timecat.component:SelfXunfei:+",
             "component-SelfAliyun"       : "com.timecat.component:SelfAliyun:+",
             "component-SelfDSL"          : "com.timecat.identity:anim:+",
@@ -170,7 +171,7 @@ ext {
     okHttp = "3.11.0"
     retrofit2 = "2.5.0"
     gson = "2.8.5"
-    glide = "4.8.0"
+    glide = "4.12.0"
     timber = "4.7.1"
     androidState = "1.4.1"
     junit = "4.13-beta-3"
@@ -196,15 +197,15 @@ ext {
     commonmark = "0.10.0"
 
     //1. kotlin
-    jetbrains_annotations_version = "16.0.3"
-    kotlinx_coroutines_version = "1.3.7"
+    jetbrains_annotations_version = "22.0.0"
+    kotlinx_coroutines_version = "1.5.0"
 
     //2. network
-    retrofitSdkVersion = "2.6.0"
-    MO_SHI_VERSION = "1.11.0"
+    retrofitSdkVersion = "2.9.0"
+    MO_SHI_VERSION = "1.12.0"
 
     //3. image
-    glideSdkVersion = "4.8.0"
+    glideSdkVersion = "4.12.0"
 
     //4. web
     agentwebVersion = "4.0.2"
@@ -231,7 +232,7 @@ ext {
     canarySdkVersion = "1.5.4"
 
     //11. router
-    component_router_version = "1.8.8"
+    component_router_version = "v1.9.2-androidx-java8"
 
 //    implementation rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
 //    implementation rootProject.ext.dependencies["kotlinx-coroutines-android"]
@@ -280,7 +281,7 @@ ext {
             "nineoldandroids"              : "com.nineoldandroids:library:2.4.0",
             "paginate"                     : "com.github.markomilos:paginate:0.5.1",
             "vlayout"                      : "com.alibaba.android:vlayout:1.1.0@aar",
-            "lottie"                       : "com.airbnb.android:lottie:2.5.4",
+            "lottie"                       : "com.airbnb.android:lottie:4.1.0",
             "realtimeblurview"             : "com.github.mmin18:realtimeblurview:1.2.1",
             "circleimageview"              : "de.hdodenhof:circleimageview:2.2.0",
             "loadinglayout"                : "com.github.czy1121:loadinglayout:1.0.1",
@@ -334,8 +335,8 @@ ext {
             "gson"                         : "com.google.code.gson:gson:2.8.5",
             "fastjson"                     : "com.alibaba:fastjson:1.2.9",
             "javax.annotation"             : "javax.annotation:jsr250-api:1.0",
-            "router"                       : "com.github.xiaojinzi123.Component:component-impl:$component_router_version-androidx",
-            "router-compiler"              : "com.github.xiaojinzi123.Component:component-compiler:$component_router_version-androidx",
+            "router"                       : "com.github.xiaojinzi123.Component:component-impl:$component_router_version",
+            "router-compiler"              : "com.github.xiaojinzi123.Component:component-compiler:$component_router_version",
             "arouter"                      : "com.alibaba:arouter-api:1.3.1",
             "arouter-compiler"             : "com.alibaba:arouter-compiler:1.1.4",
             "progressmanager"              : "me.jessyan:progressmanager:1.5.0",
@@ -344,7 +345,7 @@ ext {
             "timber"                       : "com.jakewharton.timber:timber:4.7.1",
             "logger"                       : "com.orhanobut:logger:2.2.0",
             "eventBus"                     : "org.greenrobot:eventbus:3.1.1",
-            "joda-time"                    : "joda-time:joda-time:2.10.1",
+            "joda-time"                    : "joda-time:joda-time:2.10.10",
             "jgit"                         : "org.eclipse.jgit:org.eclipse.jgit:5.7.0.202003110725-r",
             "shadow-dynamic-host"          : "com.tencent.shadow.dynamic:host:+",
             "mmkv"                         : "com.tencent:mmkv:1.2.9",
