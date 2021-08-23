@@ -28,8 +28,11 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [
-                        "moduleName": project.getName(),
-                        "HOST"      : project.getName().replace("-", ""),
+                        "moduleName"     : project.getName(),
+                        "HOST"           : project.getName().replace("-", ""),
+                        "Priority"       : String.valueOf(0),
+                        "RouterDocFolder": "${project.rootDir}/RouterDocument".toString(),
+                        "RouterDocEnable": String.valueOf("true"),
                 ]
             }
         }
@@ -87,6 +90,16 @@ android {
         main {
             manifest.srcFile './AndroidManifest.xml'
         }
+    }
+}
+
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+        arg("HOST", project.getName().replace("-", ""))
+        arg("Priority", String.valueOf(0))
+        arg("RouterDocFolder", "${project.rootDir}/RouterDocument".toString())
+        arg("RouterDocEnable", String.valueOf(true))
     }
 }
 

@@ -21,8 +21,9 @@ android {
                 arguments = [
                         "moduleName"     : project.getName(),
                         "HOST"           : project.getName().replace("-", ""),
+                        "Priority"       : String.valueOf(0),
                         "RouterDocFolder": "${project.rootDir}/RouterDocument".toString(),
-                        "RouterDocEnable": String.valueOf("true")
+                        "RouterDocEnable": String.valueOf("true"),
                 ]
             }
         }
@@ -56,6 +57,16 @@ android {
     }
 
     useLibrary 'org.apache.http.legacy'
+}
+
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+        arg("HOST", project.getName().replace("-", ""))
+        arg("Priority", String.valueOf(0))
+        arg("RouterDocFolder", "${project.rootDir}/RouterDocument".toString())
+        arg("RouterDocEnable", String.valueOf(true))
+    }
 }
 
 dependencies {
