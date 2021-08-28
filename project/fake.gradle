@@ -81,7 +81,7 @@ android {
             shrinkResources true
             zipAlignEnabled true
             ndk {
-                abiFilters "armeabi", "armeabi-v7a", "arm64-v8a" // 保留这三种架构的CPU
+                abiFilters "armeabi-v7a", "arm64-v8a" // 保留这三种架构的CPU
             }
         }
     }

@@ -12,7 +12,7 @@ object BuildConfig {
     val buildToolsVersion =  "29.0.2"
     val minSdkVersion =  21
     val targetSdkVersion =  28
-    val versionCode =  53
+    val versionCode =  55
     val versionName =  "0.8.3"
     val globalProguardFilesPath =  "./proguard-global-rules.pro"
 }
