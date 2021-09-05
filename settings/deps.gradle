@@ -77,6 +77,8 @@ ext {
             "middle-setting"             : "com.timecat.middle:form:+",
             "middle-image"               : "com.timecat.middle:selector:+",
             "middle-block"               : "com.timecat.middle:block:+",
+            "shared-host"                : "com.timecat.shared:plugin-host:+",
+            "shared-host-jar"            : "com.timecat.shared:plugin-host-jar:+",
 
             //5. data
             "component-CommonData"       : "com.timecat.data:system:+",

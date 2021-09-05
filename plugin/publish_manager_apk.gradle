@@ -1,0 +1,120 @@
+def moduleConfigProps = new Properties()
+File moduleConfig = project.file("moduleConfig.properties")
+if (moduleConfig.exists()) {
+    moduleConfigProps.load(new FileInputStream(moduleConfig))
+}
+
+//apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+
+ext {
+    DIST_PATH = gradle.ext.localMavenDir
+    PUBLISH_GROUP_ID = moduleConfigProps.PUBLISH_GROUP_ID
+    PUBLISH_ARTIFACT_ID = moduleConfigProps.PUBLISH_ARTIFACT_ID
+    PUBLISH_VERSION_CODE = moduleConfigProps.PUBLISH_VERSION_CODE
+    PUBLISH_VERSION = moduleConfigProps.PUBLISH_VERSION
+}
+
+group = project.PUBLISH_GROUP_ID
+version = project.PUBLISH_VERSION
+
+def createCopyTask(projectName, buildType, name, apkName, inputFile, taskName) {
+    def outputFile = file("${getBuildDir()}/generated/assets/${name}/${buildType}/${apkName}")
+    outputFile.getParentFile().mkdirs()
+    return tasks.create("copy${buildType.capitalize()}${name.capitalize()}Task", Copy) {
+        group = 'build'
+        description = "复制${name}到发布仓库."
+        from(inputFile.getParent()) {
+            include(inputFile.name)
+            rename { outputFile.name }
+        }
+        into(outputFile.getParent())
+
+    }.dependsOn("${projectName}:${taskName}")
+}
+
+def generateAssets(generateAssetsTask, buildType) {
+
+    def moduleName = 'plugin-manager'
+    def pluginManagerApkFile = file(
+            "${project(":plugin-manager").getBuildDir()}" +
+                    "/outputs/apk/${buildType}/" +
+                    "${moduleName}-${buildType}.apk"
+    )
+    generateAssetsTask.dependsOn createCopyTask(
+            ':plugin-manager',
+            buildType,
+            moduleName,
+            'pluginmanager.apk',
+            pluginManagerApkFile,
+            "assemble${buildType.capitalize()}"
+    )
+
+    def pluginZip = file("${getRootProject().getBuildDir()}/plugin-${buildType}.zip")
+    generateAssetsTask.dependsOn createCopyTask(
+            ':plugin:plugin-shadow-app',
+            buildType,
+            'plugin-zip',
+            "plugin-${buildType}.zip",
+            pluginZip,
+            "package${buildType.capitalize()}Plugin"
+    )
+
+
+}
+
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier "sources"
+}
+
+task jarPackage(type: Copy, dependsOn: ["${project.path}:assembleRelease"]) {
+    def buildType = "release"
+    def aarFile = file(project.buildDir.path + "/outputs/aar/${project.name}-${buildType}.aar")
+    def outputDir = file(project.buildDir.path + "/outputs/jar")
+
+    from zipTree(aarFile)
+    into outputDir
+    include 'classes.jar'
+    rename 'classes.jar', "${project.name}-${buildType}.jar"
+    group = 'build'
+    description = '生成jar包'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            maven_manager_apk(MavenPublication) {
+                def buildTypeName = "release"
+                from components.release
+                groupId project.PUBLISH_GROUP_ID
+                artifactId project.PUBLISH_ARTIFACT_ID
+                version project.PUBLISH_VERSION
+                artifact(sourceJar)
+                artifact(source: file(project.buildDir.path + "/outputs/apk/" + "${project.name}-${buildTypeName}.jar"), extension: 'jar') {
+                    builtBy jarPackage
+                }
+                pom {
+                    name = project.PUBLISH_ARTIFACT_ID
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'linxueyuan'
+                            name = 'Lin Xueyuan'
+                            email = 'linxy59@mail2.sysu.edu.cn'
+                        }
+                    }
+                }
+            }
+        }
+        repositories {
+            def deployPath = file(project.DIST_PATH)
+            maven { url "file://${deployPath.absolutePath}" }
+        }
+    }
+}
