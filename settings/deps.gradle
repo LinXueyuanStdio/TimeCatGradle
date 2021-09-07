@@ -35,7 +35,7 @@ ext {
             "shortcut"            : "com.github.zellius:android-shortcut-gradle-plugin:0.1.2",
             "resourceplaceholders": "de.timfreiheit.resourceplaceholders:placeholders:0.3",
 
-            "dependency"          : "com.vanniktech:gradle-dependency-graph-generator-plugin:0.5.0",
+            "dependency"          : "com.vanniktech:gradle-dependency-graph-generator-plugin:0.6.0",
             "analysis"            : "com.github.znyang:library-analysis:0.2.2",
 
             "upload"              : "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4",

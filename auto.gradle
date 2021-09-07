@@ -1,1 +1,0 @@
-task autoPackageAndPublish(dependsOn: [":app:assembleRelease", "githubRelease"])

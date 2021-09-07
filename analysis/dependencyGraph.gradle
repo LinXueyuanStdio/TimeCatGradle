@@ -3,33 +3,22 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.vanniktech:gradle-dependency-graph-generator-plugin:0.5.0"
+        classpath "com.vanniktech:gradle-dependency-graph-generator-plugin:0.6.0"
     }
 }
 
-//apply plugin: "com.vanniktech.dependency.graph.generator"
-
-//dependencyGraphGenerator {
-//    generators = [Generator.ALL, Generator(
-//            "timecatLibraries",
-//            { dependency -> dependency.getModuleGroup().startsWith("com.timecat") },
-//            { dependency -> true }
-//    )]
-//}
 import com.vanniktech.dependency.graph.generator.DependencyGraphGeneratorPlugin
-import com.vanniktech.dependency.graph.generator.DependencyGraphGeneratorExtension.Generator
 import guru.nidi.graphviz.attribute.Color
 import guru.nidi.graphviz.attribute.Style
 
 plugins.apply(DependencyGraphGeneratorPlugin)
 
-def timecatGenerator = new Generator(
-        "timecatLibraries", // Suffix for our Gradle task.
-        { dependency -> dependency.getModuleGroup().startsWith("com.timecat") }, // Only want Firebase.
-        { dependency -> true }, // Include transitive dependencies.
-        { node, dependency -> node.add(Style.FILLED, Color.rgb("#ffcb2b")) }, // Give them some color.
-)
-
 dependencyGraphGenerator {
-    generators = [ timecatGenerator ]
+    generators {
+        timecatLibraries {
+            include = { dependency -> dependency.getModuleGroup().startsWith("com.timecat") } // Only want Firebase.
+            children = { dependency -> true } // Include transitive dependencies.
+            dependencyNode = { node, dependency -> node.add(Style.FILLED, Color.rgb("#ffcb2b")) } // Give them some color.
+        }
+    }
 }
