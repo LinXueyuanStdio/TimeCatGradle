@@ -133,6 +133,9 @@ ext {
             //10. plugin
             "plugin-agreement-picturebed": "com.timecat.show:picturebed:+",
             "plugin-agreement-window"    : "com.timecat.show:window:+",
+            "plugin-record-api"          : "com.timecat.plugin:record-api:+",
+            "plugin-record-api-jar"      : "com.timecat.plugin:record-api-jar:+",
+            "plugin-record-api-holder"   : "com.timecat.plugin:record-api-holder:+",
 
             //11. MView
             "MView-same"                 : "com.timecat.middle:MView-same:+",
