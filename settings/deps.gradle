@@ -367,9 +367,13 @@ ext {
             "junit"                        : "junit:junit:4.12",
             "androidJUnitRunner"           : "androidx.test.runner.AndroidJUnitRunner",
             "runner"                       : "androidx.test.ext:junit:1.1.0",
+            "test-rules"                   : "androidx.test:rules:1.1.0",
+            "test-junit"                   : "androidx.test.ext:junit:1.1.0",
             "espresso-core"                : "androidx.test.espresso:espresso-core:3.1.0",
             "espresso-contrib"             : "androidx.test.espresso:espresso-contrib:3.1.0",
             "espresso-intents"             : "com.android.support.test.espresso:espresso-intents:$espressoSdkVersion",
+
+
             "mockito-core"                 : "org.mockito:mockito-core:1.+",
             "canary-debug"                 : "com.squareup.leakcanary:leakcanary-android:$canarySdkVersion",
             "canary-release"               : "com.squareup.leakcanary:leakcanary-android-no-op:$canarySdkVersion",
@@ -414,6 +418,9 @@ ext {
             "recyclerview"             : "androidx.recyclerview:recyclerview:$androidx_recyclerview_version",//implementation rootProject.ext.androidx_lib["recyclerview"]
             "recyclerview-selection"   : "androidx.recyclerview:recyclerview-selection:$androidX",//implementation rootProject.ext.androidx_lib["recyclerview-selection"]
             "swiperefreshlayout"       : "androidx.swiperefreshlayout:swiperefreshlayout:$androidX",//implementation rootProject.ext.androidx_lib["swiperefreshlayout"]
+
+            "documentfile"             : "androidx.documentfile:documentfile:1.0.1",
+            "localbroadcastmanager"    : "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0",
 
             "support-dynamic-animation": "androidx.dynamicanimation:dynamicanimation:1.0.0",
             "cardview"                 : "androidx.cardview:cardview:1.0.0",
