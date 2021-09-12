@@ -23,7 +23,6 @@ android {
 
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
-            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', file(rootProject.ext.android["globalProguardFilesPath"])
         }
     }

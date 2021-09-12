@@ -36,7 +36,7 @@ ext {
             "resourceplaceholders": "de.timfreiheit.resourceplaceholders:placeholders:0.3",
 
             "dependency"          : "com.vanniktech:gradle-dependency-graph-generator-plugin:0.6.0",
-            "analysis"            : "com.github.znyang:library-analysis:0.2.2",
+            "analysis"            : "com.timecat.plugin:report:1.0.0",
 
             "upload"              : "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4",
 
@@ -224,7 +224,7 @@ ext {
 
     //8. tools
     dagger2SdkVersion = "2.22.1"
-    shadow_version = "2.0.15"
+    shadow_version = "2.0.0"
 
     //9. player
     EXOPLAYER_VERSION = "2.12.1"

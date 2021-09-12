@@ -1,6 +1,7 @@
-apply plugin: 'com.zen.lib.analysis'
+apply plugin: 'com.timecat.plugin.report'
 
 libReport {
     output = ["txt", "html"]
     ignore = ["com.android.support:support-v4"]
+    log = true
 }

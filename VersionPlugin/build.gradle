@@ -1,7 +1,8 @@
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
+        google()
     }
     dependencies {
         // 因为使用的 Kotlin 需要需要添加 Kotlin 插件
@@ -12,15 +13,16 @@ buildscript {
 apply plugin: 'kotlin'
 apply plugin: 'java-gradle-plugin'
 
+
 repositories {
     // 需要添加 jcenter 否则会提示找不到 gradlePlugin
-    jcenter()
+    mavenCentral()
+    google()
 }
 
 dependencies {
     implementation gradleApi()
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.20"
-
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30"
 }
 
 compileKotlin {
