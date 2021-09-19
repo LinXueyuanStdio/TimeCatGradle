@@ -225,7 +225,7 @@ ext {
 
     //8. tools
     dagger2SdkVersion = "2.22.1"
-    shadow_version = "2.0.1"
+    shadow_version = "2.0.2"
 
     //9. player
     EXOPLAYER_VERSION = "2.12.1"
