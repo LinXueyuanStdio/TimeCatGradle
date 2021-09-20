@@ -4,8 +4,8 @@ ext {
             buildToolsVersion      : "30.0.2",
             minSdkVersion          : 21,
             targetSdkVersion       : 28,
-            versionCode            : 60,
-            versionName            : "0.8.9",
+            versionCode            : 61,
+            versionName            : "0.9.0",
             debug                  : "true",
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
@@ -14,7 +14,7 @@ ext {
     component_router_doc_enable = true
     //region classpath
     build_gradle_version = '4.1.2'
-    kotlin_version = '1.5.21'
+    kotlin_version = '1.5.30'
     component_router_version = "v1.9.2-androidx-java8"
     detekt_version = '1.14.0'
     classpath = [
@@ -225,7 +225,7 @@ ext {
 
     //8. tools
     dagger2SdkVersion = "2.22.1"
-    shadow_version = "2.0.2"
+    shadow_version = "2.0.5"
 
     //9. player
     EXOPLAYER_VERSION = "2.12.1"
@@ -260,9 +260,9 @@ ext {
             "converter-moshi"              : "com.squareup.retrofit2:converter-moshi:$retrofitSdkVersion",
             "moshi"                        : "com.squareup.moshi:moshi:$MO_SHI_VERSION",
             "moshi-kotlin"                 : "com.squareup.moshi:moshi-kotlin-codegen:$MO_SHI_VERSION",
-            "okhttp3"                      : "com.squareup.okhttp3:okhttp:4.5.0",
+            "okhttp3"                      : "com.squareup.okhttp3:okhttp:4.9.1",
             "okhttp-urlconnection"         : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
-            "okhttp3:logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:4.5.0",
+            "okhttp3:logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:4.9.1",
 
             //3. image
             "glide"                        : "com.github.bumptech.glide:glide:$glideSdkVersion",
@@ -303,23 +303,23 @@ ext {
             "DateTimeRangePicker"          : "com.github.skedgo:DateTimeRangePicker:v1.3",
             "BasePopup"                    : "io.github.razerdp:BasePopup:3.1.4",
             "FancyShowCaseView"            : "me.toptas.fancyshowcase:fancyshowcaseview:1.1.5",
-            "PhotoView"                    : "com.github.chrisbanes:PhotoView:2.0.0",
+            "PhotoView"                    : "com.github.chrisbanes:PhotoView:2.3.0",
             "immersionbar"                 : "com.gyf.immersionbar:immersionbar:$IMMERSION_BAR_VERSION",
 
             //6. rx1
             "rxandroid"                    : "io.reactivex:rxandroid:1.2.1",
-            "rxjava"                       : "io.reactivex:rxjava:1.3.2",
+            "rxjava"                       : "io.reactivex:rxjava:1.3.8",
             "rxlifecycle"                  : "com.trello:rxlifecycle:$rxlifecycleSdkVersion",
             "rxlifecycle-components"       : "com.trello:rxlifecycle-components:$rxlifecycleSdkVersion",
-            "rxcache"                      : "com.github.VictorAlbertos.RxCache:runtime:1.7.0-1.x",
-            "rxcache-jolyglot-gson"        : "com.github.VictorAlbertos.Jolyglot:gson:0.0.3",
+            "rxcache"                      : "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x",
+            "rxcache-jolyglot-gson"        : "com.github.VictorAlbertos.Jolyglot:gson:0.0.4",
             "rxbinding-recyclerview-v7"    : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.1",
             "rxpermissions"                : "com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar",
-            "rxerrorhandler"               : "me.jessyan:rxerrorhandler:1.0.1",
+            "rxerrorhandler"               : "me.jessyan:rxerrorhandler:2.1.1",
 
             //7. rx2
             "rxandroid2"                   : "io.reactivex.rxjava2:rxandroid:2.1.1",
-            "rxjava2"                      : "io.reactivex.rxjava2:rxjava:2.2.4",
+            "rxjava2"                      : "io.reactivex.rxjava2:rxjava:2.2.19",
             "rxlifecycle2"                 : "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycle2SdkVersion",
             "rxlifecycle2-android"         : "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycle2SdkVersion",
             "rxlifecycle2-components"      : "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycle2SdkVersion",
@@ -335,8 +335,8 @@ ext {
             "dagger2-android-processor"    : "com.google.dagger:dagger-android-processor:$dagger2SdkVersion",
             "androideventbus"              : "org.simple:androideventbus:1.0.5.1",
             "otto"                         : "com.squareup:otto:1.3.8",
-            "gson"                         : "com.google.code.gson:gson:2.8.5",
-            "fastjson"                     : "com.alibaba:fastjson:1.2.9",
+            "gson"                         : "com.google.code.gson:gson:2.8.8",
+            "fastjson"                     : "com.alibaba:fastjson:1.2.51",
             "javax.annotation"             : "javax.annotation:jsr250-api:1.0",
             "router"                       : "com.github.xiaojinzi123.Component:component-impl:$component_router_version",
             "router-compiler"              : "com.github.xiaojinzi123.Component:component-compiler:$component_router_version",
@@ -347,7 +347,7 @@ ext {
             "lifecyclemodel"               : "me.jessyan:lifecyclemodel:1.0.1",
             "timber"                       : "com.jakewharton.timber:timber:4.7.1",
             "logger"                       : "com.orhanobut:logger:2.2.0",
-            "eventBus"                     : "org.greenrobot:eventbus:3.1.1",
+            "eventBus"                     : "org.greenrobot:eventbus:3.2.0",
             "joda-time"                    : "joda-time:joda-time:2.10.10",
             "jgit"                         : "org.eclipse.jgit:org.eclipse.jgit:5.7.0.202003110725-r",
             "shadow-dynamic-host"          : "com.tencent.shadow.dynamic:host:+",
@@ -362,13 +362,13 @@ ext {
             "exoplayer-rtmp"               : "com.google.android.exoplayer:extension-rtmp:$EXOPLAYER_VERSION",
 
             //10. test
-            "junit"                        : "junit:junit:4.12",
+            "junit"                        : "junit:junit:4.13.2",
             "androidJUnitRunner"           : "androidx.test.runner.AndroidJUnitRunner",
-            "runner"                       : "androidx.test.ext:junit:1.1.0",
-            "test-rules"                   : "androidx.test:rules:1.1.0",
-            "test-junit"                   : "androidx.test.ext:junit:1.1.0",
+            "runner"                       : "androidx.test.ext:junit:1.1.3",
+            "test-rules"                   : "androidx.test:rules:1.4.0",
+            "test-junit"                   : "androidx.test.ext:junit:1.1.3",
             "espresso-core"                : "androidx.test.espresso:espresso-core:3.4.0",
-            "espresso-contrib"             : "androidx.test.espresso:espresso-contrib:3.1.0",
+            "espresso-contrib"             : "androidx.test.espresso:espresso-contrib:3.4.0",
             "espresso-intents"             : "com.android.support.test.espresso:espresso-intents:$espressoSdkVersion",
             "test-uiautomator"             : "androidx.test.uiautomator:uiautomator:$android_test_uiautomator_version",
             "test-loremipsum"              : "de.sven-jacobs:loremipsum:$loremipsum_version",
@@ -376,7 +376,7 @@ ext {
             "juniversalchardet"            : "com.googlecode.juniversalchardet:juniversalchardet:$juniversalchardet_version",
             "evernote"                     : "com.evernote:android-job:$evernote_android_job_version",
             "dropbox_core_sdk"             : "com.dropbox.core:dropbox-core-sdk:$dropbox_core_sdk_version",
-            "mockito-core"                 : "org.mockito:mockito-core:1.+",
+            "mockito-core"                 : "org.mockito:mockito-core:2.23.0",
             "canary-debug"                 : "com.squareup.leakcanary:leakcanary-android:$canarySdkVersion",
             "canary-release"               : "com.squareup.leakcanary:leakcanary-android-no-op:$canarySdkVersion",
             "umeng-analytics"              : "com.umeng.analytics:analytics:6.0.1",
@@ -384,12 +384,12 @@ ext {
     //endregion
 
     //region support
-    androidX = "1.1.0"
-    androidx_core_version = "1.5.0-alpha01"
-    androidx_fragment_version = "1.2.5"
+    androidX = "1.2.0"
+    androidx_core_version = "1.6.0"
+    androidx_fragment_version = "1.3.6"
     constraintLayout = "2.0.1"
     material_version = "1.4.0"
-    androidx_room_version = "2.2.5"
+    androidx_room_version = "2.3.0"
     androidx_lifecycle_version = "2.2.0"
     androidx_appcompat_version = "1.3.1"
     androidx_preference_version = "1.1.1"
@@ -426,9 +426,9 @@ ext {
 
             "support-dynamic-animation": "androidx.dynamicanimation:dynamicanimation:1.0.0",
             "cardview"                 : "androidx.cardview:cardview:1.0.0",
-            "customtabs"               : "androidx.browser:browser:1.2.0",
+            "customtabs"               : "androidx.browser:browser:1.3.0",
             "palette"                  : "androidx.palette:palette:1.0.0",
-            "multidex"                 : "androidx.multidex:multidex:2.0.0",
+            "multidex"                 : "androidx.multidex:multidex:2.0.1",
             "viewpager"                : "androidx.viewpager:viewpager:1.0.0",
 
             "preference"               : "androidx.preference:preference:$androidx_preference_version",//implementation rootProject.ext.androidx_lib["preference"]
