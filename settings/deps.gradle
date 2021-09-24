@@ -122,6 +122,7 @@ ext {
             "component-SelfEventBus"     : "com.timecat.component:SelfEventBus:+",
             "component-SelfMarkdown"     : "com.timecat.extend:markdown:+",
             "component-SelfImage"        : "com.timecat.extend:image:+",
+            "component-ImagePrevice"     : "com.timecat.extend:image-preview:+",
             "component-SelfRouter"       : "com.timecat.component:router:+",
             "component-SelfService"      : "com.timecat.identity:service:+",
             "component-SelfSkin"         : "com.timecat.identity:skin:+",
