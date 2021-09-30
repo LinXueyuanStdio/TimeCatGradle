@@ -420,7 +420,7 @@ ext {
 
             "recyclerview"             : "androidx.recyclerview:recyclerview:$androidx_recyclerview_version",//implementation rootProject.ext.androidx_lib["recyclerview"]
             "recyclerview-selection"   : "androidx.recyclerview:recyclerview-selection:$androidX",//implementation rootProject.ext.androidx_lib["recyclerview-selection"]
-            "swiperefreshlayout"       : "androidx.swiperefreshlayout:swiperefreshlayout:$androidX",//implementation rootProject.ext.androidx_lib["swiperefreshlayout"]
+            "swiperefreshlayout"       : "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",//implementation rootProject.ext.androidx_lib["swiperefreshlayout"]
 
             "documentfile"             : "androidx.documentfile:documentfile:1.0.1",
             "localbroadcastmanager"    : "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0",
