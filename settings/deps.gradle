@@ -422,6 +422,7 @@ ext {
             "recyclerview-selection"   : "androidx.recyclerview:recyclerview-selection:$androidX",//implementation rootProject.ext.androidx_lib["recyclerview-selection"]
             "swiperefreshlayout"       : "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",//implementation rootProject.ext.androidx_lib["swiperefreshlayout"]
 
+            "media"                    : "androidx.media:media:1.2.1",
             "documentfile"             : "androidx.documentfile:documentfile:1.0.1",
             "localbroadcastmanager"    : "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0",
 
