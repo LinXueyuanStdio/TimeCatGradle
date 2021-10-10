@@ -37,8 +37,8 @@ android {
             debuggable true
         }
         release {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
+            shrinkResources false
             ndk {
                 abiFilters "armeabi", "armeabi-v7a", "arm64-v8a" // 保留这三种架构的CPU
             }
