@@ -55,7 +55,7 @@ ext {
             "module-master"              : "com.timecat.module:module-master:+",
             "module-mindmap"             : "com.timecat.module:module-mindmap:+",
             "module-plugin"              : "com.timecat.module:module-plugin:+",
-            "module-theme"               : "com.timecat.module:module-theme:+",
+            "module-skin"                : "com.timecat.module:module-skin:+",
             "module-welcome"             : "com.timecat.module:module-welcome:+",
 
             //2. module-online
