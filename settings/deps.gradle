@@ -57,6 +57,7 @@ ext {
             "module-plugin"              : "com.timecat.module:module-plugin:+",
             "module-skin"                : "com.timecat.module:module-skin:+",
             "module-welcome"             : "com.timecat.module:module-welcome:+",
+            "module-guide"               : "com.timecat.module:module-guide:+",
 
             //2. module-online
             "module-login"               : "com.timecat.module:module-login:+",
@@ -152,6 +153,10 @@ ext {
             "MView-ListView"             : "com.timecat.component:MView-ListView:+",
             "MView-CheckBox"             : "com.timecat.component:MView-CheckBox:+",
             "MLang"                      : "com.timecat.component:MLang:2.0.2",
+
+            //12. api
+            "guide-api"                  : "com.timecat.component:guide-api:+",
+
     ]
     //endregion
 
