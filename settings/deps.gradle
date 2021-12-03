@@ -48,16 +48,24 @@ ext {
     timecat = [
             //1. module
             "module-about"               : "com.timecat.module:module-about:+",
-            "module-bugly"               : "com.timecat.module:module-bugly:+",
-            "module-controller"          : "com.timecat.module:module-controller:+",
-            "module-data"                : "com.timecat.module:module-data:+",
-            "module-developer"           : "com.timecat.module:module-developer:+",
-            "module-master"              : "com.timecat.module:module-master:+",
-            "module-mindmap"             : "com.timecat.module:module-mindmap:+",
-            "module-plugin"              : "com.timecat.module:module-plugin:+",
-            "module-skin"                : "com.timecat.module:module-skin:+",
             "module-welcome"             : "com.timecat.module:module-welcome:+",
             "module-guide"               : "com.timecat.module:module-guide:+",
+
+            "module-controller"          : "com.timecat.module:module-controller:+",
+            "module-developer"           : "com.timecat.module:module-developer:+",
+            "module-master"              : "com.timecat.module:module-master:+",
+            "module-note-org"            : "com.timecat.module:module-note-org:+",
+            "module-scarlet"             : "com.timecat.module:module-scarlet:+",
+            "module-chat"                : "com.timecat.module:module-chat:+",
+            "module-media"               : "com.timecat.module:module-media:+",
+            "module-runner"              : "com.timecat.module:module-runner:+",
+
+            "module-bugly"               : "com.timecat.module:module-bugly:+",
+            "module-data"                : "com.timecat.module:module-data:+",
+            "module-mindmap"             : "com.timecat.module:module-mindmap:+",
+
+            "module-plugin"              : "com.timecat.module:module-plugin:+",
+            "module-skin"                : "com.timecat.module:module-skin:+",
 
             //2. module-online
             "module-login"               : "com.timecat.module:module-login:+",
@@ -65,14 +73,12 @@ ext {
 
             //3. module-stand
             "module-artifact"            : "com.timecat.module:module-browser:+",
-            "module-book-reader"         : "com.timecat.module:module-reader:+",
             "module-git"                 : "com.timecat.module:module-git:+",
-            "module-neoterm"             : "com.timecat.module:module-neoterm:+",
-            "module-scarlet"             : "com.timecat.module:module-scarlet:+",
             "module-timetable"           : "com.timecat.module:module-timetable:+",
-            "module-note-org"            : "com.timecat.module:module-note-org:+",
-            "module-file-explorer"       : "com.timecat.module:module-file-explorer:+",
             "module-file"                : "com.timecat.module:module-file:+",
+            "module-book-reader"         : "com.timecat.module:module-reader:+",
+            "module-neoterm"             : "com.timecat.module:module-neoterm:+",
+            "module-file-explorer"       : "com.timecat.module:module-file-explorer:+",
 
             //4. middle
             "middle-setting"             : "com.timecat.middle:form:+",
