@@ -4,8 +4,8 @@ ext {
             buildToolsVersion      : "33.0.0",
             minSdkVersion          : 21,
             targetSdkVersion       : 28,
-            versionCode            : 63,
-            versionName            : "0.9.2",
+            versionCode            : 64,
+            versionName            : "0.9.3",
             debug                  : "true",
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
@@ -420,7 +420,7 @@ ext {
             "fragment"                 : "androidx.fragment:fragment:$androidx_fragment_version",//implementation rootProject.ext.androidx_lib["fragment"]
             "fragment-ktx"             : "androidx.fragment:fragment-ktx:$androidx_fragment_version",//implementation rootProject.ext.androidx_lib["fragment-ktx"]
 
-            "support-vector-drawable"  : "androidx.vectordrawable:vectordrawable:$androidX",
+            "support-vector-drawable"  : "androidx.vectordrawable:vectordrawable:1.1.0",
             "transition"               : "androidx.transition:transition:$androidX",
 
             "coordinatorlayout"        : "androidx.coordinatorlayout:coordinatorlayout:$androidX",
