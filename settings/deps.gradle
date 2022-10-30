@@ -74,6 +74,7 @@ ext {
             //3. module-stand
             "module-artifact"            : "com.timecat.module:module-browser:+",
             "module-git"                 : "com.timecat.module:module-git:+",
+            "module-vpn"                 : "com.timecat.module:module-vpn:+",
             "module-timetable"           : "com.timecat.module:module-timetable:+",
             "module-file"                : "com.timecat.module:module-file:+",
             "module-book-reader"         : "com.timecat.module:module-reader:+",
@@ -82,7 +83,6 @@ ext {
 
             //4. middle
             "middle-setting"             : "com.timecat.middle:form:+",
-            "middle-image"               : "com.timecat.middle:selector:+",
             "middle-block"               : "com.timecat.middle:block:+",
             "shared-host"                : "com.timecat.shared:plugin-host:+",
             "shared-host-jar"            : "com.timecat.shared:plugin-host-jar:+",
@@ -125,15 +125,15 @@ ext {
 //            "component-PackIM"           : project(":extend:PackIM"),
             "component-PackRefreshList"  : "com.timecat.element:listview:+",
             "component-SelfArms"         : "com.timecat.extend:arms:+",
-            "component-SelfBaidu"        : "com.timecat.component:SelfBaidu:+",
+            "component-SelfBaidu"        : "com.timecat.extend:baidu:+",
             "component-SelfEventBus"     : "com.timecat.component:SelfEventBus:+",
-            "component-SelfMarkdown"     : "com.timecat.extend:markdown:+",
+            "component-SelfMarkdown"     : "com.timecat.identity:markdown:+",
             "component-SelfImage"        : "com.timecat.extend:image:+",
             "component-ImagePrevice"     : "com.timecat.extend:image-preview:+",
             "component-SelfRouter"       : "com.timecat.component:router:+",
             "component-SelfService"      : "com.timecat.identity:service:+",
             "component-SelfSkin"         : "com.timecat.identity:skin:+",
-            "component-SelfXunfei"       : "com.timecat.component:SelfXunfei:+",
+            "component-SelfXunfei"       : "com.timecat.extend:xunfei:+",
             "component-SelfAliyun"       : "com.timecat.component:SelfAliyun:+",
             "component-SelfDSL"          : "com.timecat.identity:anim:+",
             "component-SelfFont"         : "com.timecat.identity:font:+",
@@ -398,9 +398,9 @@ ext {
     //region support
     androidX = "1.2.0"
     androidx_core_version = "1.9.0"
-    androidx_fragment_version = "1.5.3"
-    constraintLayout = "2.0.1"
-    material_version = "1.6.1"
+    androidx_fragment_version = "1.5.4"
+    constraintLayout = "2.1.4"
+    material_version = "1.7.0"
     androidx_room_version = "2.4.3"
     androidx_lifecycle_version = "2.5.1"
     androidx_appcompat_version = "1.5.1"
@@ -468,7 +468,7 @@ ext {
             "startup"                  : "androidx.startup:startup-runtime:1.0.0",
             "paging"                   : "androidx.paging:paging-runtime-ktx:3.0.0-alpha09",
 
-            "support"                  : "androidx.legacy:legacy-support-v4:$androidX",
+            "support"                  : "androidx.legacy:legacy-support-v4:1.0.0",
 
             "databinding-runtime"      : "androidx.databinding:databinding-runtime:$androidx_databinding_version", //api rootProject.ext.androidx_lib["databinding-runtime"]
             "databinding-compiler"     : "androidx.databinding:databinding-compiler:$androidx_databinding_version", //kaptAndroidTest rootProject.ext.androidx_lib["databinding-compiler"]
