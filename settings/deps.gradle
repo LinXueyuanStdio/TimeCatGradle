@@ -4,8 +4,8 @@ ext {
             buildToolsVersion      : "33.0.0",
             minSdkVersion          : 21,
             targetSdkVersion       : 28,
-            versionCode            : 64,
-            versionName            : "0.9.3",
+            versionCode            : 67,
+            versionName            : "0.9.5",
             debug                  : "true",
             globalProguardFilesPath: "./proguard-global-rules.pro"
     ]
@@ -82,29 +82,34 @@ ext {
             "module-file-explorer"       : "com.timecat.module:module-file-explorer:+",
 
             //4. middle
-            "middle-setting"             : "com.timecat.middle:form:+",
+            "middle-form"                : "com.timecat.middle:form:+",
             "middle-block"               : "com.timecat.middle:block:+",
             "shared-host"                : "com.timecat.shared:plugin-host:+",
             "shared-host-jar"            : "com.timecat.shared:plugin-host-jar:+",
 
             //5. data
-            "component-CommonData"       : "com.timecat.data:system:+",
-            "component-CommonRoom"       : "com.timecat.data:room:+",
-            "component-CommonGreenDao"   : "com.timecat.data:greendao:+",
-            "component-DataManager"      : "com.timecat.data:DataManager:+",
-            "component-CommonBmob"       : "com.timecat.data:bmob:+",
-            "component-CommonSetting"    : "com.timecat.component:setting:+",
-            "component-SelfData"         : "com.timecat.identity:data:+",
+            "data-system"                : "com.timecat.data:system:+",
+            "data-room"                  : "com.timecat.data:room:+",
+            "data-greendao"              : "com.timecat.data:greendao:+",
+            "data-bmob"                  : "com.timecat.data:bmob:+",
 
             //6. component
-            "component-CommonBase"       : "com.timecat.page:base:+",
-            "component-CommonSDK"        : "com.timecat.component:sdk:+",
-            "component-CommonStatic"     : "com.timecat.identity:readonly:+",
-            "component-CommonUI"         : "com.timecat.layout:ui:+",
+            "component-setting"          : "com.timecat.component:setting:+",
+            "component-page"             : "com.timecat.page:base:+",
+            "component-sdk"              : "com.timecat.component:sdk:+",
+            "component-ui"               : "com.timecat.layout:ui:+",
+            "component-identity"         : "com.timecat.component:identity:+",
+            "component-router"           : "com.timecat.component:router:+",
 
-            //7. res
-            "component-CommonResource"   : "com.timecat.component:identity:+",
-            "identity-Resource"          : "com.timecat.identity:resources:+",
+            //7. identity
+            "identity-data"              : "com.timecat.identity:data:+",
+            "identity-readonly"          : "com.timecat.identity:readonly:+",
+            "identity-resources"         : "com.timecat.identity:resources:+",
+            "identity-service"           : "com.timecat.identity:service:+",
+            "identity-markdown"          : "com.timecat.identity:markdown:+",
+            "identity-anim"              : "com.timecat.identity:anim:+",
+            "identity-font"              : "com.timecat.identity:font:+",
+            "identity-skin"              : "com.timecat.identity:skin:+",
 
             //8. widget
             "widget-chrome-tabs"         : "com.timecat.widget:widget-chrome-tabs:+",
@@ -121,22 +126,14 @@ ext {
             "widget-table"               : "com.timecat.widget:table:+",
 
             //9. extend
-            "component-PackAlert"        : "com.timecat.element:alert:+",
-//            "component-PackIM"           : project(":extend:PackIM"),
-            "component-PackRefreshList"  : "com.timecat.element:listview:+",
-            "component-SelfArms"         : "com.timecat.extend:arms:+",
-            "component-SelfBaidu"        : "com.timecat.extend:baidu:+",
-            "component-SelfEventBus"     : "com.timecat.component:SelfEventBus:+",
-            "component-SelfMarkdown"     : "com.timecat.identity:markdown:+",
-            "component-SelfImage"        : "com.timecat.extend:image:+",
-            "component-ImagePrevice"     : "com.timecat.extend:image-preview:+",
-            "component-SelfRouter"       : "com.timecat.component:router:+",
-            "component-SelfService"      : "com.timecat.identity:service:+",
-            "component-SelfSkin"         : "com.timecat.identity:skin:+",
-            "component-SelfXunfei"       : "com.timecat.extend:xunfei:+",
+            "extend-arms"                : "com.timecat.extend:arms:+",
+            "extend-baidu"               : "com.timecat.extend:baidu:+",
+            "extend-xunfei"              : "com.timecat.extend:xunfei:+",
+            "extend-image"               : "com.timecat.extend:image:+",
+            "extend-image-preview"       : "com.timecat.extend:image-preview:+",
+            "element-alert"              : "com.timecat.element:alert:+",
+            "element-listview"           : "com.timecat.element:listview:+",
             "component-SelfAliyun"       : "com.timecat.component:SelfAliyun:+",
-            "component-SelfDSL"          : "com.timecat.identity:anim:+",
-            "component-SelfFont"         : "com.timecat.identity:font:+",
 
             //10. plugin
             "plugin-agreement-picturebed": "com.timecat.show:picturebed:+",

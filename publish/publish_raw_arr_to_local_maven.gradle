@@ -1,0 +1,52 @@
+def moduleConfigProps = new Properties()
+File moduleConfig = project.file("moduleConfig.properties")
+if (moduleConfig.exists()) {
+    moduleConfigProps.load(new FileInputStream(moduleConfig))
+}
+
+//apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+
+ext {
+    DIST_PATH = gradle.ext.localMavenDir
+    PUBLISH_GROUP_ID = moduleConfigProps.PUBLISH_GROUP_ID
+    PUBLISH_ARTIFACT_ID = moduleConfigProps.PUBLISH_ARTIFACT_ID
+    PUBLISH_VERSION = moduleConfigProps.PUBLISH_VERSION
+    SOURCE_FILENAME = moduleConfigProps.SOURCE_FILENAME
+}
+
+group = project.PUBLISH_GROUP_ID
+version = project.PUBLISH_VERSION
+
+afterEvaluate {
+    publishing {
+        publications {
+            maven_raw_aar(MavenPublication) {
+                groupId project.PUBLISH_GROUP_ID
+                artifactId project.PUBLISH_ARTIFACT_ID
+                version project.PUBLISH_VERSION
+                artifact(source: file(project.SOURCE_FILENAME), extension: 'aar')
+                pom {
+                    name = project.PUBLISH_ARTIFACT_ID
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'linxueyuan'
+                            name = 'Lin Xueyuan'
+                            email = 'linxy59@mail2.sysu.edu.cn'
+                        }
+                    }
+                }
+            }
+        }
+        repositories {
+            def deployPath = file(project.DIST_PATH)
+            maven { url "file://${deployPath.absolutePath}" }
+        }
+    }
+}
