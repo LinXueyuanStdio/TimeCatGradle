@@ -184,7 +184,7 @@ ext {
     butterKnife = "8.8.1"
     okHttp = "3.11.0"
     retrofit2 = "2.5.0"
-    gson = "2.8.5"
+    gson = "2.8.9"
     glide = "4.12.0"
     timber = "4.7.1"
     androidState = "1.4.1"
@@ -210,7 +210,7 @@ ext {
 
     //1. kotlin
     jetbrains_annotations_version = "22.0.0"
-    kotlinx_coroutines_version = "1.5.0"
+    kotlinx_coroutines_version = "1.6.1"
 
     //2. network
     retrofitSdkVersion = "2.9.0"
