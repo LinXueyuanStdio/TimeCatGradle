@@ -4,7 +4,7 @@ ext {
             buildToolsVersion      : "33.0.0",
             minSdkVersion          : 21,
             targetSdkVersion       : 28,
-            versionCode            : 69,
+            versionCode            : 71,
             versionName            : "0.9.6",
             debug                  : "true",
             globalProguardFilesPath: "./proguard-global-rules.pro"
@@ -98,6 +98,7 @@ ext {
             "component-page"             : "com.timecat.page:base:+",
             "component-sdk"              : "com.timecat.component:sdk:+",
             "component-ui"               : "com.timecat.layout:ui:+",
+            "component-compose-ui"       : "com.timecat.layout:compose-ui:+",
             "component-identity"         : "com.timecat.component:identity:+",
             "component-router"           : "com.timecat.component:router:+",
 
@@ -447,10 +448,10 @@ ext {
             "webkit"                   : "androidx.webkit:webkit:$androidX",
 
             "lifecycle-viewmodel-ktx"  : "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-viewmodel-ktx"]
-//            "lifecycle-viewmodel-compose": "androidx.lifecycle:lifecycle-viewmodel-compose:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-viewmodel-compose"]
+            "lifecycle-viewmodel-compose": "androidx.lifecycle:lifecycle-viewmodel-compose:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-viewmodel-compose"]
             "lifecycle-livedata-ktx"   : "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-livedata-ktx"]
             "lifecycle-runtime-ktx"    : "androidx.lifecycle:lifecycle-runtime-ktx:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-runtime-ktx"]
-//            "lifecycle-viewmodel-savedstate": "androidx.lifecycle:lifecycle-viewmodel-savedstate:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-viewmodel-savedstate"]
+            "lifecycle-viewmodel-savedstate": "androidx.lifecycle:lifecycle-viewmodel-savedstate:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-viewmodel-savedstate"]
             "lifecycle-common-java8"   : "androidx.lifecycle:lifecycle-common-java8:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-common-java8"]
             "lifecycle-service"        : "androidx.lifecycle:lifecycle-service:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-service"]
             "lifecycle-process"        : "androidx.lifecycle:lifecycle-process:$androidx_lifecycle_version",//implementation rootProject.ext.androidx_lib["lifecycle-process"]

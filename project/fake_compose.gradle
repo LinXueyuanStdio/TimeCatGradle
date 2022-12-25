@@ -1,0 +1,125 @@
+apply plugin: 'com.android.application'
+apply plugin: 'idea'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.xiaojinzi.component.plugin'
+apply from: "${gradle.ext.localGradleDir}/project/signing.gradle"
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        multiDexEnabled true
+
+//        //兼容Android6.0系统所需
+        useLibrary 'org.apache.http.legacy'
+
+        renderscriptTargetApi 25
+        renderscriptSupportModeEnabled false    // Enable RS support
+        // ButterKnife
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "moduleName"     : project.getName(),
+                        "HOST"           : project.getName().replace("-", ""),
+                        "Priority"       : String.valueOf(0),
+                        "RouterDocFolder": "${project.rootDir}/RouterDocument".toString(),
+                        "RouterDocEnable": String.valueOf("true"),
+                ]
+            }
+        }
+
+        manifestPlaceholders = [
+                //AR76G1XB3HKJ 属于应用"测试"独有的 Android AppKey, 用于配置SDK
+                MTA_APPKEY : "AR76G1XB3HKJ",
+                //标注应用推广渠道用以区分新用户来源，可填写如应用宝，豌豆荚等
+                MTA_CHANNEL: "酷安"
+        ]
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures{
+        dataBinding true
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.3.2"
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    lintOptions {
+        checkDependencies true
+        checkReleaseBuilds false
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/{AL2.0,LGPL2.1}'
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            ndk {
+                abiFilters "armeabi-v7a", "arm64-v8a" // 保留这三种架构的CPU
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile './AndroidManifest.xml'
+        }
+    }
+}
+
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+        arg("HOST", project.getName().replace("-", ""))
+        arg("Priority", String.valueOf(0))
+        arg("RouterDocFolder", "${project.rootDir}/RouterDocument".toString())
+        arg("RouterDocEnable", String.valueOf(true))
+    }
+}
+
+dependencies {
+    kapt rootProject.ext.dependencies["router-compiler"]
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+apply from: "${gradle.ext.localGradleDir}/analysis/analysis.gradle"

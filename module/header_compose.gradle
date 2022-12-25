@@ -1,0 +1,105 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+
+        buildConfigField "boolean", "debug", rootProject.ext.android["debug"]
+        vectorDrawables.generatedDensities = ['mdpi', 'hdpi', 'xhdpi', 'xxhdpi']
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "moduleName"     : project.getName(),
+                        "HOST"           : project.getName().replace("-", ""),
+                        "Priority"       : String.valueOf(0),
+                        "RouterDocFolder": "${project.rootDir}/RouterDocument".toString(),
+                        "RouterDocEnable": String.valueOf("true"),
+                ]
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures{
+        dataBinding true
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.3.2"
+    }
+
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    lintOptions {
+        checkDependencies true
+        disable 'ExtraTranslation'
+        disable 'BlockedPrivateApi'
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+        arg("HOST", project.getName().replace("-", ""))
+        arg("Priority", String.valueOf(0))
+        arg("RouterDocFolder", "${project.rootDir}/RouterDocument".toString())
+        arg("RouterDocEnable", String.valueOf(true))
+    }
+}
+
+dependencies {
+    kapt rootProject.ext.dependencies["dagger2-compiler"]
+    kapt rootProject.ext.dependencies["router-compiler"]
+
+    api rootProject.ext.dependencies["kotlin-stdlib"]
+
+    def composeBom = platform('androidx.compose:compose-bom:2022.10.00')
+    api(composeBom)
+    androidTestImplementation(composeBom)
+
+    api 'androidx.compose.material3:material3'
+    api "androidx.compose.material3:material3-window-size-class"
+    api "androidx.compose.material:material-icons-extended"
+    api "androidx.compose.ui:ui-tooling-preview"
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4"
+    debugImplementation "androidx.compose.ui:ui-tooling"
+    debugImplementation "androidx.compose.ui:ui-test-manifest"
+}
+
+group = "com.timecat.module"
